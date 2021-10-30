@@ -1,0 +1,13 @@
+f401_motorcontrol\pmsm_foc_compute.o: F:/STM32_Mode_Base/STM32_MAT/MotorControl/Src/PMSM_FOC_Compute.c
+f401_motorcontrol\pmsm_foc_compute.o: ../MotorControl/Inc/PMSM_FOC_Compute.h
+f401_motorcontrol\pmsm_foc_compute.o: ../MotorControl/Inc/rtwtypes.h
+f401_motorcontrol\pmsm_foc_compute.o: ../MotorControl/Inc/PMSM_FOC_Compute_types.h
+f401_motorcontrol\pmsm_foc_compute.o: ../Drivers/CMSIS/DSP/Include/arm_math.h
+f401_motorcontrol\pmsm_foc_compute.o: ../Drivers/CMSIS/Include/core_cm4.h
+f401_motorcontrol\pmsm_foc_compute.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+f401_motorcontrol\pmsm_foc_compute.o: ../Drivers/CMSIS/Include/cmsis_version.h
+f401_motorcontrol\pmsm_foc_compute.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+f401_motorcontrol\pmsm_foc_compute.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+f401_motorcontrol\pmsm_foc_compute.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+f401_motorcontrol\pmsm_foc_compute.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+f401_motorcontrol\pmsm_foc_compute.o: ../MotorControl/Inc/PMSM_FOC_Compute_private.h

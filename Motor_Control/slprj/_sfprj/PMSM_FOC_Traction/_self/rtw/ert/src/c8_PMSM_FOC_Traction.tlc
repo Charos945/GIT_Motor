@@ -1,0 +1,67 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   7 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c8_PMSM_FOC_Traction"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_c8_PMSM_FOC_Traction"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "NS_1_flag"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "NS_1_flag"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "NS_2_flag"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "NS_2_flag"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "NS_3_flag"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "NS_3_flag"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "NS_4_flag"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "NS_4_flag"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
