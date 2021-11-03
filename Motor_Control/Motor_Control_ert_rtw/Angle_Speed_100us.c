@@ -22,6 +22,7 @@
 #include "Motor_Control_private.h"
 
 /* Output and update for trigger system: '<S8>/ACC_OMG' */
+real32_T delta_t;
 void ACC_OMG(void)
 {
   real32_T rtb_Gain3_m;
@@ -32,12 +33,12 @@ void ACC_OMG(void)
    *  TriggerPort: '<S64>/function'
    */
   /* Inport: '<Root>/Hall' */
-//  if ((((rtU.Hall[0] > 0) != (rtPrevZCX.ACC_OMG_Trig_ZCE[0] == POS_ZCSIG)) &&
-//       (rtPrevZCX.ACC_OMG_Trig_ZCE[0] != UNINITIALIZED_ZCSIG)) || (((rtU.Hall[1]
-//         > 0) != (rtPrevZCX.ACC_OMG_Trig_ZCE[1] == POS_ZCSIG)) &&
-//       (rtPrevZCX.ACC_OMG_Trig_ZCE[1] != UNINITIALIZED_ZCSIG)) || (((rtU.Hall[2]
-//         > 0) != (rtPrevZCX.ACC_OMG_Trig_ZCE[2] == POS_ZCSIG)) &&
-//       (rtPrevZCX.ACC_OMG_Trig_ZCE[2] != UNINITIALIZED_ZCSIG))) {
+  if ((((rtU.Hall[0] > 0) != (rtPrevZCX.ACC_OMG_Trig_ZCE[0] == POS_ZCSIG)) &&
+       (rtPrevZCX.ACC_OMG_Trig_ZCE[0] != UNINITIALIZED_ZCSIG)) || (((rtU.Hall[1]
+         > 0) != (rtPrevZCX.ACC_OMG_Trig_ZCE[1] == POS_ZCSIG)) &&
+       (rtPrevZCX.ACC_OMG_Trig_ZCE[1] != UNINITIALIZED_ZCSIG)) || (((rtU.Hall[2]
+         > 0) != (rtPrevZCX.ACC_OMG_Trig_ZCE[2] == POS_ZCSIG)) &&
+       (rtPrevZCX.ACC_OMG_Trig_ZCE[2] != UNINITIALIZED_ZCSIG))) {
     /* Inport: '<S64>/Timer_Counter' incorporates:
      *  Inport: '<Root>/Timer_counter'
      */
@@ -50,6 +51,8 @@ void ACC_OMG(void)
      *  Memory: '<S64>/Memory'
      */
     rtb_dt1 = rtb_Gain3_m - rtDW.Memory_PreviousInput;
+		
+		delta_t=rtb_dt1;
 
     /* Gain: '<S64>/Gain2' incorporates:
      *  Constant: '<S64>/Constant6'
@@ -191,7 +194,7 @@ void ACC_OMG(void)
      *  Outport: '<Root>/Speed_Measured'
      */
     rtDW.UnitDelay_DSTATE_ec = rtY.Speed_Measured;
- // }
+  }
 
   rtPrevZCX.ACC_OMG_Trig_ZCE[0] = (ZCSigState)(rtU.Hall[0] > 0);
   rtPrevZCX.ACC_OMG_Trig_ZCE[1] = (ZCSigState)(rtU.Hall[1] > 0);
@@ -202,6 +205,7 @@ void ACC_OMG(void)
 }
 
 /* Output and update for atomic system: '<S8>/ADC_IRQ' */
+
 void ADC_IRQ(void)
 {
   real32_T rtb_Add6;
@@ -378,12 +382,12 @@ void Resolver_Observer(void)
 void Angle_Speed_100us(void)
 {
   /* Outputs for Triggered SubSystem: '<S8>/ACC_OMG' */
- // ACC_OMG();
+  ACC_OMG();
 
   /* End of Outputs for SubSystem: '<S8>/ACC_OMG' */
 
   /* Outputs for Atomic SubSystem: '<S8>/ADC_IRQ' */
-//  ADC_IRQ();
+  ADC_IRQ();
 
   /* End of Outputs for SubSystem: '<S8>/ADC_IRQ' */
 

@@ -150,7 +150,7 @@ void ADC_IRQHandler(void)
 	//HAL_ADCEx_InjectedStart(&hadc1);
 		rtU.Timer_counter=__HAL_TIM_GET_COUNTER(&htim5);
                
-	 ADC_IRQ();
+	 //ADC_IRQ();
 	  
 	
 	
@@ -267,7 +267,7 @@ void TIM2_IRQHandler(void)
 	rtU.Hall[1]=Hall_b;
 	rtU.Hall[2]=Hall_c;
 	rtU.Timer_counter=__HAL_TIM_GET_COUNTER(&htim5);
-	ACC_OMG();
+	//ACC_OMG();
 	
 	if(Hall_InterruptCnt>=6)
 	{
@@ -427,10 +427,10 @@ void UploadData(void)
 		time_count++;
 		temp[0] = *(int16_T*)"AA";
 		temp[1] =(int16_T)(Bus_volt_V*100);
-		temp[2] =(int16_T)(rtY.Speed_Measured*1000);
-		temp[3] =(int16_T)(rtY.Ta*1000);
+		temp[2] =(int16_T)(rtY.Speed_Measured*10);
+		temp[3] =(int16_T)(rtY.Ta*10);
 		temp[4] =(int16_T)(rtY.Tb*10);
-		temp[5] =(int16_T)(Ia_A*1000);
+		temp[5] =(int16_T)(Ia_A*100);
 	
 		__HAL_UNLOCK( huart2.hdmatx);
 		huart2.gState = HAL_UART_STATE_READY;
@@ -440,10 +440,10 @@ void UploadData(void)
 	else if( time_count == 999)
 	{
 		temp[0] = (int16_T)(Bus_volt_V*100);
-		temp[1] = (int16_T)(rtY.Speed_Measured*1000);
-		temp[2] = (int16_T)(rtY.Ta*1000);
+		temp[1] = (int16_T)(rtY.Speed_Measured*10);
+		temp[2] = (int16_T)(rtY.Ta*10);
 		temp[3] = (int16_T)(rtY.Tb*10);
-		temp[4] = (int16_T)(Ia_A*1000);
+		temp[4] = (int16_T)(Ia_A*100);
 		
 		temp[5] = *(int16_T*)"BB";
 		__HAL_UNLOCK( huart2.hdmatx);
@@ -456,10 +456,10 @@ void UploadData(void)
 	{
 		time_count++;
 		temp[0] = (int16_T)(Bus_volt_V*100);
-		temp[1] = (int16_T)(rtY.Speed_Measured*1000);
-		temp[2] = (int16_T)(rtY.Ta*1000);
+		temp[1] = (int16_T)(rtY.Speed_Measured*10);
+		temp[2] = (int16_T)(rtY.Ta*10);
 		temp[3] = (int16_T)(rtY.Tb*10);
-		temp[4] = (int16_T)(Ia_A*1000);
+		temp[4] = (int16_T)(Ia_A*100);
 		
 		__HAL_UNLOCK( huart2.hdmatx);
 		huart2.gState = HAL_UART_STATE_READY;
