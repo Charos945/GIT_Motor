@@ -1,0 +1,35 @@
+%implements s80_b0_x3iyp_9_Disable "C"
+
+%function Disable(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/*@>cde5*/if (/*@>31d3c*/FOC_Motor_ControlrtDW./*@>32da0*/Har_Compensation_MODE) {
+    /*@>31d42*/FOC_Motor_ControlrtDW./*@>32da3*/DiscreteTimeIntegrator_DSTATE_h/*@>cdfb*/ = /*@>31a92*/FOC_Motor_ControlrtB./*@>32d94*/DiscreteTimeIntegrator_o;
+    /*@>31d48*/FOC_Motor_ControlrtDW./*@>32da6*/DiscreteTimeIntegrator_DSTATE_d/*@>cdfd*/ = /*@>31a98*/FOC_Motor_ControlrtB./*@>32d97*/DiscreteTimeIntegrator_d;
+    /*@>31d4e*/FOC_Motor_ControlrtDW./*@>32da9*/DiscreteTimeIntegrator_DSTATE_m/*@>cdff*/ = /*@>31a9e*/FOC_Motor_ControlrtB./*@>32d9a*/DiscreteTimeIntegrator_a;
+    /*@>31d54*/FOC_Motor_ControlrtDW./*@>32dac*/DiscreteTimeIntegrator_DSTATE_k/*@>ce01*/ = /*@>31aa4*/FOC_Motor_ControlrtB./*@>32d9d*/DiscreteTimeIntegrator_g;
+    /*@>31d5a*/FOC_Motor_ControlrtDW./*@>32daf*/Har_Compensation_MODE/*@>cde8*/ = /*@>2d49b*/false;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[9].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Disable", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))
+%<SLibCG_AccessArg(9, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(9, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Disable", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(9, 1, 0)>
+%endif
+%endfunction
+%function DisableFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Har_Compensation_Disable(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(9, 1, fcnProtoType)>
+%endfunction

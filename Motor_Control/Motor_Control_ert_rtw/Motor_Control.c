@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 3.5
+ * Model version                  : 1.44
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Sun Sep  5 09:33:37 2021
+ * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -19,234 +19,162 @@
 #include "Motor_Control_private.h"
 
 /* Exported block signals */
-real32_T Speed_RPM;                    /* '<S81>/Gain' */
-real32_T Angle_Theta;                  /* '<S81>/Math Function' */
+real32_T Motor_Power;                  /* '<S164>/Add1' */
+real32_T Motor_Torque;                 /* '<S165>/Add1' */
+real32_T Id_ref;                       /* '<S81>/Merge' */
+real32_T Iq_ref;                       /* '<S81>/Merge1' */
+real32_T Vq_voltage;                   /* '<S155>/Switch2' */
+real32_T Id_measured;                  /* '<S99>/Add1' */
+real32_T Iq_measured;                  /* '<S99>/Add2' */
+real32_T V_alpha;                      /* '<S98>/Add' */
+real32_T V_beta;                       /* '<S98>/Add3' */
+real32_T Vd_voltage;                   /* '<S128>/Switch2' */
+real32_T Ialpha;                       /* '<S103>/Gain2' */
+real32_T Ibeta;                        /* '<S103>/Gain5' */
 
 /* Exported block parameters */
-HFI_STRUCT HFI = {
-  0U,
-  0U,
-  12.0F,
-  1000.0F,
-  12.0F,
-  500.0F,
-  0.1F,
-  12.0F,
-  0.05F,
-  0.001F,
-  0.01F,
-  0.5F,
-  0.1F,
-  6283.18555F,
-  100.0F,
-  950.0F,
-  1050.0F,
-  100.0F,
-  5000.0F
-} ;                                    /* Variable: HFI
+real32_T Dead_Time = 0.0F;             /* Variable: Dead_Time
+                                        * Referenced by: '<S92>/IdRef2'
+                                        */
+real32_T SpeedFilter_Fn = 0.3F;        /* Variable: SpeedFilter_Fn
                                         * Referenced by:
-                                        *   '<S180>/HFI_Enalble'
-                                        *   '<S186>/HFI_AngleEnable'
-                                        *   '<S190>/HFI_Enalble'
-                                        *   '<S208>/HFI_State_machine'
-                                        *   '<S208>/HFI_Enalble'
-                                        *   '<S209>/StartRUN_State_machine'
-                                        *   '<S209>/Const'
-                                        *   '<S209>/Constant2'
-                                        *   '<S209>/Constant3'
-                                        *   '<S209>/HFI_Enalble'
-                                        *   '<S211>/Constant'
-                                        *   '<S212>/NS_State_machine'
-                                        *   '<S212>/HFI_Enalble'
-                                        *   '<S220>/Kp4'
-                                        *   '<S220>/Kp5'
-                                        *   '<S221>/Const1'
-                                        *   '<S221>/A'
-                                        *   '<S245>/Const1'
-                                        *   '<S256>/Constant'
-                                        *   '<S258>/Constant'
+                                        *   '<S66>/Constant1'
+                                        *   '<S79>/Constant1'
+                                        */
+uint8_T Dead_Com_Enable = 0U;          /* Variable: Dead_Com_Enable
+                                        * Referenced by: '<S92>/Constant3'
+                                        */
+uint8_T FF_Enable = 0U;                /* Variable: FF_Enable
+                                        * Referenced by: '<S92>/Constant1'
                                         */
 
-CTRLPARAMS_STRUCT ctrlParamsPI = {
-  0.5F,
-  0.00267F,
-  0.0633F,
-  1.5F,
-  -1.5F,
-  20.0F,
-  0.528F,
-  0.08F,
-  13.8564062F,
-  -13.8564062F,
-  0.8F,
-  0.0576F,
-  13.8564062F,
-  -13.8564062F
-} ;                                    /* Variable: ctrlParamsPI
-                                        * Referenced by:
-                                        *   '<S181>/Ki'
-                                        *   '<S181>/Kp'
-                                        *   '<S181>/Saturation'
-                                        *   '<S182>/Ki'
-                                        *   '<S182>/Kp'
-                                        *   '<S182>/Saturation'
-                                        *   '<S203>/Ki'
-                                        *   '<S203>/Kp'
-                                        *   '<S203>/Saturation'
-                                        *   '<S273>/Ki'
-                                        *   '<S273>/Kp'
-                                        *   '<S273>/Saturation'
-                                        */
+/* Exported data definition */
 
-Hall_STRUCT Hall_Parameter = {
+/* Definition for custom storage class: Struct */
+CTL_Parameter_type CTL_Parameter = {
+  /* Angle_offset */
+  0.1985F,
+
+  /* Over_modulation */
+  0,
+
+  /* Angle */
   1U,
-  1U,
-  0U,
+
+  /* TorqueMode */
+  0U
+};
+
+FluxWeak_Parameter_type FluxWeak_Parameter = {
+  /* FluxWeak_Idref_max */
   0.0F,
-  0.0F,
-  -0.0F,
-  0.4e-5F,
+
+  /* FluxWeak_Idref_min */
+  -200.0F,
+
+  /* FluxWeak_Ki */
+  50.0F,
+
+  /* FluxWeak_Kp */
+  1.2F,
+
+  /* FluxWeak_Enable */
+  0U
+};
+
+Hall_Parameter_type Hall_Parameter = {
+  /* HaLL_AngleShift */
+  1.0F,
+
   0.0F,
   1.04719758F,
   2.09439516F,
   3.14159274F,
   4.18879032F,
-  5.23598766F
-} ;                                    /* Variable: Hall_Parameter
-                                        * Referenced by:
-                                        *   '<S3>/Hall_Enalble'
-                                        *   '<S5>/Hall_Enalble'
-                                        *   '<S11>/Chart'
-                                        *   '<S12>/Hall_Angle_Enable'
-                                        *   '<S178>/Hall_Enalble'
-                                        *   '<S143>/Gain3'
-                                        *   '<S144>/Gain2'
-                                        *   '<S144>/Gain3'
-                                        *   '<S160>/Angle_offset'
-                                        *   '<S164>/Duty'
-                                        *   '<S165>/Duty'
-                                        *   '<S154>/Constant'
-                                        *   '<S154>/Constant1'
-                                        *   '<S155>/Constant1'
-                                        *   '<S155>/Pi//3'
-                                        *   '<S156>/Constant'
-                                        *   '<S156>/Constant1'
-                                        *   '<S157>/Constant'
-                                        *   '<S157>/Constant1'
-                                        *   '<S158>/Constant'
-                                        *   '<S158>/Constant1'
-                                        *   '<S159>/Constant'
-                                        *   '<S159>/Constant1'
-                                        */
+  5.23598766F,
 
-SMOParam_STRUCT SMO = {
-  0U,
-  0U,
-  0.99F,
-  -4.99999123e-6F,
-  0.0249999985F,
-  12.0F,
-  18.0F,
-  0.5F,
-  0.2F,
-  9.0F,
-  0.0F
-} ;                                    /* Variable: SMO
-                                        * Referenced by:
-                                        *   '<S3>/SMO_Enalble'
-                                        *   '<S135>/Angle_offset'
-                                        *   '<S137>/Gain2'
-                                        *   '<S137>/Gain3'
-                                        *   '<S138>/Constant'
-                                        *   '<S138>/Constant1'
-                                        *   '<S138>/Constant2'
-                                        *   '<S138>/Constant3'
-                                        *   '<S138>/Constant4'
-                                        *   '<S138>/Constant5'
-                                        */
+  /* HaLL_Timer_T */
+  5E-5F
+};
 
-CLParam_STRUCT CL_Param = {
-  1U,
-  1000.0F,
-  1.0F,
-  0.5F,
-  0.1985F,
-  2.0F,
-  1000.0F,
-  -1000.0F
-} ;                                    /* Variable: CL_Param
-                                        * Referenced by:
-                                        *   '<S2>/Control_Mode'
-                                        *   '<S4>/IQ_Command'
-                                        */
+Harmonic_Com_type Harmonic_Com = {
+  /* Harmonic_Id5th_Ki */
+  32.0F,
 
-OPLParam_STRUCT OPL_Param = {
-  0U,
-  0U,
-  800.0F,
-  0.5F,
-  0.1F,
-  5.0F,
-  0.16F,
-  800.0F,
-  -800.0F
-} ;                                    /* Variable: OPL_Param
-                                        * Referenced by:
-                                        *   '<S3>/State_machine'
-                                        *   '<S3>/Iq_Command'
-                                        *   '<S3>/OPL_Angle_Enable'
-                                        *   '<S3>/OPL_Enable'
-                                        *   '<S12>/Sensorless_Enable'
-                                        *   '<S14>/OPL_SpeedRPM'
-                                        *   '<S176>/Constant1'
-                                        *   '<S177>/Constant1'
-                                        *   '<S177>/Constant2'
-                                        *   '<S177>/Iq_Command'
-                                        */
+  /* Harmonic_Id5th_Kp */
+  1.2F,
 
-Fluxweak_STRUCT Flux_weak = {
-  0U,
-  -4.0F,
-  0.0F,
-  0.05F,
+  /* Harmonic_Id5th_Max */
+  60.0F,
+
+  /* Harmonic_Id5th_Min */
+  -60.0F,
+
+  /* Harmonic_Id7th_Ki */
+  24.0F,
+
+  /* Harmonic_Id7th_Kp */
   0.8F,
-  10.0F
-} ;                                    /* Variable: Flux_weak
-                                        * Referenced by:
-                                        *   '<S183>/Constant1'
-                                        *   '<S207>/Ki'
-                                        *   '<S207>/Kp'
-                                        *   '<S207>/Saturation'
-                                        */
 
-FluxObsever_STRUCT FluxObsever = {
-  1U,
-  0U,
-  1000.0F,
-  10.0F
-} ;                                    /* Variable: FluxObsever
-                                        * Referenced by:
-                                        *   '<S3>/Flux_Obsever'
-                                        *   '<S12>/Sensorless_Enable1'
-                                        *   '<S20>/Constant'
-                                        *   '<S20>/Gain'
-                                        */
+  /* Harmonic_Id7th_Max */
+  60.0F,
 
-Resolver_STRUCT Resolver_Parameter = {
-  1U,
-  0U,
-  1U,
-  0U,
-  0.0F,
-  1.02F
-} ;                                    /* Variable: Resolver_Parameter
-                                        * Referenced by:
-                                        *   '<S3>/Dir_Angle_Enable'
-                                        *   '<S3>/PLL_Enable'
-                                        *   '<S12>/Resolver_Enable'
-                                        *   '<S12>/Resolver_PLL_Enable'
-                                        *   '<S80>/Angle_offset'
-                                        */
+  /* Harmonic_Id7th_Min */
+  -60.0F,
+
+  /* Harmonic_Iq5th_Ki */
+  32.0F,
+
+  /* Harmonic_Iq5th_Kp */
+  1.2F,
+
+  /* Harmonic_Iq5th_Max */
+  60.0F,
+
+  /* Harmonic_Iq5th_Min */
+  -60.0F,
+
+  /* Harmonic_Iq7th_Ki */
+  24.0F,
+
+  /* Harmonic_Iq7th_Kp */
+  0.8F,
+
+  /* Harmonic_Iq7th_Max */
+  60.0F,
+
+  /* Harmonic_Iq7th_Min */
+  -60.0F,
+
+  /* Harmonic_Com_Enable */
+  0U
+};
+
+PI_Parameter_type PI_Parameter = {
+  /* ID_Ki */
+  0.8F,
+
+  /* ID_Kp */
+  0.05F,
+
+  /* IQ_Ki */
+  0.8F,
+
+  /* IQ_Kp */
+  0.05F,
+
+  /* Speed_Ki */
+  0.00633F,
+
+  /* Speed_Kp */
+  0.00267F,
+
+  /* Speed_PI_OutputMax */
+  8.0F,
+
+  /* Speed_PI_OutputMin */
+  -8.0F
+};
 
 /* Block signals and states (default storage) */
 DW rtDW;
@@ -316,21 +244,7 @@ static void rate_scheduler(void)
 /* Model step function */
 void Motor_Control_step(void)
 {
-  int32_T i;
-
   /* Outputs for Atomic SubSystem: '<Root>/Motor_Control' */
-  /* UnitDelay: '<S2>/Unit Delay2' */
-  rtDW.UnitDelay2 = rtDW.UnitDelay2_DSTATE;
-
-  /* UnitDelay: '<S2>/Unit Delay1' */
-  rtDW.UnitDelay1 = rtDW.UnitDelay1_DSTATE;
-
-  /* UnitDelay: '<S2>/Unit Delay4' */
-  rtDW.UnitDelay4 = rtDW.UnitDelay4_DSTATE;
-
-  /* UnitDelay: '<S2>/Unit Delay3' */
-  rtDW.UnitDelay3 = rtDW.UnitDelay3_DSTATE;
-
   /* S-Function (fcgen): '<S2>/Function-Call Generator2' incorporates:
    *  SubSystem: '<S2>/Angle_Speed_100us'
    */
@@ -338,15 +252,31 @@ void Motor_Control_step(void)
 
   /* End of Outputs for S-Function (fcgen): '<S2>/Function-Call Generator2' */
 
-  /* UnitDelay: '<S2>/Unit Delay5' incorporates:
-   *  Outport: '<Root>/RUN_State'
-   */
-  rtY.RUN_State = rtDW.UnitDelay5_DSTATE;
+  /* UnitDelay: '<S2>/Unit Delay2' */
+  rtDW.UnitDelay2 = rtDW.UnitDelay2_DSTATE;
+
+  /* UnitDelay: '<S2>/Unit Delay1' */
+  rtDW.UnitDelay1 = rtDW.UnitDelay1_DSTATE;
+
+  /* UnitDelay: '<S2>/Unit Delay3' */
+  rtDW.UnitDelay3 = rtDW.UnitDelay3_DSTATE;
+
+  /* UnitDelay: '<S2>/Unit Delay4' */
+  rtDW.UnitDelay4 = rtDW.UnitDelay4_DSTATE;
+  if (rtM->Timing.TaskCounters.TID[2] == 0) {
+    /* S-Function (fcgen): '<S2>/Function-Call Generator3' incorporates:
+     *  SubSystem: '<S2>/SYM_State_10ms'
+     */
+    SYM_State_10ms();
+
+    /* End of Outputs for S-Function (fcgen): '<S2>/Function-Call Generator3' */
+  }
+
   if (rtM->Timing.TaskCounters.TID[1] == 0) {
     /* S-Function (fcgen): '<S2>/Function-Call Generator1' incorporates:
      *  SubSystem: '<S2>/Control_Command_2ms'
      */
-    Control_Command_2ms();
+    Control_Command_2ms_k();
 
     /* End of Outputs for S-Function (fcgen): '<S2>/Function-Call Generator1' */
   }
@@ -358,114 +288,28 @@ void Motor_Control_step(void)
 
   /* End of Outputs for S-Function (fcgen): '<S2>/Function-Call Generator' */
 
-  /* Outport: '<Root>/Id' incorporates:
-   *  UnitDelay: '<S2>/Unit Delay6'
-   */
-  rtY.Id = rtDW.UnitDelay6_DSTATE;
-
-  /* Outport: '<Root>/Vd' incorporates:
-   *  UnitDelay: '<S2>/Unit Delay8'
-   */
-  rtY.Vd = rtDW.UnitDelay8_DSTATE;
-
-  /* Outport: '<Root>/Iq' incorporates:
-   *  UnitDelay: '<S2>/Unit Delay7'
-   */
-  rtY.Iq = rtDW.UnitDelay7_DSTATE;
-
-  /* Outport: '<Root>/Vq' incorporates:
-   *  UnitDelay: '<S2>/Unit Delay9'
-   */
-  rtY.Vq = rtDW.UnitDelay9_DSTATE;
-  if (rtM->Timing.TaskCounters.TID[2] == 0) {
-    /* S-Function (fcgen): '<S2>/Function-Call Generator3' incorporates:
-     *  SubSystem: '<S2>/Motor_State_10ms'
-     */
-    /* Outport: '<Root>/Id' incorporates:
-     *  Outport: '<Root>/Iq'
-     *  Outport: '<Root>/Vd'
-     *  Outport: '<Root>/Vq'
-     */
-    Motor_State_10ms(rtY.Id, rtY.Vd, rtY.Iq, rtY.Vq);
-
-    /* End of Outputs for S-Function (fcgen): '<S2>/Function-Call Generator3' */
-  }
-
   /* Update for UnitDelay: '<S2>/Unit Delay2' */
-  rtDW.UnitDelay2_DSTATE = rtDW.Gain2_d;
+  rtDW.UnitDelay2_DSTATE = Id_measured;
 
   /* Update for UnitDelay: '<S2>/Unit Delay1' */
-  rtDW.UnitDelay1_DSTATE = rtDW.Gain5;
-
-  /* Update for UnitDelay: '<S2>/Unit Delay4' */
-  rtDW.UnitDelay4_DSTATE = rtDW.Add1_l;
+  rtDW.UnitDelay1_DSTATE = rtDW.Add;
 
   /* Update for UnitDelay: '<S2>/Unit Delay3' */
-  rtDW.UnitDelay3_DSTATE = rtDW.Add2_f;
+  rtDW.UnitDelay3_DSTATE = Iq_measured;
 
-  /* Update for UnitDelay: '<S2>/Unit Delay5' */
-  rtDW.UnitDelay5_DSTATE = rtDW.RUN_state;
-
-  /* Update for UnitDelay: '<S2>/Unit Delay6' */
-  rtDW.UnitDelay6_DSTATE = rtDW.Add1;
-
-  /* Update for UnitDelay: '<S2>/Unit Delay8' */
-  rtDW.UnitDelay8_DSTATE = rtDW.Saturation_l;
-
-  /* Update for UnitDelay: '<S2>/Unit Delay7' */
-  rtDW.UnitDelay7_DSTATE = rtDW.Add2;
-
-  /* Update for UnitDelay: '<S2>/Unit Delay9' */
-  rtDW.UnitDelay9_DSTATE = rtDW.Saturation_b;
+  /* Update for UnitDelay: '<S2>/Unit Delay4' */
+  rtDW.UnitDelay4_DSTATE = rtDW.Add1_a;
 
   /* End of Outputs for SubSystem: '<Root>/Motor_Control' */
 
-  /* Outport: '<Root>/Duty' */
-  rtY.Duty = rtDW.Merge1_e;
+  /* Outport: '<Root>/Ta' */
+  rtY.Ta = rtDW.Merge_c4;
 
-  /* Outport: '<Root>/Gate' */
-  for (i = 0; i < 6; i++) {
-    rtY.Gate[i] = rtDW.Merge_gx[i];
-  }
+  /* Outport: '<Root>/Tb' */
+  rtY.Tb = rtDW.Merge1_h;
 
-  /* End of Outport: '<Root>/Gate' */
-
-  /* Outport: '<Root>/HFI_Theta' */
-  rtY.HFI_Theta = rtDW.Merge2_j;
-
-  /* Outport: '<Root>/FOC_Theta' */
-  rtY.FOC_Theta = rtDW.Merge1;
-
-  /* Outport: '<Root>/Force_Theta' */
-  rtY.Force_Theta = rtDW.Merge_g;
-
-  /* Outport: '<Root>/Ubeta_Ealpha' */
-  rtY.Ubeta_Ealpha[0] = rtDW.SFunctionBuilder_o4;
-  rtY.Ubeta_Ealpha[1] = rtDW.Ubeta;
-
-  /* Outport: '<Root>/Speed_Mes' */
-  rtY.Speed_Mes = rtDW.Merge;
-
-  /* Outport: '<Root>/SMO_Angle' */
-  rtY.SMO_Angle = rtDW.Merge1_a;
-
-  /* Outport: '<Root>/Hall_Angle' */
-  rtY.Hall_Angle = rtDW.Merge1_c;
-  if (rtM->Timing.TaskCounters.TID[2] == 0) {
-    /* Outport: '<Root>/Motor_Power' */
-    rtY.Motor_Power = rtDW.Lowpassfilter;
-
-    /* Outport: '<Root>/Motor_Torque' */
-    rtY.Motor_Torque = rtDW.Lowpassfilter1;
-  }
-
-  /* Update absolute time for base rate */
-  /* The "clockTick0" counts the number of times the code of this task has
-   * been executed. The resolution of this integer timer is 0.0001, which is the step size
-   * of the task. Size of "clockTick0" ensures timer will not overflow during the
-   * application lifespan selected.
-   */
-  rtM->Timing.clockTick0++;
+  /* Outport: '<Root>/Tc' */
+  rtY.Tc = rtDW.Merge2_d;
   rate_scheduler();
 }
 
@@ -476,71 +320,27 @@ void Motor_Control_initialize(void)
 
   /* initialize non-finites */
   rt_InitInfAndNaN(sizeof(real_T));
+  rtPrevZCX.ACC_OMG_Trig_ZCE[0] = UNINITIALIZED_ZCSIG;
+  rtPrevZCX.ACC_OMG_Trig_ZCE[1] = UNINITIALIZED_ZCSIG;
+  rtPrevZCX.ACC_OMG_Trig_ZCE[2] = UNINITIALIZED_ZCSIG;
 
-  {
-    int32_T i;
-    rtPrevZCX.ACC_OMG_Trig_ZCE[0] = UNINITIALIZED_ZCSIG;
-    rtPrevZCX.ACC_OMG_Trig_ZCE[1] = UNINITIALIZED_ZCSIG;
-    rtPrevZCX.ACC_OMG_Trig_ZCE[2] = UNINITIALIZED_ZCSIG;
+  /* SystemInitialize for Atomic SubSystem: '<Root>/Motor_Control' */
+  /* SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator1' incorporates:
+   *  SubSystem: '<S2>/Control_Command_2ms'
+   */
+  Control_Command_2ms_o_Init();
 
-    /* SystemInitialize for Atomic SubSystem: '<Root>/Motor_Control' */
-    /* SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator2' incorporates:
-     *  SubSystem: '<S2>/Angle_Speed_100us'
-     */
-    Angle_Speed_100us_Init();
+  /* End of SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator1' */
+  /* End of SystemInitialize for SubSystem: '<Root>/Motor_Control' */
 
-    /* End of SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator2' */
+  /* SystemInitialize for Outport: '<Root>/Ta' */
+  rtY.Ta = rtDW.Merge_c4;
 
-    /* SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator1' incorporates:
-     *  SubSystem: '<S2>/Control_Command_2ms'
-     */
-    Control_Command_2ms_Init();
+  /* SystemInitialize for Outport: '<Root>/Tb' */
+  rtY.Tb = rtDW.Merge1_h;
 
-    /* End of SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator1' */
-
-    /* SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator' incorporates:
-     *  SubSystem: '<S2>/FOC_Control_100us'
-     */
-    FOC_Control_100us_Init();
-
-    /* End of SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator' */
-    /* End of SystemInitialize for SubSystem: '<Root>/Motor_Control' */
-
-    /* SystemInitialize for Outport: '<Root>/Duty' */
-    rtY.Duty = rtDW.Merge1_e;
-
-    /* SystemInitialize for Outport: '<Root>/Gate' */
-    for (i = 0; i < 6; i++) {
-      rtY.Gate[i] = rtDW.Merge_gx[i];
-    }
-
-    /* End of SystemInitialize for Outport: '<Root>/Gate' */
-
-    /* SystemInitialize for Outport: '<Root>/HFI_Theta' */
-    rtY.HFI_Theta = rtDW.Merge2_j;
-
-    /* SystemInitialize for Outport: '<Root>/FOC_Theta' */
-    rtY.FOC_Theta = rtDW.Merge1;
-
-    /* SystemInitialize for Outport: '<Root>/Force_Theta' */
-    rtY.Force_Theta = rtDW.Merge_g;
-
-    /* SystemInitialize for Outport: '<Root>/Ubeta_Ealpha' incorporates:
-     *  Inport: '<S10>/Ubeta'
-     *  S-Function (SMO_Function): '<S138>/S-Function Builder'
-     */
-    rtY.Ubeta_Ealpha[0] = rtDW.SFunctionBuilder_o4;
-    rtY.Ubeta_Ealpha[1] = rtDW.Ubeta;
-
-    /* SystemInitialize for Outport: '<Root>/Speed_Mes' */
-    rtY.Speed_Mes = rtDW.Merge;
-
-    /* SystemInitialize for Outport: '<Root>/SMO_Angle' */
-    rtY.SMO_Angle = rtDW.Merge1_a;
-
-    /* SystemInitialize for Outport: '<Root>/Hall_Angle' */
-    rtY.Hall_Angle = rtDW.Merge1_c;
-  }
+  /* SystemInitialize for Outport: '<Root>/Tc' */
+  rtY.Tc = rtDW.Merge2_d;
 }
 
 /*

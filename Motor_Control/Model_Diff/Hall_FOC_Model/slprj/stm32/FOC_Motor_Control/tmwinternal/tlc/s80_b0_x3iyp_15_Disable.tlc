@@ -1,0 +1,57 @@
+%implements s80_b0_x3iyp_15_Disable "C"
+
+%function Disable(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[20], "Disable",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_D_Current_PI_Disable",20,0)
+%<SLibCG_AccessArg(15 ,2, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[3fa1a*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_D_Current_PI_Disable", ["%<_modelSS>"], 20, 0, 14, 1, 14, 76),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[30], "Disable",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Q_Current_PI_Disable",30,0)
+%<SLibCG_AccessArg(15 ,2, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[3fa1b*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Q_Current_PI_Disable", ["%<_modelSS>"], 30, 0, 14, 1, 14, 76),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[26], "Disable",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Har_Compensation_Disable",26,0)
+%<SLibCG_AccessArg(15 ,2, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[3fa1c*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Har_Compensation_Disable", ["%<_modelSS>"], 26, 0, 14, 1, 14, 76),"/*@]*/")>\
+
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[15].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Disable", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))
+%<SLibCG_AccessArg(15, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(15, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Disable", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(15, 2, 0)>
+%endif
+%endfunction
+%function DisableFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_FOC_Disable(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(15, 2, fcnProtoType)>
+%endfunction

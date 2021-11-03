@@ -1,0 +1,83 @@
+%implements s80_b0_x3iyp_5_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real32_T Merge_a;
+real32_T rtb_Add_jn;
+real32_T rtb_Switch_h;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+/*@>23215*/rtb_Switch_h/*@>ee27*/ = /*@>231e8*/Id_ref/*@>ee24*/ - /*@>231ea*/Id_measured;
+/*@>be60*/if ((/*@>240ed*/FOC_Motor_ControlrtB./*@>245be*/Merge1_a/*@>be5c*/ != /*@>231ee*/0)/*@>be5f*/ || (/*@>2423b*/FOC_Motor_ControlrtDW./*@>245ca*/DiscreteTimeIntegrator_PrevResetState_pb/*@>2325c*/ != /*@>23259*/0)) {
+    /*@>24241*/FOC_Motor_ControlrtDW./*@>245cd*/DiscreteTimeIntegrator_DSTATE_a/*@>be63*/ = /*@>23241*/0.0F;
+}
+/*@>240f3*/FOC_Motor_ControlrtB./*@>245c1*/DiscreteTimeIntegrator_ap/*@>be65*/ = /*@>24247*/FOC_Motor_ControlrtDW./*@>245d0*/DiscreteTimeIntegrator_DSTATE_a;
+/*@>23217*/rtb_Add_jn/*@>ee2c*/ = %<SLibCG_DumpSSCode("/*@[244fe*/",(SLibCG_SE(SLibCGIR_CSCP(287, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>23256*/ * /*@>2322b*/rtb_Switch_h/*@>ee29*/ + /*@>240f9*/FOC_Motor_ControlrtB./*@>245c4*/DiscreteTimeIntegrator_ap;
+/*@>be6d*/if (%<SLibCG_DumpSSCode("/*@[244c1*/",(SLibCGIR_CSCP(294, 0, 1, "", -1, "", 0)),"/*@]*/")>) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[17], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Over_M",17,0)
+%<SLibCG_AccessArg(5 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Over_M",17,1)
+%<SLibCG_AccessArg(5 ,0, 1)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[244a3*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Over_M", ["%<_modelSS>", "FOC_Motor_Controlrtrtu_Bus_Voltage", "&/*@>2463a*/Merge_a", "&/*@>24645*/Vd_voltage"], 17, 0, 6, 1, 6, 76),"/*@]*/")>\
+
+%endif
+} else {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[18], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Normal",18,0)
+%<SLibCG_AccessArg(5 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Normal",18,1)
+%<SLibCG_AccessArg(5 ,0, 1)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[244a2*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Normal", ["%<_modelSS>", "FOC_Motor_Controlrtrtu_Bus_Voltage", "&/*@>24682*/Merge_a", "&/*@>2468d*/Vd_voltage"], 18, 0, 6, 1, 6, 76),"/*@]*/")>\
+
+%endif
+}
+/*@>23646*/if (/*@>2322d*/rtb_Add_jn/*@>224cf*/ > /*@>2322f*/Merge_a) {
+    /*@>2364a*/Vd_voltage/*@>23649*/ = /*@>23200*/Merge_a;
+} else {
+    /*@>2364b*/if (!/*@<23b40*/(/*@>2323d*/rtb_Add_jn/*@>2252c*/ < /*@>2323f*/Vd_voltage)) {
+        /*@>23202*/Vd_voltage/*@>beb4*/ = /*@>23233*/rtb_Add_jn;
+    }
+}
+/*@>230af*/if (!/*@<23b3f*//*@>2424d*/FOC_Motor_ControlrtDW./*@>245d3*/UnitDelay3_DSTATE_k) {
+    /*@>23208*/rtb_Switch_h/*@>bec7*/ = /*@>23242*/0.0F;
+}
+/*@>24253*/FOC_Motor_ControlrtDW./*@>245d6*/DiscreteTimeIntegrator_DSTATE_a/*@>24559*/ += %<SLibCG_DumpSSCode("/*@[244df*/",(SLibCG_SE(SLibCGIR_CSCP(286, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>23252*/ * /*@>23237*/rtb_Switch_h/*@>2324e*/ * /*@>23243*/0.0001F;
+/*@>2425f*/FOC_Motor_ControlrtDW./*@>245d9*/DiscreteTimeIntegrator_PrevResetState_pb/*@>bf06*/ = (int8_T)(/*@>240ff*/FOC_Motor_ControlrtB./*@>245c7*/Merge1_a/*@>bf04*/ > /*@>23210*/0);
+/*@>24265*/FOC_Motor_ControlrtDW./*@>245dc*/UnitDelay3_DSTATE_k/*@>bf30*/ = (/*@>23239*/rtb_Add_jn/*@>2250d*/ == /*@>2323b*/Vd_voltage);
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[5].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(5, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(5, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(5, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_D_Current_PI(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 0, fcnProtoType)>
+%endfunction

@@ -148,7 +148,7 @@ void ADC_IRQHandler(void)
 	//HAL_ADCEx_InjectedStop_IT(&hadc1);
 	// HAL_NVIC_DisableIRQ(ADC_IRQn);
 	//HAL_ADCEx_InjectedStart(&hadc1);
-		rtU.Timer_Cnt=__HAL_TIM_GET_COUNTER(&htim5);
+		rtU.Timer_counter=__HAL_TIM_GET_COUNTER(&htim5);
                
 	 ADC_IRQ();
 	  
@@ -164,17 +164,19 @@ void ADC_IRQHandler(void)
 	W_voltage=(float)ADC_Value[5]*0.017947f;
 //	
 
-	rtU.Speed_target = CL_Param.Target_RPM;
+	rtU.Speed_target = Speed_In;
 	rtU.Phase_CurrentABC[0] = Ia_A;
 	rtU.Phase_CurrentABC[1] = Ib_A;
 	rtU.Phase_CurrentABC[2] = Ic_A;
+	rtU.Bus_Voltage=Bus_volt_V;//24
+
 	
-	 rtU.Angle_Theta_e = rtY.Hall_Angle;
+	 //rtU.Angle_Theta =0;
 	 
 	
 	if(EnDisable_flag==1)
 	{
-	
+	rtU.Start_Stop=1;
 	Motor_Control_step();
 	}
 		
@@ -183,7 +185,7 @@ Sampling_cnt++;
 	{
 		UploadData();
 		Sampling_cnt=0;
-	Ia_arr[arr_index]=rtY.Hall_Angle;
+	Ia_arr[arr_index]=rtDW.Merge1_i;
 	arr_index++;
 	if(arr_index>=1999)
 	{
@@ -191,17 +193,17 @@ Sampling_cnt++;
 	}
 }
 	
-//  rtY.Ta=0;
-//	rtY.Tb=0;
-//	rtY.Tc=0;
+////  rtY.Ta=0;
+////	rtY.Tb=0;
+////	rtY.Tc=0;
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1,(uint16_t) rtY.Ta);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_2,(uint16_t) rtY.Tb);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3,(uint16_t) rtY.Tc);
 	//DAC
 	//__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,(uint16_t)(rtY.Ubeta_Ealpha[0]*525));
 	//__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_2,(uint16_t)(rtY.Ubeta_Ealpha[1]*525));
-	__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,(uint16_t)(rtY.Hall_Angle*334));
-	__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_2,(uint16_t)(rtY.Flux_Angle*334));
+	__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_1,(uint16_t)(rtY.Ta*334));
+	__HAL_TIM_SET_COMPARE(&htim3,TIM_CHANNEL_2,(uint16_t)(rtY.Tb*334));
  // MotorControl_step();
 
   /* USER CODE END ADC_IRQn 0 */
@@ -261,10 +263,10 @@ void TIM2_IRQHandler(void)
 	Hall_Arr[Hall_InterruptCnt]=Hall_Sector;
   Hall_InterruptCnt++;
 	
-	rtU.Hall_ABC[0]=Hall_a;
-	rtU.Hall_ABC[1]=Hall_b;
-	rtU.Hall_ABC[2]=Hall_c;
-	rtU.Timer_Cnt=__HAL_TIM_GET_COUNTER(&htim5);
+	rtU.Hall[0]=Hall_a;
+	rtU.Hall[1]=Hall_b;
+	rtU.Hall[2]=Hall_c;
+	rtU.Timer_counter=__HAL_TIM_GET_COUNTER(&htim5);
 	ACC_OMG();
 	
 	if(Hall_InterruptCnt>=6)
@@ -425,9 +427,9 @@ void UploadData(void)
 		time_count++;
 		temp[0] = *(int16_T*)"AA";
 		temp[1] =(int16_T)(Bus_volt_V*100);
-		temp[2] =(int16_T)(rtY.Hall_Angle*1000);
-		temp[3] =(int16_T)(rtY.Flux_Angle*1000);
-		temp[4] =(int16_T)(rtY.Flux_Speed*10);
+		temp[2] =(int16_T)(rtY.Speed_Measured*1000);
+		temp[3] =(int16_T)(rtY.Ta*1000);
+		temp[4] =(int16_T)(rtY.Tb*10);
 		temp[5] =(int16_T)(Ia_A*1000);
 	
 		__HAL_UNLOCK( huart2.hdmatx);
@@ -438,9 +440,9 @@ void UploadData(void)
 	else if( time_count == 999)
 	{
 		temp[0] = (int16_T)(Bus_volt_V*100);
-		temp[1] = (int16_T)(rtY.Hall_Angle*1000);
-		temp[2] = (int16_T)(rtY.Flux_Angle*1000);
-		temp[3] = (int16_T)(rtY.Flux_Speed*10);
+		temp[1] = (int16_T)(rtY.Speed_Measured*1000);
+		temp[2] = (int16_T)(rtY.Ta*1000);
+		temp[3] = (int16_T)(rtY.Tb*10);
 		temp[4] = (int16_T)(Ia_A*1000);
 		
 		temp[5] = *(int16_T*)"BB";
@@ -454,9 +456,9 @@ void UploadData(void)
 	{
 		time_count++;
 		temp[0] = (int16_T)(Bus_volt_V*100);
-		temp[1] = (int16_T)(rtY.Hall_Angle*1000);
-		temp[2] = (int16_T)(rtY.Flux_Angle*1000);
-		temp[3] = (int16_T)(rtY.Flux_Speed*10);
+		temp[1] = (int16_T)(rtY.Speed_Measured*1000);
+		temp[2] = (int16_T)(rtY.Ta*1000);
+		temp[3] = (int16_T)(rtY.Tb*10);
 		temp[4] = (int16_T)(Ia_A*1000);
 		
 		__HAL_UNLOCK( huart2.hdmatx);

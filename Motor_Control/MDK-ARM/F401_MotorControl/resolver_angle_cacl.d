@@ -9,11 +9,8 @@ f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\rt_nonfinite.h
 f401_motorcontrol\resolver_angle_cacl.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\Motor_Control.h
 f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\Angle_Speed_100us.h
-f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\SpeedAndAngle.h
-f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h
-f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h
+f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.h
 f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\Control_Command_2ms.h
 f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\FOC_Control_100us.h
-f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\HF_Observer.h
-f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\Motor_State_10ms.h
+f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\SYM_State_10ms.h
 f401_motorcontrol\resolver_angle_cacl.o: ..\Motor_Control_ert_rtw\Motor_Control_private.h

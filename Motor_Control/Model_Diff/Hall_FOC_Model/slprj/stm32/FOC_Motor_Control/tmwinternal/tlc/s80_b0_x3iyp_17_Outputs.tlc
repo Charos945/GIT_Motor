@@ -1,0 +1,55 @@
+%implements s80_b0_x3iyp_17_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real32_T rtb_Add_i;
+real32_T tmp;
+%closefile localVarDecl
+/*@>42a1a*/FOC_Motor_ControlrtB./*@>42e9f*/Merge_c/*@>11874*/ = */*@<42e31*/FOC_Motor_Controlrtrtu_Speed_target/*@>11871*/ - */*@<42e32*/FOC_Motor_Controlrtrty_Speed_Measured;
+/*@>42131*/if (/*@>42b92*/FOC_Motor_ControlrtDW./*@>42ec0*/UnitDelay3_DSTATE_m) {
+    /*@>42135*/tmp/*@>42134*/ = /*@>42a20*/FOC_Motor_ControlrtB./*@>42ea2*/Merge_c;
+} else {
+    /*@>41b54*/tmp/*@>419d7*/ = /*@>41b4d*/0.0F;
+}
+/*@>cf0f*/if ((/*@>42a26*/FOC_Motor_ControlrtB./*@>42ea5*/Merge1_a/*@>cf0b*/ != /*@>41b0f*/0)/*@>cf0e*/ || (/*@>42b98*/FOC_Motor_ControlrtDW./*@>42ec3*/DiscreteTimeIntegrator_PrevResetState_h/*@>41b7f*/ != /*@>41b7c*/0)) {
+    /*@>42b9e*/FOC_Motor_ControlrtDW./*@>42ec6*/DiscreteTimeIntegrator_DSTATE_g/*@>cf12*/ = /*@>41b4e*/0.0F;
+}
+/*@>42a2c*/FOC_Motor_ControlrtB./*@>42ea8*/DiscreteTimeIntegrator_f/*@>cf14*/ = /*@>42ba4*/FOC_Motor_ControlrtDW./*@>42ec9*/DiscreteTimeIntegrator_DSTATE_g;
+/*@>41b3a*/rtb_Add_i/*@>11879*/ = %<SLibCG_DumpSSCode("/*@[42d6d*/",(SLibCG_SE(SLibCGIR_CSCP(291, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>41b79*/ * /*@>42a32*/FOC_Motor_ControlrtB./*@>42eab*/Merge_c/*@>11876*/ + /*@>42a38*/FOC_Motor_ControlrtB./*@>42eae*/DiscreteTimeIntegrator_f;
+/*@>42136*/if (/*@>41f74*/rtb_Add_i/*@>41d6b*/ > %<SLibCG_DumpSSCode("/*@[42d8c*/",(SLibCG_SE(SLibCGIR_CSCP(292, 0, 1, "", -1, "", 0))),"/*@]*/")>) {
+    /*@>42a3e*/FOC_Motor_ControlrtB./*@>42eb1*/Merge_c/*@>42139*/ = %<SLibCG_DumpSSCode("/*@[42dab*/",(SLibCG_SE(SLibCGIR_CSCP(292, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+} else /*@>4213b*/if (/*@>41f7a*/rtb_Add_i/*@>41d68*/ < %<SLibCG_DumpSSCode("/*@[42dca*/",(SLibCG_SE(SLibCGIR_CSCP(293, 0, 1, "", -1, "", 0))),"/*@]*/")>) {
+    /*@>42a4a*/FOC_Motor_ControlrtB./*@>42eb7*/Merge_c/*@>4213e*/ = %<SLibCG_DumpSSCode("/*@[42de9*/",(SLibCG_SE(SLibCGIR_CSCP(293, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+} else {
+    /*@>42a44*/FOC_Motor_ControlrtB./*@>42eb4*/Merge_c/*@>41d72*/ = /*@>41f80*/rtb_Add_i;
+}
+/*@>42baa*/FOC_Motor_ControlrtDW./*@>42ecc*/UnitDelay3_DSTATE_m/*@>cfe2*/ = (/*@>41b49*/rtb_Add_i/*@>41157*/ == /*@>42a50*/FOC_Motor_ControlrtB./*@>42eba*/Merge_c);
+/*@>42bb0*/FOC_Motor_ControlrtDW./*@>42ecf*/DiscreteTimeIntegrator_DSTATE_g/*@>42e30*/ += %<SLibCG_DumpSSCode("/*@[42d4e*/",(SLibCG_SE(SLibCGIR_CSCP(290, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>41fbb*/ * /*@>41fbf*/tmp/*@>41b75*/ * /*@>41b4f*/0.002F;
+/*@>42bbc*/FOC_Motor_ControlrtDW./*@>42ed2*/DiscreteTimeIntegrator_PrevResetState_h/*@>cf64*/ = (int8_T)(/*@>42a56*/FOC_Motor_ControlrtB./*@>42ebd*/Merge1_a/*@>cf62*/ > /*@>41b2f*/0);
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[17].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(17, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(17, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(17, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Speed_PI(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(17, 0, fcnProtoType)>
+%endfunction

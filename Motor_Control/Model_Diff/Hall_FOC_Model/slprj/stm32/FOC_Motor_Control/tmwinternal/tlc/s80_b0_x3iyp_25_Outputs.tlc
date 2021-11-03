@@ -1,0 +1,45 @@
+%implements s80_b0_x3iyp_25_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[64], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Speed_cacl",64,0)
+%<SLibCG_AccessArg(25 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Speed_cacl",64,1)
+%<SLibCG_AccessArg(25 ,0, 1)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[50713*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Speed_cacl", ["%<_modelSS>", "FOC_Motor_Controlrtrtu_Angle_Theta"], 64, 0, 6, 1, 6, 76),"/*@]*/")>\
+
+%endif
+*FOC_Motor_Controlrtrty_Speed_Measured/*@>d9a1*/ = /*@>50699*/FOC_Motor_ControlrtDW./*@>5074e*/UnitDelay_DSTATE_f;
+/*@>50563*/FOC_Motor_ControlrtB./*@>5074b*/Merge1/*@>d9a4*/ = */*@<50737*/FOC_Motor_Controlrtrtu_Angle_Theta;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[25].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(25, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(25, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(25, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Speed_Resolver(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(25, 0, fcnProtoType)>
+%endfunction

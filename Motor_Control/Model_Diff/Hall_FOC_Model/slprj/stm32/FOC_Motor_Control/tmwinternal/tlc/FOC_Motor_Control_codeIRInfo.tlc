@@ -1,0 +1,54 @@
+%function FcnLoadCodeIRInfo() Output 
+codeIRInfoStruct = load('tmwinternal\tlc\codeIRInfo.mat');
+codeInfo = codeIRInfoStruct.codeInfo;
+%endfunction
+
+%function FcnGetIsInheritedSampleTime() void
+%assign tmpIdx = 0
+%return tmpIdx 
+%endfunction
+
+%function FcnGetUnsetEIIdxFromIRInfo() void
+%assign tmpIdx = []
+%return tmpIdx 
+%endfunction
+
+%function FcnGetRootInportsMapFromIRInfo() void
+%assign tmpIdx = Matrix(8,2)[[0, 0]; [1, 1]; [2, 2]; [3, 3]; ...
+[4, 4]; [5, 5]; [6, 6]; [7, 7]; ]
+%return tmpIdx 
+%endfunction
+
+%function FcnGetUnsetEOIdxFromIRInfo() void
+%assign tmpIdx = []
+%return tmpIdx 
+%endfunction
+
+%function FcnGetUnsetParamIdxFromIRInfo() void
+%assign tmpIdx = Matrix(42,2)[[257, 4]; [258, 5]; [259, 6]; [260, 7]; ...
+[261, 8]; [262, 9]; [263, 10]; [264, 11]; [265, 12]; ...
+[266, 13]; [267, 14]; [268, 15]; [269, 16]; [270, 17]; ...
+[271, 18]; [272, 19]; [273, 20]; [274, 21]; [275, 22]; ...
+[276, 23]; [277, 24]; [278, 25]; [279, 26]; [280, 27]; ...
+[281, 28]; [282, 29]; [283, 30]; [284, 31]; [285, 32]; ...
+[286, 33]; [287, 34]; [288, 35]; [289, 36]; [290, 37]; ...
+[291, 38]; [292, 39]; [293, 40]; [294, 41]; [295, 42]; ...
+[296, 43]; [297, 44]; [298, 45]; ]
+%return tmpIdx 
+%endfunction
+
+%function FcnGetArSharedParamIdxFromIRInfo() void
+%assign tmpIdx = []
+%return tmpIdx 
+%endfunction
+
+%function FcnGetInstanceSpecificParamIdxFromIRInfo() void
+%assign tmpIdx = []
+%return tmpIdx 
+%endfunction
+
+%function FcnGetUnsetDSMIdxFromIRInfo() void
+%assign tmpIdx = []
+%return tmpIdx 
+%endfunction
+

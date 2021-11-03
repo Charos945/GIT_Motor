@@ -1,0 +1,33 @@
+%implements s80_b0_x3iyp_6_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/*@>c096*/if (/*@>24dca*/FOC_Motor_ControlrtB./*@>24f9d*/Constant1/*@>c095*/ > /*@>24b20*/0.0F) {
+    /*@>24dd0*/FOC_Motor_ControlrtB./*@>24fa0*/Subtract3/*@>ef50*/ = (/*@>24b34*/0.004F/*@>24b4e*/ * /*@>24b2f*/Iq_measured/*@>24b4a*/ * /*@>24b2d*/Id_measured/*@>248c5*/ + /*@>24b33*/0.4F/*@>24b46*/ * /*@>24dd6*/FOC_Motor_ControlrtB./*@>24fa3*/Add3)/*@>ef4d*/ + /*@>24b35*/0.0260812F/*@>24b52*/ * /*@>24b25*/Iq_measured;
+    /*@>24ddc*/FOC_Motor_ControlrtB./*@>24fa6*/Subtract1/*@>ef55*/ = /*@>24b36*/0.4F/*@>24b3a*/ * /*@>24b27*/Id_measured/*@>ef52*/ - /*@>24b37*/0.0042F/*@>24b42*/ * /*@>24b31*/Iq_measured/*@>24b3e*/ * /*@>24de2*/FOC_Motor_ControlrtB./*@>24fa9*/Add3;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[6].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(6, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(6, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(6, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_FeedForward(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 0, fcnProtoType)>
+%endfunction

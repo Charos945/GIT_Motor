@@ -1,0 +1,41 @@
+%implements s80_b0_x3iyp_21_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+/*@>4b50b*/FOC_Motor_ControlrtDW./*@>4b804*/If1_ActiveSubsystem/*@>dc76*/ = /*@>4b7f7*/-1;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[45], "SystemInitialize",2)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_Init",45,0)
+%<SLibCG_AccessArg(21 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4b6a1*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Control_Command_2ms_Init", ["%<_modelSS>"], 45, 0, 4, 2, 4, 76),"/*@]*/")>\
+
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[21].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("SystemInitialize", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))
+%<SLibCG_AccessArg(21, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(21, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "SystemInitialize", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(21, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Control_Command_2ms_f_Init(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(21, 0, fcnProtoType)>
+%endfunction

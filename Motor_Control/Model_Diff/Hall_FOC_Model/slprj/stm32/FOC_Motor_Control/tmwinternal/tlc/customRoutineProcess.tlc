@@ -1,0 +1,551 @@
+%%
+%% CUSTOM_ROUTINE_PROCESS generates required files beyond the
+%% default RTW generated files.
+%%
+%% Create MAIN (harness) for target applications: PIL, External mode and Normal mode.
+%% Please note that these code fragments are going to be merged by the STM32CubeMX tool,
+%% which finally provides the entire application that incorporates the elements
+%% generated in C corresponding to the Simulink model.
+
+%% Synchronized with following MW references:
+%% c:\Program Files\MATLAB\R2019b\rtw\c\tlc\mw\bareboard_mrmain.tlc
+%% c:\Program Files\MATLAB\R2019b\rtw\c\tlc\mw\ertextmode.tlc
+
+%selectfile NULL_FILE
+%<LibSetCodeTemplateComplianceLevel(1)>
+
+%assign CodeFormat = "Embedded-C"
+
+%% The model name being active
+%assign modelName = LibGetModelName()
+
+%% Get the simulation type.
+%assign customizationMode = FEVAL("getpref","STM32","mainCustomizationMode")
+
+%if (ISEQUAL(customizationMode, 0))
+    %assign customizationModeString = "SKIPPING"
+
+%elseif (ISEQUAL(customizationMode, 1))
+    %assign customizationModeString = "RTW"
+
+%elseif (ISEQUAL(customizationMode, 2))
+    %assign customizationModeString = "PIL"
+
+%elseif (ISEQUAL(customizationMode, 3))
+    %assign customizationModeString = "EXT"
+%else
+    %error Customization of main() is not well defined.
+%endif
+
+%% Get Timebase Source of SYS
+%assign SYS_Timebase_Source = FEVAL("updatePrefs","get","stm32_SYS_Timebase_Source")
+
+%% Use SysTick as stepper with 2 possible cases:
+%% - Timesource base is SysTick and fundamental time step is 1 ms, there is no bad side effect
+%% - Timesource base is TIMX so SysTick can be used freely
+%if ((customizationMode == 1) || (customizationMode == 3))
+    %assign fixedStep = FEVAL("getFixedStep","%<modelName>")
+    %assign isNum = FEVAL("isnumeric","%<fixedStep>")
+
+    %warning SYS Timebase Source value is '%<SYS_Timebase_Source>'
+    %warning Fundamental sample time is set to: '%<fixedStep>' s by the Simulink model
+
+    %if (ISEQUAL("%<fixedStep>", "auto"))
+        %assign fixedStep = 0.001000000
+        %warning Fundamental sample time was set to 'auto' and is changed to 1 ms
+        %assign stepperByTimebaseSource = TLC_TRUE
+
+    %elseif (ISEQUAL("%<isNum>", "0") && ISEQUAL("%<fixedStep>", "0.001000000"))
+        %warning Fundamental sample time is set to: '1' ms by the Simulink model
+        %assign stepperByTimebaseSource = TLC_TRUE
+
+    %elseif (ISEQUAL("%<isNum>", "0"))
+        %assign fixedStep = FEVAL("evalin","base","%<fixedStep>")
+        %% %warning Fundamental sample time is set to: '%<fixedStep>' s by the Simulink model
+        %assign stepperByTimebaseSource = TLC_FALSE
+    %else
+        %assign stepperByTimebaseSource = TLC_FALSE
+    %endif
+
+    %if (ISEQUAL(SYS_Timebase_Source, "SysTick") && (stepperByTimebaseSource == TLC_FALSE))
+        %error Move to TIMER as Timebase Source for SYS in the STM32CubeMX project.
+    %endif
+%endif
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%warning Customizing the main entry point is requested as '%<customizationModeString>' for '%<modelName>'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%if (ISEQUAL(customizationMode, 0))
+    %% Nothing done, for instance a model being referenced
+
+%elseif (ISEQUAL(customizationMode, 2))
+    %% Customize main.c for PIL (from original \toolbox\rtw\targets\pil\c\pil_main.c)
+    %warning Create main.c for PIL
+    %assign cFile = LibCreateSourceFile("Source", "Custom", "main")
+
+    %openfile main_Buf
+    /* This section of code is going to be merged by the STM32CubeMX tool. */
+    /* USER CODE BEGIN 0 */
+    /* Add include files for PIL processing. */
+    #include <stdio.h>
+    #include "xil_interface_lib.h"
+    #include "rtwtypes.h"
+    #include "STM32SerialRtiostream-ProfilerTimer.h"
+    /* USER CODE END 0 */
+    %closefile main_Buf
+    %<LibSetSourceFileSection(cFile, "Includes", main_Buf)>
+
+    %% Create calling syntax for the model initialization and step routine:
+    %openfile main_Buf
+    /**
+     * @brief  The application entry point.
+     * @retval int
+     */
+    int main(void)
+    {
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN 1 */
+      XIL_INTERFACE_LIB_ERROR_CODE errorCode = XIL_INTERFACE_LIB_SUCCESS;
+      int errorOccurred = 0;
+      /* Avoid warnings about infinite loops */
+      volatile int loop = 1;
+      /* USER CODE END 1 */
+
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN 2 */
+      /* Profiling settings: set reload SysTick timer to max value 0x00FFFFFF */
+      profileTimerInit();
+
+      /* XIL initialization */
+      const int argc = 0;
+      void * argv = (void *) 0;
+      errorCode = xilInit(argc, argv);
+      errorOccurred = (errorCode != XIL_INTERFACE_LIB_SUCCESS);
+      /* USER CODE END 2 */
+
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN WHILE */
+      /* main XIL loop */
+      while(loop && !errorOccurred) {
+        errorCode = xilRun();
+        if (errorCode != XIL_INTERFACE_LIB_SUCCESS) {
+          if (errorCode == XIL_INTERFACE_LIB_TERMINATE) {
+            /* orderly shutdown of rtiostream */
+            errorOccurred = (xilTerminateComms() != XIL_INTERFACE_LIB_SUCCESS);
+          } else {
+            errorOccurred = 1;
+          }
+        }
+      }
+      /* trap error with infinite loop */
+      if (errorOccurred)
+        while (loop) { }
+      /* USER CODE END WHILE */
+
+      /* USER CODE BEGIN 3 */
+      /* USER CODE END 3 */
+      }
+    %closefile main_Buf
+    %<LibSetSourceFileSection(cFile, "Functions", main_Buf)>
+
+
+%elseif (ISEQUAL(customizationMode, 3))
+    %%Create main.c for external mode
+    %assign cFile = LibCreateSourceFile("Source", "Custom", "main")
+    %assign nbOfTasks = LibGetNumSyncPeriodicTasks()
+
+    %warning Create main.c for External Mode Mode with '%<modelName>'
+    %warning Number of sample times is set to: '%<NumRuntimeExportedRates>'
+
+    %% Add corresponding System-Includes to the Includes-Section:
+    %openfile main_Buf
+    /* This section of code is going to be merged by the STM32CubeMX tool. */
+    /* USER CODE BEGIN 0 */
+    #include <stdio.h>
+    #include "%<LibGetMdlPubHdrBaseName()>.h"
+    #include "rtwtypes.h"
+    #include "multiword_types.h"
+    #include "ext_work.h"
+
+    /* Flags for taskOverrun */
+    static boolean_T OverrunFlags[%<nbOfTasks>];
+
+    /* Number of auto reload timer rotation computed */
+    static volatile uint32_t autoReloadTimerLoopVal_S = 1;
+
+    /* Remaining number of auto reload timer rotation to do */
+    volatile uint32_t remainAutoReloadTimerLoopVal_S = 1;
+    /* USER CODE END 0 */
+    %closefile main_Buf
+    %<LibSetSourceFileSection(cFile, "Includes", main_Buf)>
+
+    %% Create calling syntax for the model initialization and step routine:
+    %openfile main_Buf
+    /**
+     * @brief  The application entry point.
+     * @retval int
+     */
+    int main (void)
+    {
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN 1 */
+%if (nbOfTasks > 1)
+      boolean_T eventFlags[%<nbOfTasks>] = {false,};    /* Model has %<nbOfTasks> rates */
+%endif
+    /* USER CODE END 1 */
+
+    /* This section of code is going to be merged by the STM32CubeMX tool. */
+    /* USER CODE BEGIN 2 */
+
+%if ((stepperByTimebaseSource == TLC_TRUE) || ISEQUAL(SYS_Timebase_Source, "TIMx"))
+    /* Use Systick arm timer and interrupt to tick step() functions of the Simulink model. */
+    /* Fundamental sample time is set to: '%<fixedStep>' s */
+    %assign FixedStep = FEVAL("inv",%<fixedStep>)
+    if (SysTick_Config((uint32_t)(SystemCoreClock / %<FixedStep>))){
+      autoReloadTimerLoopVal_S = 1;
+      do {
+        autoReloadTimerLoopVal_S++;
+      } while((uint32_t)(SystemCoreClock/%<FixedStep>)/autoReloadTimerLoopVal_S > SysTick_LOAD_RELOAD_Msk);\
+
+      SysTick_Config((uint32_t)(SystemCoreClock/%<FixedStep>)/autoReloadTimerLoopVal_S);
+    }
+
+    /* Set number of loop to do. */
+    remainAutoReloadTimerLoopVal_S = autoReloadTimerLoopVal_S;
+%endif
+
+    {
+      int i;
+      for (i = 0; i < %<nbOfTasks>; i++) {
+        OverrunFlags[i] = %<GET_TYPE_ID_REPLACEMENT("false")>;
+      }
+    }
+
+    /* initialize external mode */
+    rtParseArgsForExtMode(0, NULL);
+
+    /* Initialize model */
+    %<LibCallModelInitialize()>\
+
+    /* External mode */
+    rtSetTFinalForExtMode(&%<RTMGet("TFinal")>);\
+    rtExtModeCheckInit(%<NumRuntimeExportedRates>);\
+
+    {
+      boolean_T rtmStopReq = %<GET_TYPE_ID_REPLACEMENT("false")>;
+      rtExtModeWaitForStartPkt(%<RTMGet("RTWExtModeInfo")>, ...
+        %<NumRuntimeExportedRates>, ...
+        &rtmStopReq);
+      if (rtmStopReq) {
+        %<RTMSetStopRequested("true")>;
+      }
+    }
+
+    rtERTExtModeStartMsg();
+    /* USER CODE END 2 */
+
+
+    /* This section of code is going to be merged by the STM32CubeMX tool. */
+    /* USER CODE BEGIN WHILE */
+    /* Infinite loop */
+    /* Real time from systickHandler */
+    while(1) {
+      /* Process tasks every solver time */
+      if (remainAutoReloadTimerLoopVal_S == 0) {
+        remainAutoReloadTimerLoopVal_S = autoReloadTimerLoopVal_S;\
+
+        /* Check base rate for overrun */
+        if (OverrunFlags[0]) {
+          %<LibSetRTModelErrorStatus("\"Overrun\"")>;
+        }
+        OverrunFlags[0] = %<GET_TYPE_ID_REPLACEMENT("true")>;
+
+%if (nbOfTasks > 1)
+        /*
+         * For a bare-board target (i.e., no operating system), the rates
+         * that execute this base step are buffered locally to allow for
+         * overlapping preemption.  The generated code includes function
+         * writeCodeInfoFcn() which sets the rates
+         * that need to run this time step.  The return values are 1 and 0
+         * for true and false, respectively.
+         */
+        %<LibCallSetEventForThisBaseStep("eventFlags")>\
+%endif
+
+        /* External mode */
+        {
+          boolean_T rtmStopReq = %<GET_TYPE_ID_REPLACEMENT("false")>;
+          rtExtModeOneStep(%<RTMGet("RTWExtModeInfo")>, ...
+            %<NumRuntimeExportedRates>, ...
+            &rtmStopReq);
+          if (rtmStopReq) {
+            %<RTMSetStopRequested("true")>;
+          }
+        }
+
+        /* Step the model for base rate */
+        %<LibCallModelStep(0)>\
+
+        /* Indicate task for base rate complete */
+        OverrunFlags[0] = %<GET_TYPE_ID_REPLACEMENT("false")>;
+
+%if (nbOfTasks > 1)
+        /* Step the model for any subrate */
+        {
+          int i;
+          for (i = 1; i < %<nbOfTasks>; i++) {
+            if (eventFlags[i]) {
+              if (OverrunFlags[i]) {
+                %<LibSetRTModelErrorStatus("\"Overrun\"")>;
+              }
+
+              OverrunFlags[i] = %<GET_TYPE_ID_REPLACEMENT("true")>;
+
+              /* Step the model for sub-rate "i" */
+              %<LibCallModelStep("i")>\
+
+              /* Indicate task complete for sample time "i" */
+              OverrunFlags[i] = %<GET_TYPE_ID_REPLACEMENT("false")>;
+            }
+          }
+        }
+%endif
+      }
+    }
+
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+    /* USER CODE END 3 */
+    }
+
+%% %if ((stepperByTimebaseSource == TLC_TRUE) && ISEQUAL(SYS_Timebase_Source, "TIMx"))
+%%     /* This section of code is going to be merged by the STM32CubeMX tool. */
+%%     /* USER CODE BEGIN Callback 1 */
+%%     /* Use Systick arm timer and interrupt to tick step() functions of the Simulink model. */
+%%     {
+%%        extern volatile uint32_t remainAutoReloadTimerLoopVal_S;
+%%        /* Manage number of loop before interrupt has to be processed. */
+%%        if (remainAutoReloadTimerLoopVal_S) {
+%%          remainAutoReloadTimerLoopVal_S--;
+%%        }
+%%     }
+%%     /* USER CODE END Callback 1 */
+%% %endif
+
+    %closefile main_Buf
+    %<LibSetSourceFileSection(cFile, "Functions", main_Buf)>
+
+%if ((stepperByTimebaseSource == TLC_TRUE) || ISEQUAL(SYS_Timebase_Source, "TIMx"))
+    %assign cFileIT = LibCreateSourceFile("Source", "Custom", "stm32xxxx_it")
+    %openfile it_Buf
+    /**
+     * @brief This function handles System tick timer.
+     */
+    void SysTick_Handler(void)
+    {
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN SysTick_IRQn 0 */
+      {
+        extern volatile uint32_t remainAutoReloadTimerLoopVal_S;
+        /* Manage number of loop before interrupt has to be processed. */
+        if (remainAutoReloadTimerLoopVal_S) {
+          remainAutoReloadTimerLoopVal_S--;
+        }
+      }
+      /* USER CODE END SysTick_IRQn 0 */
+
+      /* USER CODE BEGIN SysTick_IRQn 1 */
+
+      /* USER CODE END SysTick_IRQn 1 */
+    }
+    %closefile it_Buf
+    %<LibSetSourceFileSection(cFileIT, "Functions", it_Buf)>
+%endif
+
+
+
+%else
+    %%Create main.c for real time
+    %assign cFile = LibCreateSourceFile("Source", "Custom", "main")
+    %assign nbOfTasks = LibGetNumSyncPeriodicTasks()
+
+    %warning Create main.c for Real Time Mode with '%<modelName>'
+    %warning Number of sample times is set to: '%<NumRuntimeExportedRates>'
+
+    %% Add corresponding System-Includes to the Includes-Section:
+    %openfile main_Buf
+    /* This section of code is going to be merged by the STM32CubeMX tool. */
+    /* USER CODE BEGIN 0 */
+    #include <stdio.h>
+    #include "%<LibGetMdlPubHdrBaseName()>.h"
+    #include "rtwtypes.h"
+
+    /* Flags for taskOverrun */
+    static boolean_T OverrunFlags[%<nbOfTasks>] = {false,};
+
+    /* Number of auto reload timer rotation computed */
+    static volatile uint32_t autoReloadTimerLoopVal_S = 1;
+
+    /* Remaining number of auto reload timer rotation to do */
+    volatile uint32_t remainAutoReloadTimerLoopVal_S = 1;
+    /* USER CODE END 0 */
+    %closefile main_Buf
+    %<LibSetSourceFileSection(cFile, "Includes", main_Buf)>
+
+    %% Create calling syntax for the model initialization and step routine:
+    %openfile main_Buf
+    /**
+     * @brief  The application entry point.
+     * @retval int
+     */
+    int main (void)
+    {
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN 1 */
+%if (nbOfTasks > 1)
+      boolean_T eventFlags[%<nbOfTasks>];
+%endif
+      /* USER CODE END 1 */
+
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN 2 */
+%if ((stepperByTimebaseSource == TLC_TRUE) || ISEQUAL(SYS_Timebase_Source, "TIMx"))
+      /* Use Systick arm timer and interrupt to tick step() functions of the Simulink model. */
+      /* Fundamental sample time is set to: '%<fixedStep>' s */
+      %assign FixedStep = FEVAL("inv",%<fixedStep>)
+
+      if (SysTick_Config((uint32_t)(SystemCoreClock/%<FixedStep>))) {
+        autoReloadTimerLoopVal_S = 1;
+        do {
+          autoReloadTimerLoopVal_S++;
+        } while((uint32_t)(SystemCoreClock/%<FixedStep>)/autoReloadTimerLoopVal_S > SysTick_LOAD_RELOAD_Msk);\
+
+        SysTick_Config((uint32_t)(SystemCoreClock/%<FixedStep>)/autoReloadTimerLoopVal_S);
+      }
+      /* Set number of loop to do. */
+      remainAutoReloadTimerLoopVal_S = autoReloadTimerLoopVal_S;
+%endif
+
+      {
+        int i;
+        for (i = 0; i < %<nbOfTasks>; i++) {
+          OverrunFlags[i] = %<GET_TYPE_ID_REPLACEMENT("false")>;
+        }
+      }
+      /* Initialize model */
+      %<LibCallModelInitialize()>\
+      /* USER CODE END 2 */
+
+
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN WHILE */
+      /* Infinite loop */
+      /* Real time from systickHandler */
+      while(1) {
+        /*Process tasks every solver time*/
+        if (remainAutoReloadTimerLoopVal_S == 0) {
+          remainAutoReloadTimerLoopVal_S = autoReloadTimerLoopVal_S;\
+
+          /* Check base rate for overrun */
+          if (OverrunFlags[0]) {
+            %<LibSetRTModelErrorStatus("\"Overrun\"")>;
+          }
+          OverrunFlags[0] = %<GET_TYPE_ID_REPLACEMENT("true")>;
+
+%if (nbOfTasks > 1)
+          /*
+           * For a bare-board target (i.e., no operating system), the rates
+           * that execute this base step are buffered locally to allow for
+           * overlapping preemption.  The generated code includes function
+           * writeCodeInfoFcn() which sets the rates
+           * that need to run this time step.  The return values are 1 and 0
+           * for true and false, respectively.
+           */
+          %<LibCallSetEventForThisBaseStep("eventFlags")>\
+%endif
+
+          /* Step the model for base rate */
+          %<LibCallModelStep(0)>\
+
+          /* Indicate task for base rate complete */
+          OverrunFlags[0] = %<GET_TYPE_ID_REPLACEMENT("false")>;
+
+%if (nbOfTasks > 1)
+          /* Step the model for any sub-rate */
+          {
+            int i;
+            for (i = 1; i < %<nbOfTasks>; i++) {
+              if (eventFlags[i]) {
+                if (OverrunFlags[i]) {
+                  %<LibSetRTModelErrorStatus("\"Overrun\"")>;
+                }
+
+                OverrunFlags[i] = %<GET_TYPE_ID_REPLACEMENT("true")>;
+                /* Step the model for sub-rate "i" */
+                %<LibCallModelStep("i")>\
+
+                /* Indicate task complete for sample time "i" */
+                OverrunFlags[i] = %<GET_TYPE_ID_REPLACEMENT("false")>;
+              }
+            }
+          }
+    %endif
+        }
+      }
+      /* USER CODE END WHILE */
+
+      /* USER CODE BEGIN 3 */
+      /* USER CODE END 3 */
+    }
+
+%% %if (ISEQUAL(SYS_Timebase_Source, "TIMx") && fixedStep)
+%%     /* This section of code is going to be merged by the STM32CubeMX tool. */
+%%     /* USER CODE BEGIN Callback 1 */
+%%     /* Use Systick arm timer and interrupt to tick step() functions of the Simulink model. */
+%%     {
+%%       extern volatile uint32_t remainAutoReloadTimerLoopVal_S;
+%%       /* Manage number of loop before interrupt has to be processed. */
+%%       if (remainAutoReloadTimerLoopVal_S) {
+%%         remainAutoReloadTimerLoopVal_S--;
+%%       }
+%%     }
+%%     /* USER CODE END Callback 1 */
+%% %endif
+    %closefile main_Buf
+    %<LibSetSourceFileSection(cFile, "Functions", main_Buf)>
+
+%if ((stepperByTimebaseSource == TLC_TRUE) || ISEQUAL(SYS_Timebase_Source, "TIMx"))
+    %assign cFileIT = LibCreateSourceFile("Source", "Custom", "stm32xxxx_it")
+    %openfile it_Buf
+    /**
+     * @brief This function handles System tick timer.
+     */
+    void SysTick_Handler(void)
+    {
+      /* This section of code is going to be merged by the STM32CubeMX tool. */
+      /* USER CODE BEGIN SysTick_IRQn 0 */
+      {
+        extern volatile uint32_t remainAutoReloadTimerLoopVal_S;
+        /* Manage number of loop before interrupt has to be processed. */
+        if (remainAutoReloadTimerLoopVal_S) {
+          remainAutoReloadTimerLoopVal_S--;
+        }
+      }
+      /* USER CODE END SysTick_IRQn 0 */
+
+      /* USER CODE BEGIN SysTick_IRQn 1 */
+
+      /* USER CODE END SysTick_IRQn 1 */
+    }
+    %closefile it_Buf
+    %<LibSetSourceFileSection(cFileIT, "Functions", it_Buf)>
+    %endif
+%endif
+
+%% %warning Customizing the main entry point finished with '%<modelName>'
+%% EOF: customRoutineProcess.tlc

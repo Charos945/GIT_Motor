@@ -1,0 +1,64 @@
+%implements s80_b0_x3iyp_28_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real32_T rtb_DiscreteTimeIntegrator;
+real32_T rtb_Sum;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%if SLibCG_FcnCallArgAccessed(28,1,0,2)
+%<SLibCG_AccessArg(28 ,1, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+/*@>558cc*/FOC_Motor_ControlrtB./*@>55da7*/Speed_RPM/*@>d57b*/ = /*@>55a1a*/FOC_Motor_ControlrtDW./*@>55db6*/UnitDelay4_DSTATE_j;
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[68], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Sine_Cosine_b",68,0)
+%<SLibCG_AccessArg(28 ,1, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[55c66*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Sine_Cosine_b", ["%<_modelSS>"], 68, 0, 6, 1, 6, 76),"/*@]*/")>\
+
+%endif
+/*@>542c4*/rtb_DiscreteTimeIntegrator/*@>1296c*/ = /*@>558d2*/FOC_Motor_ControlrtB./*@>55daa*/Speed_RPM/*@>5437c*/ * /*@>542e0*/0.0F/*@>12969*/ - /*@>542e1*/0.0F/*@>54380*/ * /*@>558d8*/FOC_Motor_ControlrtB./*@>55dad*/Sine;
+/*@>542c6*/rtb_Sum/*@>12971*/ = /*@>542e2*/141.0F/*@>54378*/ * /*@>542d6*/rtb_DiscreteTimeIntegrator/*@>1296e*/ + /*@>55a20*/FOC_Motor_ControlrtDW./*@>55db9*/Integrator_DSTATE;
+/*@>558de*/FOC_Motor_ControlrtB./*@>55db0*/Speed_RPM/*@>d53a*/ = /*@>542e3*/2.38732409F/*@>54374*/ * /*@>5429e*/rtb_Sum;
+*rty_Angle/*@>d548*/ = %<SLibCG_DumpSSCode("/*@[55caf*/",(SLibCGCallSubFcn("rt_modf_snf", ["/*@>55e16*/FOC_Motor_ControlrtDW./*@>55e15*/DiscreteTimeIntegrator_DSTATE", "/*@>55e21*/6.28318548F", "%<_modelSS>"], 28, 1, 0)),"/*@]*/")>;
+*rty_Velocity/*@>d5d0*/ = 0.04F/*@>548b6*/ * /*@>55a2c*/FOC_Motor_ControlrtDW./*@>55dbf*/LPF_states;
+/*@>55a32*/FOC_Motor_ControlrtDW./*@>55dc2*/UnitDelay4_DSTATE_j/*@>d63a*/ = */*@<55d57*/rty_Angle;
+/*@>55a38*/FOC_Motor_ControlrtDW./*@>55dc5*/Integrator_DSTATE/*@>55d4e*/ += /*@>542e6*/10000.0F/*@>5436c*/ * /*@>542dc*/rtb_DiscreteTimeIntegrator/*@>54368*/ * /*@>542e5*/0.0001F;
+/*@>55a44*/FOC_Motor_ControlrtDW./*@>55dc8*/DiscreteTimeIntegrator_DSTATE/*@>55d4f*/ += /*@>542e7*/0.0001F/*@>54364*/ * /*@>542b0*/rtb_Sum;
+/*@>55a50*/FOC_Motor_ControlrtDW./*@>55dcb*/LPF_states/*@>d675*/ = /*@>558e4*/FOC_Motor_ControlrtB./*@>55db3*/Speed_RPM/*@>548bf*/ - -0.96F/*@>548c2*/ * /*@>55a56*/FOC_Motor_ControlrtDW./*@>55dce*/LPF_states;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[28].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(28, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(28, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(28, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Resolver_Angle_cacl(\
+%assign comma = ""
+%<comma>real32_T *rty_Velocity\
+%assign comma = ", "
+%<comma>real32_T *rty_Angle\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(28, 1, fcnProtoType)>
+%endfunction

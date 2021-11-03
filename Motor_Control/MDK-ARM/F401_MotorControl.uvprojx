@@ -538,11 +538,6 @@
               <FilePath>..\Motor_Control_ert_rtw\FOC_Control_100us.c</FilePath>
             </File>
             <File>
-              <FileName>HF_Observer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Motor_Control_ert_rtw\HF_Observer.c</FilePath>
-            </File>
-            <File>
               <FileName>Motor_Control.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Motor_Control_ert_rtw\Motor_Control.c</FilePath>
@@ -551,11 +546,6 @@
               <FileName>Motor_Control_data.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Motor_Control_ert_rtw\Motor_Control_data.c</FilePath>
-            </File>
-            <File>
-              <FileName>Motor_State_10ms.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Motor_Control_ert_rtw\Motor_State_10ms.c</FilePath>
             </File>
             <File>
               <FileName>Resolver_Angle_cacl.c</FileName>
@@ -568,14 +558,9 @@
               <FilePath>..\Motor_Control_ert_rtw\rt_nonfinite.c</FilePath>
             </File>
             <File>
-              <FileName>rt_sys_HF_Observer_37.c</FileName>
+              <FileName>rt_sys_FOC_Control_100us_2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.c</FilePath>
-            </File>
-            <File>
-              <FileName>rt_sys_HF_Observer_38.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.c</FilePath>
+              <FilePath>..\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.c</FilePath>
             </File>
             <File>
               <FileName>rtGetInf.c</FileName>
@@ -588,14 +573,9 @@
               <FilePath>..\Motor_Control_ert_rtw\rtGetNaN.c</FilePath>
             </File>
             <File>
-              <FileName>SMO_Function_wrapper.c</FileName>
+              <FileName>SYM_State_10ms.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Motor_Control_ert_rtw\SMO_Function_wrapper.c</FilePath>
-            </File>
-            <File>
-              <FileName>SpeedAndAngle.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Motor_Control_ert_rtw\SpeedAndAngle.c</FilePath>
+              <FilePath>..\Motor_Control_ert_rtw\SYM_State_10ms.c</FilePath>
             </File>
           </Files>
         </Group>

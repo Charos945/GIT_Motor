@@ -1,0 +1,98 @@
+%implements s80_b0_x3iyp_32_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%<SLibWriteMachineInitialize()>
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[71], "SystemInitialize",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_Speed_100us_Init",71,0)
+%<SLibCG_AccessArg(32 ,0, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_Speed_100us_Init",71,1)
+%<SLibCG_AccessArg(32 ,0, 4)>
+%<SLibCG_TrackOArg(76, 3, 1, 0)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5aa59*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Angle_Speed_100us_Init", ["/*@>5ac1e*/%<::tSimStruct>", "rty_Speed_Measured"], 71, 0, 4, 0, 4, 76),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[51], "SystemInitialize",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_f_Init",51,0)
+%<SLibCG_AccessArg(32 ,0, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5aa5a*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Control_Command_2ms_f_Init", ["/*@>5ac46*/%<::tSimStruct>"], 51, 0, 4, 0, 4, 76),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[42], "SystemInitialize",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us_Init",42,0)
+%<SLibCG_AccessArg(32 ,0, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us_Init",42,1)
+%<SLibCG_AccessArg(32 ,0, 1)>
+%<SLibCG_TrackOArg(76, 0, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us_Init",42,2)
+%<SLibCG_AccessArg(32 ,0, 2)>
+%<SLibCG_TrackOArg(76, 1, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us_Init",42,3)
+%<SLibCG_AccessArg(32 ,0, 3)>
+%<SLibCG_TrackOArg(76, 2, 1, 0)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5aa5b*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_FOC_Control_100us_Init", ["/*@>5ac6a*/%<::tSimStruct>", "rty_Ta", "rty_Tb", "rty_Tc"], 42, 0, 4, 0, 4, 76),"/*@]*/")>\
+
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[32].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("SystemInitialize", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))
+%<SLibCG_AccessArg(32, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(32, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "SystemInitialize", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(32, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Init(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(32, 0, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%assign rtmArgSys = SLibGetModuleFileNameOwnerSystemIdx(32)
+%assign sourceFile = SLibGetFullFileNameForSystemCode("sys_fcn_defn", rtmArgSys)
+%<SLibUpdateLocalSymbolTableForFile(sourceFile, SLibGetFcnDefinitionRTMSymbolName())>\
+%endif
+%if SLibCG_ArgAccessed(32, 0, 1)
+%<comma>real32_T *rty_Ta\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 0, 2)
+%<comma>real32_T *rty_Tb\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 0, 3)
+%<comma>real32_T *rty_Tc\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 0, 4)
+%<comma>real32_T *rty_Speed_Measured\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(32, 0, fcnProtoType)>
+%endfunction

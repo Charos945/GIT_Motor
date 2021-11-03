@@ -1,7 +1,0 @@
--IF:\STM32_Mode_Base\STM32F401_Model_Motor
--IF:\STM32_Mode_Base\STM32F401_Model_Motor\Motor_Control_ert_rtw
--I"D:\Program Files\Polyspace\R2020b\extern\include"
--I"D:\Program Files\Polyspace\R2020b\simulink\include"
--I"D:\Program Files\Polyspace\R2020b\rtw\c\src"
--I"D:\Program Files\Polyspace\R2020b\rtw\c\src\ext_mode\common"
--I"D:\Program Files\Polyspace\R2020b\rtw\c\ert"

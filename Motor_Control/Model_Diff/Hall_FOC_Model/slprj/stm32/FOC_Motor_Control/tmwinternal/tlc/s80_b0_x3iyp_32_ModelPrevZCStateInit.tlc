@@ -1,0 +1,38 @@
+%implements s80_b0_x3iyp_32_ModelPrevZCStateInit "C"
+
+%function ModelPrevZCStateInit(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+FOC_Motor_ControlrtPrevZCX.ACC_OMG_Trig_ZCE[0] = UNINITIALIZED_ZCSIG;
+FOC_Motor_ControlrtPrevZCX.ACC_OMG_Trig_ZCE[1] = UNINITIALIZED_ZCSIG;
+FOC_Motor_ControlrtPrevZCX.ACC_OMG_Trig_ZCE[2] = UNINITIALIZED_ZCSIG;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[32].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("ModelPrevZCStateInit", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "ModelPrevZCStateInit"))
+%<SLibCG_AccessArg(32, 3, 0)>
+%endif
+%if SLibCG_ArgAccessed(32, 3, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "ModelPrevZCStateInit", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "ModelPrevZCStateInit"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(32, 3, 0)>
+%endif
+%endfunction
+%function ModelPrevZCStateInitFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_PrevZCStateInit(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(32, 3, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%assign rtmArgSys = SLibGetModuleFileNameOwnerSystemIdx(32)
+%assign sourceFile = SLibGetFullFileNameForSystemCode("sys_fcn_defn", rtmArgSys)
+%<SLibUpdateLocalSymbolTableForFile(sourceFile, SLibGetFcnDefinitionRTMSymbolName())>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(32, 3, fcnProtoType)>
+%endfunction
