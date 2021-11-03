@@ -1,0 +1,7 @@
+-IF:\GIT_Motor\Motor_Control\Motor_Control\Model_Diff\Hall_FOC_Model
+-IF:\GIT_Motor\Motor_Control\Motor_Control\Model_Diff\Hall_FOC_Model\Motor_Control_ert_rtw
+-I"D:\Program Files\Polyspace\R2020b\extern\include"
+-I"D:\Program Files\Polyspace\R2020b\simulink\include"
+-I"D:\Program Files\Polyspace\R2020b\rtw\c\src"
+-I"D:\Program Files\Polyspace\R2020b\rtw\c\src\ext_mode\common"
+-I"D:\Program Files\Polyspace\R2020b\rtw\c\ert"

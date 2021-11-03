@@ -1,0 +1,83 @@
+%implements s80_b0_x3iyp_21_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int8_T rtPrevAction;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[45], "Output",2)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms",45,0)
+%<SLibCG_AccessArg(21 ,1, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms",45,1)
+%<SLibCG_AccessArg(21 ,1, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms",45,2)
+%<SLibCG_AccessArg(21 ,1, 2)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms",45,3)
+%<SLibCG_AccessArg(21 ,1, 4)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4b71b*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Control_Command_2ms", ["%<_modelSS>", "FOC_Motor_Controlrtrtu_Speed_target", "FOC_Motor_Controlrtrtu_Torque_ref", "FOC_Motor_Controlrtrty_Speed_Measured"], 45, 0, 6, 2, 6, 76),"/*@]*/")>\
+
+%endif
+/*@>4a8ab*/rtPrevAction/*@>db90*/ = /*@>4b511*/FOC_Motor_ControlrtDW./*@>4b87d*/If1_ActiveSubsystem;
+/*@>4b517*/FOC_Motor_ControlrtDW./*@>4b880*/If1_ActiveSubsystem/*@>db98*/ = (int8_T)(%<SLibCG_DumpSSCode("/*@[4b73b*/",(SLibCG_SE(SLibCGIR_CSCP(296, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>4aa42*/ != /*@>4a8d2*/1);
+/*@>dba0*/if ((/*@>4a8b5*/rtPrevAction/*@>db9f*/ != /*@>4b51d*/FOC_Motor_ControlrtDW./*@>4b883*/If1_ActiveSubsystem)/*@>4b78d*/ && (/*@>4a8d6*/rtPrevAction/*@>4a8ec*/ == /*@>4a8e9*/0)) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[48], "Disable",2)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Flux_weak_Disable",48,0)
+%<SLibCG_AccessArg(21 ,1, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4b71c*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Flux_weak_Disable", ["%<_modelSS>"], 48, 0, 14, 2, 6, 76),"/*@]*/")>\
+
+%endif
+}
+/*@>4aa17*/if (/*@>4b523*/FOC_Motor_ControlrtDW./*@>4b886*/If1_ActiveSubsystem/*@>4aa16*/ == /*@>4aa19*/0) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[48], "Output",2)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Flux_weak",48,0)
+%<SLibCG_AccessArg(21 ,1, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Flux_weak",48,1)
+%<SLibCG_AccessArg(21 ,1, 3)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4b71d*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Flux_weak", ["%<_modelSS>", "FOC_Motor_Controlrtrtu_Bus_Voltage"], 48, 0, 6, 2, 6, 76),"/*@]*/")>\
+
+%endif
+} else {
+    /*@>4a8bf*/Id_ref/*@>dbd7*/ = /*@>4a8d5*/0.0F;
+    /*@>4a8c3*/Iq_ref/*@>dbd9*/ = /*@>4b3d5*/FOC_Motor_ControlrtB./*@>4b87a*/Merge_c;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[21].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(21, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(21, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(21, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Control_Command_2ms_k(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(21, 1, fcnProtoType)>
+%endfunction

@@ -1,0 +1,75 @@
+%implements s80_b0_x3iyp_20_Functions "C"
+
+%function rt_powf_snf_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real32_T tmp;
+real32_T tmp_0;
+real32_T y;
+if (rtIsNaNF(u0) || rtIsNaNF(u1)) {
+    y = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("single"))>;
+} else {
+    tmp = fabsf(u0);
+    tmp_0 = fabsf(u1);
+    if (rtIsInfF(u1)) {
+        if (tmp == 1.0F) {
+            y = 1.0F;
+        } else if (tmp > 1.0F) {
+            if (u1 > 0.0F) {
+                y = %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("single"))>;
+            } else {
+                y = 0.0F;
+            }
+        } else if (u1 > 0.0F) {
+            y = 0.0F;
+        } else {
+            y = %<LibGetMathConstant(LibRealNonFinite("inf"), FcnGetDataTypeIdFromName("single"))>;
+        }
+    } else if (tmp_0 == 0.0F) {
+        y = 1.0F;
+    } else if (tmp_0 == 1.0F) {
+        if (u1 > 0.0F) {
+            y = u0;
+        } else {
+            y = 1.0F / u0;
+        }
+    } else if (u1 == 2.0F) {
+        y = u0 * u0;
+    } else if ((u1 == 0.5F) && (u0 >= 0.0F)) {
+        y = sqrtf(u0);
+    } else if ((u0 < 0.0F) && (u1 > floorf(u1))) {
+        y = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("single"))>;
+    } else {
+        y = powf(u0, u1);
+    }
+}
+return y;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[20].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("rt_powf_snf", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "rt_powf_snf"))
+%<SLibCG_AccessArg(20, 0, 2)>
+%endif
+%if SLibCG_ArgAccessed(20, 0, 2)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "rt_powf_snf", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "rt_powf_snf"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(20, 0, 2)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real32_T rt_powf_snf(\
+%assign comma = ""
+%<comma>real32_T u0\
+%assign comma = ", "
+%<comma>real32_T u1\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(20, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

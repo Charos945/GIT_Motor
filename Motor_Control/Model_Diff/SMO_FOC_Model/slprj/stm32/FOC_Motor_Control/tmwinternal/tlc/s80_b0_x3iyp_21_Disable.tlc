@@ -1,0 +1,51 @@
+%implements s80_b0_x3iyp_21_Disable "C"
+
+%function Disable(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[45], "Disable",2)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_Disable",45,0)
+%<SLibCG_AccessArg(21 ,2, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4b789*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Control_Command_2ms_Disable", ["%<_modelSS>"], 45, 0, 14, 2, 14, 76),"/*@]*/")>\
+
+%endif
+/*@>4a7da*/if (/*@>4b529*/FOC_Motor_ControlrtDW./*@>4b94b*/If1_ActiveSubsystem/*@>4a8f5*/ == /*@>4a8f2*/0) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[48], "Disable",2)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Flux_weak_Disable",48,0)
+%<SLibCG_AccessArg(21 ,2, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[4b78a*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Flux_weak_Disable", ["%<_modelSS>"], 48, 0, 14, 2, 14, 76),"/*@]*/")>\
+
+%endif
+}
+/*@>4b52f*/FOC_Motor_ControlrtDW./*@>4b94e*/If1_ActiveSubsystem/*@>dc04*/ = /*@>4b938*/-1;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[21].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Disable", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))
+%<SLibCG_AccessArg(21, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(21, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Disable", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(21, 2, 0)>
+%endif
+%endfunction
+%function DisableFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Control_Command_2ms_i_Disable(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(21, 2, fcnProtoType)>
+%endfunction

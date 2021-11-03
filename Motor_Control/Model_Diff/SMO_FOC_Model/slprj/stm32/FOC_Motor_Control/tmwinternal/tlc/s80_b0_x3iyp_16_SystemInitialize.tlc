@@ -1,0 +1,49 @@
+%implements s80_b0_x3iyp_16_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[41], "SystemInitialize",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Init",41,0)
+%<SLibCG_AccessArg(16 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Init",41,1)
+%<SLibCG_AccessArg(16 ,0, 1)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Init",41,2)
+%<SLibCG_AccessArg(16 ,0, 2)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Init",41,3)
+%<SLibCG_AccessArg(16 ,0, 3)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[40a71*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_FOC_Init", ["%<_modelSS>", "FOC_Motor_Controlrtrty_Ta", "FOC_Motor_Controlrtrty_Tb", "FOC_Motor_Controlrtrty_Tc"], 41, 0, 4, 1, 4, 76),"/*@]*/")>\
+
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[16].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("SystemInitialize", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))
+%<SLibCG_AccessArg(16, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(16, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "SystemInitialize", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "SystemInitialize"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(16, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_FOC_Control_100us_Init(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(16, 0, fcnProtoType)>
+%endfunction

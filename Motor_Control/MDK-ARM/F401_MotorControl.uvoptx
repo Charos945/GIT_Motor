@@ -350,6 +350,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>delta_t</ItemText>
         </Ww>
+        <Ww>
+          <count>40</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Harmonic_Com</ItemText>
+        </Ww>
       </WatchWindow1>
       <MemoryWindow1>
         <Mm>

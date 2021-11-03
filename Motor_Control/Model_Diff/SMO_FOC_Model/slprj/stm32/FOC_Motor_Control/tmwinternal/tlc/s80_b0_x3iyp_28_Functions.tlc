@@ -1,0 +1,66 @@
+%implements s80_b0_x3iyp_28_Functions "C"
+
+%function rt_modf_snf_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real32_T q;
+real32_T y;
+boolean_T yEq;
+y = u0;
+if (u1 == 0.0F) {
+    if (u0 == 0.0F) {
+        y = u1;
+    }
+} else if (rtIsNaNF(u0) || rtIsNaNF(u1) || rtIsInfF(u0)) {
+    y = %<LibGetMathConstant(LibRealNonFinite("nan"), FcnGetDataTypeIdFromName("single"))>;
+} else if (u0 == 0.0F) {
+    y = 0.0F / u1;
+} else if (rtIsInfF(u1)) {
+    if ((u1 < 0.0F) != (u0 < 0.0F)) {
+        y = u1;
+    }
+} else {
+    y = fmodf(u0, u1);
+    yEq = (y == 0.0F);
+    if ((!yEq) && (u1 > floorf(u1))) {
+        q = fabsf(u0 / u1);
+        yEq = !(fabsf(q - floorf(q + 0.5F)) > FLT_EPSILON * q);
+    }
+    if (yEq) {
+        y = u1 * 0.0F;
+    } else {
+        if ((u0 < 0.0F) != (u1 < 0.0F)) {
+            y += u1;
+        }
+    }
+}
+return y;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[28].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("rt_modf_snf", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "rt_modf_snf"))
+%<SLibCG_AccessArg(28, 0, 2)>
+%endif
+%if SLibCG_ArgAccessed(28, 0, 2)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "rt_modf_snf", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "rt_modf_snf"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(28, 0, 2)>
+%endif
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real32_T rt_modf_snf(\
+%assign comma = ""
+%<comma>real32_T u0\
+%assign comma = ", "
+%<comma>real32_T u1\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(28, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/ci/19700101 http://schema.mathworks.com/mf0/sl_modelref_info/R2020b http://schema.mathworks.com/mf0/slexec_mm_sto/R2019b_201902271317">
+  <ModelRefInfoRepo.ModelRefInfoRoot type="ModelRefInfoRepo.ModelRefInfoRoot" uuid="4e684f9a-b3f1-4cd4-8306-62d852b48f78">
+    <autoSolverStatusFlags>323</autoSolverStatusFlags>
+    <childModelRefInfo type="ModelRefInfoRepo.ChildModelRefInfo" uuid="1ffb394f-861c-40a8-a7a2-03d230d92a9e">
+      <isSingleInstance>true</isSingleInstance>
+      <modelName>FOC_Motor_Control</modelName>
+      <modelPath>FOC_Motor_Control</modelPath>
+    </childModelRefInfo>
+    <compDerivCacheNeedsReset>false</compDerivCacheNeedsReset>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="6b20ccf9-32ad-4276-b39a-0727498d672c">
+      <grAndCompPorts>0</grAndCompPorts>
+      <grAndCompPorts>0</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="0f194c36-6bd8-4ad5-983c-c6f7dbd7512a">
+      <grAndCompPorts>1</grAndCompPorts>
+      <grAndCompPorts>1</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="ce2f5152-c849-40a5-ad16-6da97e78340a">
+      <grAndCompPorts>2</grAndCompPorts>
+      <grAndCompPorts>2</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="c516bf8f-558b-47c3-a974-051dc37d273c">
+      <grAndCompPorts>3</grAndCompPorts>
+      <grAndCompPorts>3</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="203c61a7-d1d5-4f71-b202-b2add74e2928">
+      <grAndCompPorts>4</grAndCompPorts>
+      <grAndCompPorts>4</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="526fa645-dd77-4e4c-833c-f1f91b9dc379">
+      <grAndCompPorts>5</grAndCompPorts>
+      <grAndCompPorts>5</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="a6fd20a9-f3ea-4b0a-8477-acc8f6487a97">
+      <grAndCompPorts>6</grAndCompPorts>
+      <grAndCompPorts>6</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrInputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="f13427a1-0533-49ed-8948-f8352afb11f2">
+      <grAndCompPorts>7</grAndCompPorts>
+      <grAndCompPorts>7</grAndCompPorts>
+    </compToGrInputPortMaps>
+    <compToGrOutputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="6153cb1c-341c-42d9-b220-2e8aee4944c0">
+      <grAndCompPorts>0</grAndCompPorts>
+      <grAndCompPorts>0</grAndCompPorts>
+    </compToGrOutputPortMaps>
+    <compToGrOutputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="579d408b-adfd-460c-a3ed-9a993ba6acb3">
+      <grAndCompPorts>1</grAndCompPorts>
+      <grAndCompPorts>1</grAndCompPorts>
+    </compToGrOutputPortMaps>
+    <compToGrOutputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="df7d9186-76cf-4509-b50d-9724bb7d8f51">
+      <grAndCompPorts>2</grAndCompPorts>
+      <grAndCompPorts>2</grAndCompPorts>
+    </compToGrOutputPortMaps>
+    <compToGrOutputPortMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="d6ee5c0d-06d5-433c-a745-5cdcabce7055">
+      <grAndCompPorts>3</grAndCompPorts>
+      <grAndCompPorts>3</grAndCompPorts>
+    </compToGrOutputPortMaps>
+    <compZcCacheNeedsReset>false</compZcCacheNeedsReset>
+    <dataDictionary>Hall_FOC_Data.sldd</dataDictionary>
+    <dataDictionarySet>Hall_FOC_Data.sldd</dataDictionarySet>
+    <dataDictionarySetForDataTypeCheck>Hall_FOC_Data.sldd</dataDictionarySetForDataTypeCheck>
+    <dataTransferInfos>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAAAAAABAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAA</dataTransferInfos>
+    <defaultsCMapping>{&quot;Inports&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;Outports&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;ParameterArguments&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;LocalParameters&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;GlobalParameters&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;InternalData&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;SharedLocalDataStores&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;GlobalDataStores&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;Constants&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;DataTransfers&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;ModelData&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;InitializeTerminate&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;Execution&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;,&quot;SharedUtility&quot;:&quot;{\&quot;Name\&quot;:\&quot;Default\&quot;,\&quot;Checksum\&quot;:\&quot;Default\&quot;,\&quot;PerInstancePropertiesChecksum\&quot;:\&quot;\&quot;,\&quot;MemorySectionName\&quot;:\&quot;None\&quot;,\&quot;MemorySectionChecksum\&quot;:\&quot;None\&quot;}&quot;}</defaultsCMapping>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="6794be4b-694b-4bcf-a8cb-1ec954f23d2e">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Unit Delay2</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="95fd4b52-f622-462b-9f56-7695a9a128a3">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Unit Delay1</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="13ef632c-b7ea-4ee3-8ce4-747d237e62e0">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Unit Delay3</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="29bf25c3-affd-43cf-99c3-48f627132465">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Unit Delay4</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="0293a61c-1b35-4cba-b465-04efdaeb1b83">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/LPF/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="5dabb12e-4f5e-4fb9-9adb-9ff1fc8cd6c3">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/LPF1/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="6545af28-edd2-4579-a1d1-3a6f29c51231">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Angle_Speed_100us/Resolver_Observer/Resolver_Angle_cacl/Unit Delay4</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="48935741-cf7a-4af9-a7e3-e23b2e4efb77">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Angle_Speed_100us/Resolver_Observer/Resolver_Angle_cacl/PID Controller/Integrator/Discrete/Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="06e60a3c-a754-40c8-a81f-fbff22cb411f">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Angle_Speed_100us/Resolver_Observer/Resolver_Angle_cacl/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="d19986c9-1c4d-4587-a275-3f9dfd5d6390">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Angle_Speed_100us/Resolver_Observer/Resolver_Angle_cacl/LPF</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>states</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="3d6139d3-b325-432b-a364-3fbf34e584c8">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Angle_Speed_100us/Speed_Resolver/Speed_cacl/LPF/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="ab13f4a3-c238-4a0d-af72-b21bd32d9cf4">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening
+/Subsystem/Flux_weak/ID_Control/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="01a321cf-0628-43df-a7c5-810f39e7a37a">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI/Speed_PI/Speed_Control/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="3358bbf9-fc5f-4f62-857a-ba06cbfbbcb2">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="450c97b5-c117-4c02-9cad-ea334391f2b2">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq5/LPF/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>2</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="4d363b8f-f702-4e3a-8946-d2212041d401">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq5/LPF2/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>2</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="bd42bdc9-c41f-4d4c-8f28-82ab338203ab">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq7/LPF/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>2</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="cc89f108-2591-4e59-8ca9-4f70c931c48e">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq7/LPF2/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>2</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="1474acb0-4d91-49a4-a7de-9bb3e8a3487a">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/ID_7/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="1a496655-3eee-4abb-a887-c27ae768d0b2">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/IQ_7/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="9fd38901-ece4-4efa-8d95-b33a68a30f4e">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/ID_5/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="60d04ea9-16dc-4bf0-9ca5-4f82c3f7de0a">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/IQ_5/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="095e268a-2f1d-404a-a96c-0bd2b342ee83">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Discrete-Time
+Integrator</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="1e22a8b7-038a-46d3-973d-bd2dee53dcc5">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/LPF1/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="7a112106-92df-4b1e-8631-b4e6047f04dc">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/LPF/Unit Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>1</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="ae7d3be4-41ec-4979-a995-3cdf90488d2d">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Angle_Speed_100us/Speed_Resolver/Speed_cacl/Position_Delay</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>6</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="be92fd5d-6093-4189-867c-c4cf29551db3">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening
+/Subsystem/Flux_weak/ID_Control/Unit Delay3</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>8</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="eefd942d-3907-47b6-a6e1-a297312d62df">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI/Speed_PI/Speed_Control/Unit Delay3</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>8</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="88089423-8de3-4a4c-9505-9011104fb3ff">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Unit Delay3</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>8</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <discStateRecordInfo type="ModelRefInfoRepo.StateRecordInfo" uuid="445f1259-bb60-47dd-a1e6-3e9b1f275a41">
+      <blockName>FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Unit Delay3</blockName>
+      <crossMdlRef>true</crossMdlRef>
+      <dataType>8</dataType>
+      <label>DSTATE</label>
+      <width>1</width>
+    </discStateRecordInfo>
+    <fundamentalSampleTimePeriod>1e-05</fundamentalSampleTimePeriod>
+    <globalVariables>#Angle#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Angle_Theta#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Angle_offset#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Cosine_table#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Dead_Com_Enable#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Dead_Time#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#FF_Enable#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Fixed_Step_Size#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Flux#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#FluxWeak_Enable#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#FluxWeak_Idref_max#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#FluxWeak_Idref_min#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#FluxWeak_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#FluxWeak_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_AngleShift#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_Sector1#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_Sector2#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_Sector3#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_Sector4#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_Sector5#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_Sector6#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#HaLL_Timer_T#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Com_Enable#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id5th_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id5th_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id5th_Max#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id5th_Min#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id7th_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id7th_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id7th_Max#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Id7th_Min#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq5th_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq5th_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq5th_Max#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq5th_Min#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq7th_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq7th_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq7th_Max#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Harmonic_Iq7th_Min#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#ID_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#ID_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#IQ_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#IQ_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Ialpha#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Ibeta#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Id_measured#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Id_ref#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Iq_measured#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Iq_ref#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Ld#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Lq#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Motor_Power#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Motor_Torque#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Over_modulation#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#PWM_Frequency#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Phase_CurrentABC#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Pole_Pairs#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#R#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Resolver_signal#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Sine_table#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#SpeedFilter_Fn#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Speed_Ki#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Speed_Kp#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Speed_Measured#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Speed_PI_OutputMax#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Speed_PI_OutputMin#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Speed_target#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Ta#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Task_10ms#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Task_2ms#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Tb#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Tc#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#TorqueMode#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Torque_ref#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#V_alpha#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#V_beta#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Vd_voltage#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#Vq_voltage#Hall_FOC_Data.sldd#</globalVariables>
+    <globalVariables>#atan_table#Hall_FOC_Data.sldd#</globalVariables>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="10c2df9c-ac0a-46d6-884d-468ff364177a">
+      <grAndCompPorts>0</grAndCompPorts>
+      <grAndCompPorts>0</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="0fdf1e67-f51e-40f2-b6bc-72adac6c7db3">
+      <grAndCompPorts>1</grAndCompPorts>
+      <grAndCompPorts>1</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="8b7413a1-a33b-468b-b298-62d7d2c7e803">
+      <grAndCompPorts>2</grAndCompPorts>
+      <grAndCompPorts>2</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="dcf451ab-3a52-46be-9f37-9c71b77a748c">
+      <grAndCompPorts>3</grAndCompPorts>
+      <grAndCompPorts>3</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="951c6caf-da5e-44db-b7ac-2edd721e78ad">
+      <grAndCompPorts>4</grAndCompPorts>
+      <grAndCompPorts>4</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="abfb0435-d553-4fcf-a322-dfd5798fb58f">
+      <grAndCompPorts>5</grAndCompPorts>
+      <grAndCompPorts>5</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="a51d022e-9fa9-42d7-8a47-a7b8e76e4214">
+      <grAndCompPorts>6</grAndCompPorts>
+      <grAndCompPorts>6</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompInputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="d6022fbc-5357-4b32-b073-ed3d2b33d4c3">
+      <grAndCompPorts>7</grAndCompPorts>
+      <grAndCompPorts>7</grAndCompPorts>
+    </grToCompInputPortsMaps>
+    <grToCompOutputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="d6902265-9339-4e2f-ab48-d316f6441419">
+      <grAndCompPorts>0</grAndCompPorts>
+      <grAndCompPorts>0</grAndCompPorts>
+    </grToCompOutputPortsMaps>
+    <grToCompOutputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="046ca2bc-d5f5-4a69-a93c-e07b2ff23dbc">
+      <grAndCompPorts>1</grAndCompPorts>
+      <grAndCompPorts>1</grAndCompPorts>
+    </grToCompOutputPortsMaps>
+    <grToCompOutputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="78613acd-6062-4ccc-a809-5485d6b5d8a5">
+      <grAndCompPorts>2</grAndCompPorts>
+      <grAndCompPorts>2</grAndCompPorts>
+    </grToCompOutputPortsMaps>
+    <grToCompOutputPortsMaps type="ModelRefInfoRepo.GrCompIOPortMaps" uuid="165602a7-746d-4089-8936-39d1a4fb9495">
+      <grAndCompPorts>3</grAndCompPorts>
+      <grAndCompPorts>3</grAndCompPorts>
+    </grToCompOutputPortsMaps>
+    <hasBlockWithPeriodicDiscreteSampleTime>true</hasBlockWithPeriodicDiscreteSampleTime>
+    <hasBwsAccessed>true</hasBwsAccessed>
+    <hasBwsAccessedByAnyModel>true</hasBwsAccessedByAnyModel>
+    <hasConstantOutput>false</hasConstantOutput>
+    <hasModelWideEventTs>false</hasModelWideEventTs>
+    <hasNonVirtualConstantTs>true</hasNonVirtualConstantTs>
+    <hasStatesModifiedInOutputUpdate>true</hasStatesModifiedInOutputUpdate>
+    <hasVariantModelOrSubsystem>true</hasVariantModelOrSubsystem>
+    <inlinedVariables>#Cosine_table#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Fixed_Step_Size#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Flux#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Ld#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Lq#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#PWM_Frequency#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Pole_Pairs#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#R#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Sine_table#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Task_10ms#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#Task_2ms#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inlinedVariables>#atan_table#Hall_FOC_Data.sldd#</inlinedVariables>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="8f82c8ae-0ba3-4470-8688-1ad21e385f5f">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.002</period>
+        <priority>40</priority>
+        <rateIdx>2</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="ab76ab88-27f5-48fd-91d3-864c6675092b"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="bfd9337a-62b3-4002-8bf3-6216337655bb"/>
+    </inports>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="c33ab0ec-b1ae-441f-8006-48e76ecbed9e">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>6.283185307179586</designMax>
+      <indexType>2</indexType>
+      <originalPortNumber>1</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.002</period>
+        <priority>40</priority>
+        <rateIdx>2</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="48d05297-cb48-4221-8f3b-c4b050d62885"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="7addd5ce-891c-4b5c-a08b-6721b8918b2e"/>
+    </inports>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="5d60e7cb-ea4a-4dc0-8bc8-7103c1f3bc71">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>2</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="ec3d625c-c37e-47a8-a86e-597dcc8f1f95"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="b7377fb5-5537-4110-ada6-fe91c367c00f"/>
+    </inports>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="47f0850b-2a5b-4362-816e-b9363d78968e">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>6.283185307179586</designMax>
+      <indexType>2</indexType>
+      <originalPortNumber>3</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="4ecf4ce0-b596-49ea-a14f-552bb6ed5598"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="50da6777-1b66-4cfa-b11c-d759d8b68d29"/>
+    </inports>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="5b35b4ca-fabd-4f69-b44e-cf9858dada68">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>4</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject></resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="572c9835-c424-4cb8-823c-0212234da7f0"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="31609a0f-d394-4a97-868a-debb00edf58e"/>
+    </inports>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="01faca13-1509-4b2a-9f82-5d7ca20bf875">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>5</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.01</period>
+        <priority>40</priority>
+        <rateIdx>3</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject></resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="14e256a9-6f70-48e2-bb94-543f48baed3d"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="7fd90dd7-e248-46f7-b88d-afc5810612a3"/>
+    </inports>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="4398f74b-939f-4a67-b9cd-b2d2be763925">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>6</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject></resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="d406eb8c-7b50-4a77-933f-2f5da43b957e"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="64cbd9bd-aa45-453f-a08c-37b6e41836f0"/>
+    </inports>
+    <inports type="ModelRefInfoRepo.InportInformation" uuid="1c2f3f79-47ff-46bb-aaa6-8be6072f3cc6">
+      <isNotDerivPort>true</isNotDerivPort>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>7</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject></resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSARInportInfo" uuid="e0ebee9c-cf7b-4681-b725-0285d32e7d57"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="e818dce0-5fc6-4ecb-a614-dfbd884eef94"/>
+    </inports>
+    <isAperiodicRootFcnCallSystem>false</isAperiodicRootFcnCallSystem>
+    <isBdInSimModeForSimCodegenVariants>false</isBdInSimModeForSimCodegenVariants>
+    <isInlineParamsOn>true</isInlineParamsOn>
+    <isNumAllowedInstancesOne>true</isNumAllowedInstancesOne>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigInportVirtualBus>false</isOrigInportVirtualBus>
+    <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+    <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+    <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+    <isOrigOutportVirtualBus>false</isOrigOutportVirtualBus>
+    <isPreCompSingleRate>false</isPreCompSingleRate>
+    <isRefModelConstant>false</isRefModelConstant>
+    <isRootFcnCallPortGroupsEmpty>true</isRootFcnCallPortGroupsEmpty>
+    <loggingSaveFormat>2</loggingSaveFormat>
+    <maxFreqHz>-1.0</maxFreqHz>
+    <numDStateRecs>30</numDStateRecs>
+    <numDataInputPorts>8</numDataInputPorts>
+    <numLoggableDStateRecs>30</numLoggableDStateRecs>
+    <numModelWideEventTs>0</numModelWideEventTs>
+    <numPortlessSimulinkFunctionPortGroups>0</numPortlessSimulinkFunctionPortGroups>
+    <numRuntimeExportedRates>4</numRuntimeExportedRates>
+    <numTs>4</numTs>
+    <origInportBusType></origInportBusType>
+    <origInportBusType></origInportBusType>
+    <origInportBusType></origInportBusType>
+    <origInportBusType></origInportBusType>
+    <origInportBusType></origInportBusType>
+    <origInportBusType></origInportBusType>
+    <origInportBusType></origInportBusType>
+    <origInportBusType></origInportBusType>
+    <origOutportBusOutputAsStruct>false</origOutportBusOutputAsStruct>
+    <origOutportBusOutputAsStruct>false</origOutportBusOutputAsStruct>
+    <origOutportBusOutputAsStruct>false</origOutportBusOutputAsStruct>
+    <origOutportBusOutputAsStruct>false</origOutportBusOutputAsStruct>
+    <origOutportBusType></origOutportBusType>
+    <origOutportBusType></origOutportBusType>
+    <origOutportBusType></origOutportBusType>
+    <origOutportBusType></origOutportBusType>
+    <outports type="ModelRefInfoRepo.OutportInformation" uuid="9f28a32a-ffd5-4f9d-8bd0-7c60de95a72c">
+      <blkIOUpdatedInAnotherExecContext>true</blkIOUpdatedInAnotherExecContext>
+      <computeICInFirstInitialize>true</computeICInFirstInitialize>
+      <drivenByOutputPortWithCGInit>true</drivenByOutputPortWithCGInit>
+      <hasSystemInitMethod>true</hasSystemInitMethod>
+      <isInitializedWithIC>true</isInitializedWithIC>
+      <okToMerge>2</okToMerge>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSAROutportInfo" uuid="55ac4768-fa9c-45f2-8611-0d82355d55d2"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="6dcb12b9-2584-4c76-82ba-d1d85cd5ab49"/>
+    </outports>
+    <outports type="ModelRefInfoRepo.OutportInformation" uuid="faf026bc-cbb5-49ac-89a7-8b28e12002f5">
+      <blkIOUpdatedInAnotherExecContext>true</blkIOUpdatedInAnotherExecContext>
+      <computeICInFirstInitialize>true</computeICInFirstInitialize>
+      <drivenByOutputPortWithCGInit>true</drivenByOutputPortWithCGInit>
+      <hasSystemInitMethod>true</hasSystemInitMethod>
+      <isInitializedWithIC>true</isInitializedWithIC>
+      <okToMerge>2</okToMerge>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>1</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSAROutportInfo" uuid="8b7077e6-7e31-4bd2-b06e-32475cd0e544"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="d2a24af4-bdcb-4598-bb7d-b4914bdc2646"/>
+    </outports>
+    <outports type="ModelRefInfoRepo.OutportInformation" uuid="6e101b4a-ae7a-4a2a-b9e6-754856683994">
+      <blkIOUpdatedInAnotherExecContext>true</blkIOUpdatedInAnotherExecContext>
+      <computeICInFirstInitialize>true</computeICInFirstInitialize>
+      <drivenByOutputPortWithCGInit>true</drivenByOutputPortWithCGInit>
+      <hasSystemInitMethod>true</hasSystemInitMethod>
+      <isInitializedWithIC>true</isInitializedWithIC>
+      <okToMerge>2</okToMerge>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>2</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSAROutportInfo" uuid="3a23bc84-d451-40ed-8b68-587196da9239"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="25ffa0bc-5903-4e2c-9031-36670589e6ed"/>
+    </outports>
+    <outports type="ModelRefInfoRepo.OutportInformation" uuid="6a0d05cc-d0d1-4f93-9fc8-474da803ac35">
+      <blkIOUpdatedInAnotherExecContext>true</blkIOUpdatedInAnotherExecContext>
+      <computeICInFirstInitialize>true</computeICInFirstInitialize>
+      <drivenByOutputPortWithCGInit>true</drivenByOutputPortWithCGInit>
+      <hasSystemInitMethod>true</hasSystemInitMethod>
+      <isInitializedWithIC>true</isInitializedWithIC>
+      <okToMerge>2</okToMerge>
+      <designMax>Inf</designMax>
+      <designMin>-Inf</designMin>
+      <indexType>2</indexType>
+      <originalPortNumber>3</originalPortNumber>
+      <rateInfo type="ModelRefInfoRepo.RateInfo">
+        <compiled>true</compiled>
+        <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+        <period>.0001</period>
+        <priority>40</priority>
+        <rateIdx>1</rateIdx>
+      </rateInfo>
+      <resolvedSignalObject>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CQIAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAACAAEAAQAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAJAgAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAIAAQAAAAAADgAAAEgAAAAGAAAACAAAAA0AAAAAAAAABQAAAAgAAAAFAAAAAQAAAAEAAAAAAAAABgAAABQAAAAAAADdAgAAAAEAAAABAAAAAgAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAAAAAAAAAAAAAEAAAAAAAAACQAAAAAAAAAOAAAAMAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAJAAAAAAAAAA4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAAAAAAAAAAABAAAAAAAAABAAAAAAAAAADgAAADgAAAAGAAAACAAAAAYAAAAAAAAABQAAAAgAAAABAAAAAQAAAAEAAAAAAAAACQAAAAgAAAAAAAAAAADwvw4AAAAwAAAABgAAAAgAAAAEAAAAAAAAAAUAAAAIAAAAAQAAAAQAAAABAAAAAAAAABAABABhdXRvDgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAAAAAAAAAPC/DgAAADAAAAAGAAAACAAAAAQAAAAAAAAABQAAAAgAAAABAAAABAAAAAEAAAAAAAAAEAAEAGF1dG8OAAAAMAAAAAYAAAAIAAAABAAAAAAAAAAFAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAA4AAADgAQAABgAAAAgAAAARAAAAAAAAAAEAAAAAAAAAAQAAAAYAAABoYW5kbGUAAAEAAAAUAAAAU2ltdWxpbmsuTG9nZ2luZ0luZm8AAAAADgAAAJABAAAGAAAACAAAAAEAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAADgAAAOAAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAACwAAAAAQAAAAEAAAAAAAAAAgAAALAAAAABAAAAAgAAAEAAAABgAAAAaAAAAJgAAACoAAAAsAAAAAAAAAAAAAAAU2ltdWxpbmsATG9nZ2luZ0luZm8AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAB4AAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAA4AAABIAAAABgAAAAgAAAANAAAAAAAAAAUAAAAIAAAABQAAAAEAAAABAAAAAAAAAAYAAAAUAAAAAAAA3QIAAAABAAAAAQAAAAEAAAAAAAAADgAAADgAAAAGAAAACAAAAAwAAAAAAAAABQAAAAgAAAACAAAAAQAAAAEAAAAAAAAABQAAAAgAAAAAAAAAAAAAAA4AAACoAAAABgAAAAgAAAABAAAAAAAAAAUAAAAIAAAAAgAAAAEAAAABAAAAAAAAAA4AAAA4AAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAAAAAABAAAAAAAAAAUABAABAAAAAQAAAAAAAAAOAAAAOAAAAAYAAAAIAAAAAgAAAAAAAAAFAAAACAAAAAEAAAAAAAAAAQAAAAAAAAAFAAQAAQAAAAEAAAAAAAAADgAAAJgAAAAGAAAACAAAAAkAAAAAAAAABQAAAAgAAAABAAAAaAAAAAEAAAAAAAAAAgAAAGgAAAAAAUlNAAAAAA4AAABYAAAABgAAAAgAAAACAAAAAAAAAAUAAAAIAAAAAQAAAAEAAAABAAAAAAAAAAUABAAHAAAAAQAAAA4AAABNQ09TAAAAaGFuZGxlAAAADgAAAAAAAAAOAAAAAAAAAA==</resolvedSignalObject>
+      <autosarInfo type="ModelRefInfoRepo.AUTOSAROutportInfo" uuid="82945441-1bb4-4526-a3f7-763a116cfecf"/>
+      <sigNameToEMVCEMap type="ModelRefInfoRepo.SigNameEMVCEInfo" uuid="3d44bc78-cad4-4229-b898-d9d16ca37be2"/>
+    </outports>
+    <preCompAllowConstTsOnPorts>false</preCompAllowConstTsOnPorts>
+    <preCompAllowPortBasedInTriggeredSS>false</preCompAllowPortBasedInTriggeredSS>
+    <removeResetFunc>true</removeResetFunc>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <isEmpty>true</isEmpty>
+      <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+      <period>1e-05</period>
+      <priority>40</priority>
+      <rateIdx>0</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+      <period>.0001</period>
+      <priority>40</priority>
+      <rateIdx>1</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+      <period>.002</period>
+      <priority>40</priority>
+      <rateIdx>2</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <runtimeNonFcnCallRateInfos type="ModelRefInfoRepo.RateInfo">
+      <compiled>true</compiled>
+      <nonFcnCallPartitionName>D1</nonFcnCallPartitionName>
+      <period>.01</period>
+      <priority>40</priority>
+      <rateIdx>3</rateIdx>
+    </runtimeNonFcnCallRateInfos>
+    <sampleTimeInheritanceRule>2</sampleTimeInheritanceRule>
+    <timingAndTaskingRegistry>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;slexec_sto version=&quot;1.1&quot; packageUris=&quot;http://schema.mathworks.com/mf0/slexec_mm_sto/R2019b_201902271317&quot;&gt;
+  &lt;sto.Registry type=&quot;sto.Registry&quot; uuid=&quot;e922c30d-8883-4b5f-9b8a-127848cf1f6a&quot;&gt;
+    &lt;clocks type=&quot;sto.Timer&quot; uuid=&quot;fd4b3539-ebde-4273-8d61-9e3df7bde358&quot;&gt;
+      &lt;needsToProvideTimeDuringExecution&gt;true&lt;/needsToProvideTimeDuringExecution&gt;
+      &lt;clockTickConstraint&gt;PeriodicWithFixedResolution&lt;/clockTickConstraint&gt;
+      &lt;resolution&gt;1e-05&lt;/resolution&gt;
+      &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
+      &lt;clockDomain type=&quot;sto.ClockDomain&quot; uuid=&quot;dede15e4-1f4e-41ab-942f-b032e09a1f6a&quot;&gt;
+        &lt;baseTaskID&gt;_task0&lt;/baseTaskID&gt;
+        &lt;computedFundamentalStepSize&gt;1e-05&lt;/computedFundamentalStepSize&gt;
+        &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;2e0e404f-65a5-45be-96af-796cb237eada&quot;/&gt;
+        &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;c9049bd2-fa3f-4162-b553-4c5d761ae3ed&quot;/&gt;
+        &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;98dca5e0-565a-4bbe-91c3-2359520d7383&quot;/&gt;
+        &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;65ea73f2-baa8-42e2-95d5-65fe6601fdf5&quot;/&gt;
+        &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;b907b839-2326-45bf-9b71-a6021c080447&quot;/&gt;
+        &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;6e2e009e-a6d2-4418-8b30-2e46a43f51a2&quot;&gt;
+          &lt;isExecutable&gt;true&lt;/isExecutable&gt;
+          &lt;orderIndex&gt;1&lt;/orderIndex&gt;
+          &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;2e0e404f-65a5-45be-96af-796cb237eada&quot;&gt;
+            &lt;annotation&gt;FiM&lt;/annotation&gt;
+            &lt;colorIndex&gt;8&lt;/colorIndex&gt;
+            &lt;description&gt;Fixed in Minor Step&lt;/description&gt;
+            &lt;eventSourceType&gt;UNSPECIFIED_EVENT_SOURCE&lt;/eventSourceType&gt;
+            &lt;rateIDX&gt;-1&lt;/rateIDX&gt;
+            &lt;registry type=&quot;sto.Registry&quot; uuid=&quot;e922c30d-8883-4b5f-9b8a-127848cf1f6a&quot;/&gt;
+            &lt;taskId&gt;_task0&lt;/taskId&gt;
+            &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
+            &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;0ad636a6-e9e8-4346-8faa-b4e85b135062&quot;&gt;
+              &lt;offset&gt;1.0&lt;/offset&gt;
+              &lt;rateType&gt;ZOHContinuous&lt;/rateType&gt;
+            &lt;/rateSpec&gt;
+          &lt;/rates&gt;
+          &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;c9049bd2-fa3f-4162-b553-4c5d761ae3ed&quot;&gt;
+            &lt;annotation&gt;D1&lt;/annotation&gt;
+            &lt;colorIndex&gt;2&lt;/colorIndex&gt;
+            &lt;description&gt;Discrete 1&lt;/description&gt;
+            &lt;eventSourceType&gt;UNSPECIFIED_EVENT_SOURCE&lt;/eventSourceType&gt;
+            &lt;registry type=&quot;sto.Registry&quot; uuid=&quot;e922c30d-8883-4b5f-9b8a-127848cf1f6a&quot;/&gt;
+            &lt;taskId&gt;_task0&lt;/taskId&gt;
+            &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;89e72301-db16-488f-9a9c-e65a72a141f9&quot;&gt;
+              &lt;period&gt;1e-05&lt;/period&gt;
+              &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+            &lt;/rateSpec&gt;
+          &lt;/rates&gt;
+          &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;98dca5e0-565a-4bbe-91c3-2359520d7383&quot;&gt;
+            &lt;annotation&gt;D2&lt;/annotation&gt;
+            &lt;colorIndex&gt;3&lt;/colorIndex&gt;
+            &lt;description&gt;Discrete 2&lt;/description&gt;
+            &lt;eventSourceType&gt;UNSPECIFIED_EVENT_SOURCE&lt;/eventSourceType&gt;
+            &lt;rateIDX&gt;1&lt;/rateIDX&gt;
+            &lt;registry type=&quot;sto.Registry&quot; uuid=&quot;e922c30d-8883-4b5f-9b8a-127848cf1f6a&quot;/&gt;
+            &lt;taskId&gt;_task0&lt;/taskId&gt;
+            &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;38bf8e13-c6ae-46e2-8be6-df5bb3cd4384&quot;&gt;
+              &lt;period&gt;.0001&lt;/period&gt;
+              &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+            &lt;/rateSpec&gt;
+          &lt;/rates&gt;
+          &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;65ea73f2-baa8-42e2-95d5-65fe6601fdf5&quot;&gt;
+            &lt;annotation&gt;D3&lt;/annotation&gt;
+            &lt;colorIndex&gt;4&lt;/colorIndex&gt;
+            &lt;description&gt;Discrete 3&lt;/description&gt;
+            &lt;eventSourceType&gt;UNSPECIFIED_EVENT_SOURCE&lt;/eventSourceType&gt;
+            &lt;rateIDX&gt;2&lt;/rateIDX&gt;
+            &lt;registry type=&quot;sto.Registry&quot; uuid=&quot;e922c30d-8883-4b5f-9b8a-127848cf1f6a&quot;/&gt;
+            &lt;taskId&gt;_task0&lt;/taskId&gt;
+            &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;53c10124-b1ed-4c93-bf43-099dce89ba00&quot;&gt;
+              &lt;period&gt;.002&lt;/period&gt;
+              &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+            &lt;/rateSpec&gt;
+          &lt;/rates&gt;
+          &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;b907b839-2326-45bf-9b71-a6021c080447&quot;&gt;
+            &lt;annotation&gt;D4&lt;/annotation&gt;
+            &lt;colorIndex&gt;10&lt;/colorIndex&gt;
+            &lt;description&gt;Discrete 4&lt;/description&gt;
+            &lt;eventSourceType&gt;UNSPECIFIED_EVENT_SOURCE&lt;/eventSourceType&gt;
+            &lt;rateIDX&gt;3&lt;/rateIDX&gt;
+            &lt;registry type=&quot;sto.Registry&quot; uuid=&quot;e922c30d-8883-4b5f-9b8a-127848cf1f6a&quot;/&gt;
+            &lt;taskId&gt;_task0&lt;/taskId&gt;
+            &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;7d90cfa2-f276-43de-966f-0ec71a3cad6b&quot;&gt;
+              &lt;period&gt;.01&lt;/period&gt;
+              &lt;rateType&gt;ClassicPeriodicDiscrete&lt;/rateType&gt;
+            &lt;/rateSpec&gt;
+          &lt;/rates&gt;
+          &lt;elementType&gt;Task&lt;/elementType&gt;
+          &lt;identifier&gt;_task0&lt;/identifier&gt;
+          &lt;priority&gt;40&lt;/priority&gt;
+        &lt;/rootTaskHierarchyElements&gt;
+      &lt;/clockDomain&gt;
+    &lt;/clocks&gt;
+    &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;ea4899ef-21ca-4724-85fe-def5f4e86e03&quot;&gt;
+      &lt;clientId&gt;NonTunableParameterChangeEvent&lt;/clientId&gt;
+      &lt;eventType&gt;UNSPECIFIED_EVENT_SOURCE&lt;/eventType&gt;
+      &lt;cNum&gt;2&lt;/cNum&gt;
+      &lt;clockType&gt;Event&lt;/clockType&gt;
+      &lt;identifier&gt;NonTunableParameterChangeEvent&lt;/identifier&gt;
+      &lt;resolution&gt;-1.0&lt;/resolution&gt;
+      &lt;specifiedTaskingMode&gt;ExplicitTasking&lt;/specifiedTaskingMode&gt;
+      &lt;timeAdvanceMode&gt;None&lt;/timeAdvanceMode&gt;
+      &lt;clockDomain type=&quot;sto.ClockDomain&quot; uuid=&quot;257b6997-82ee-49d8-8065-83f0f98008d4&quot;&gt;
+        &lt;computedFundamentalStepSize&gt;-1.0&lt;/computedFundamentalStepSize&gt;
+      &lt;/clockDomain&gt;
+    &lt;/clocks&gt;
+    &lt;clocks type=&quot;sto.Event&quot; uuid=&quot;030c4118-b36a-4e01-bdcd-1c6f7da01e17&quot;&gt;
+      &lt;clientId&gt;ParameterChangeEvent&lt;/clientId&gt;
+      &lt;eventType&gt;PARAMETER_CHANGE_EVENT&lt;/eventType&gt;
+      &lt;cNum&gt;1&lt;/cNum&gt;
+      &lt;clockType&gt;Event&lt;/clockType&gt;
+      &lt;identifier&gt;ParameterChangeEvent&lt;/identifier&gt;
+      &lt;resolution&gt;-1.0&lt;/resolution&gt;
+      &lt;specifiedTaskingMode&gt;ExplicitTasking&lt;/specifiedTaskingMode&gt;
+      &lt;timeAdvanceMode&gt;None&lt;/timeAdvanceMode&gt;
+      &lt;clockDomain type=&quot;sto.ClockDomain&quot; uuid=&quot;3601998f-e874-4d97-ac4c-5b4f2c60a5f2&quot;&gt;
+        &lt;computedFundamentalStepSize&gt;-1.0&lt;/computedFundamentalStepSize&gt;
+        &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;12fffca6-b92d-473a-b304-fcbb8d231ab8&quot;/&gt;
+        &lt;rootTaskHierarchyElements type=&quot;sto.Task&quot; uuid=&quot;c2c15e56-cf8c-4369-ad35-58088d402fac&quot;&gt;
+          &lt;isExplicit&gt;true&lt;/isExplicit&gt;
+          &lt;rates type=&quot;sto.Rate&quot; uuid=&quot;12fffca6-b92d-473a-b304-fcbb8d231ab8&quot;&gt;
+            &lt;eventSourceType&gt;PARAMETER_CHANGE_EVENT&lt;/eventSourceType&gt;
+            &lt;rateIDX&gt;-1&lt;/rateIDX&gt;
+            &lt;registry type=&quot;sto.Registry&quot; uuid=&quot;e922c30d-8883-4b5f-9b8a-127848cf1f6a&quot;/&gt;
+            &lt;stringID&gt;ParameterChangeEvent&lt;/stringID&gt;
+            &lt;taskId&gt;ModelWideParameterChangeEvent&lt;/taskId&gt;
+            &lt;useForExecution&gt;NotForExecution&lt;/useForExecution&gt;
+            &lt;rateSpec type=&quot;sto.RateSpec&quot; uuid=&quot;ff375e0f-6d4f-4d02-b65b-b75f0dc1744f&quot;&gt;
+              &lt;period&gt;Inf&lt;/period&gt;
+              &lt;rateType&gt;ModelWideParameterChangeEvent&lt;/rateType&gt;
+            &lt;/rateSpec&gt;
+          &lt;/rates&gt;
+          &lt;tNum&gt;1&lt;/tNum&gt;
+          &lt;elementType&gt;Task&lt;/elementType&gt;
+          &lt;identifier&gt;ModelWideParameterChangeEvent&lt;/identifier&gt;
+          &lt;priority&gt;-1&lt;/priority&gt;
+          &lt;schedulingClockID&gt;ParameterChangeEvent&lt;/schedulingClockID&gt;
+        &lt;/rootTaskHierarchyElements&gt;
+      &lt;/clockDomain&gt;
+    &lt;/clocks&gt;
+    &lt;executionSpec&gt;Undetermined&lt;/executionSpec&gt;
+    &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;1141487c-b28b-4779-87f4-d3aa86a029a2&quot;&gt;
+      &lt;taskIdentifier&gt;_task0&lt;/taskIdentifier&gt;
+    &lt;/taskDependencyGraph&gt;
+    &lt;taskDependencyGraph type=&quot;sto.SerializedTaskConnectionList&quot; uuid=&quot;a88dbd93-e764-48a6-8b6c-b9b77e91538c&quot;&gt;
+      &lt;clockIdentifier&gt;ParameterChangeEvent&lt;/clockIdentifier&gt;
+      &lt;taskIdentifier&gt;ModelWideParameterChangeEvent&lt;/taskIdentifier&gt;
+    &lt;/taskDependencyGraph&gt;
+    &lt;taskPriorityDirection&gt;HighNumberLast&lt;/taskPriorityDirection&gt;
+    &lt;tasks type=&quot;sto.Task&quot; uuid=&quot;6e2e009e-a6d2-4418-8b30-2e46a43f51a2&quot;/&gt;
+    &lt;tasks type=&quot;sto.Task&quot; uuid=&quot;c2c15e56-cf8c-4369-ad35-58088d402fac&quot;/&gt;
+    &lt;timeAdvanceMode&gt;FixedStep&lt;/timeAdvanceMode&gt;
+  &lt;/sto.Registry&gt;
+&lt;/slexec_sto&gt;</timingAndTaskingRegistry>
+    <usePortBasedSampleTime>false</usePortBasedSampleTime>
+    <userSpecifiedFixedStepSize>1e-05</userSpecifiedFixedStepSize>
+    <zeroCrossingInfo type="ModelRefInfoRepo.ZeroCrossingInfo" uuid="a5faa409-c68c-4df6-8ec1-fda974d3d5c2">
+      <direction>63</direction>
+      <isDiscrete>true</isDiscrete>
+      <isDiscrete>true</isDiscrete>
+      <isDiscrete>true</isDiscrete>
+      <name>Trig</name>
+      <needsEventNotification>true</needsEventNotification>
+      <tolerance>-1.0</tolerance>
+      <type>1</type>
+      <width>3</width>
+    </zeroCrossingInfo>
+    <zeroInternalMemoryAtStartupUnchecked>true</zeroInternalMemoryAtStartupUnchecked>
+    <FMUBlockMap type="ModelRefInfoRepo.FMUBlockInfo" uuid="5d373bf3-4949-4102-a15b-920f6b066ee7"/>
+    <codeGenInfo type="ModelRefInfoRepo.CodeGenInformation" uuid="ae5f1a7e-57a8-469f-83de-29903e792e94">
+      <DWorkTypeName>MdlrefDW_FOC_Motor_Control</DWorkTypeName>
+    </codeGenInfo>
+    <configSettingsForConsistencyChecks type="ModelRefInfoRepo.ConfigSettingsForConsistencyChecks" uuid="6ff3dfb9-0de5-47cd-a059-2b2951fa2412">
+      <consistentOutportInitialization>true</consistentOutportInitialization>
+      <fixedStepSize>1e-05</fixedStepSize>
+      <frameDiagnosticSetting>2</frameDiagnosticSetting>
+      <hasHybridSampleTime>true</hasHybridSampleTime>
+      <optimizedInitCode>true</optimizedInitCode>
+      <signalLoggingSaveFormat>2</signalLoggingSaveFormat>
+      <simSIMDOptimization>1</simSIMDOptimization>
+      <solverName>FixedStepDiscrete</solverName>
+      <solverType>SOLVER_TYPE_FIXEDSTEP</solverType>
+      <useDivForNetSlopComp>2</useDivForNetSlopComp>
+      <hardwareSettings type="ModelRefInfoRepo.HardwareSettings" uuid="6eda603b-3992-4de1-8664-3bcc8610d553">
+        <prodBitPerChar>8</prodBitPerChar>
+        <prodBitPerDouble>64</prodBitPerDouble>
+        <prodBitPerFloat>32</prodBitPerFloat>
+        <prodBitPerInt>32</prodBitPerInt>
+        <prodBitPerLong>32</prodBitPerLong>
+        <prodBitPerLongLong>64</prodBitPerLongLong>
+        <prodBitPerPointer>32</prodBitPerPointer>
+        <prodBitPerPtrDiffT>32</prodBitPerPtrDiffT>
+        <prodBitPerShort>16</prodBitPerShort>
+        <prodBitPerSizeT>32</prodBitPerSizeT>
+        <prodEndianess>2</prodEndianess>
+        <prodLargestAtomicFloat>1</prodLargestAtomicFloat>
+        <prodLargestAtomicInteger>3</prodLargestAtomicInteger>
+        <prodLongLongMode>true</prodLongLongMode>
+        <prodShiftRight>true</prodShiftRight>
+        <prodWordSize>32</prodWordSize>
+      </hardwareSettings>
+    </configSettingsForConsistencyChecks>
+    <controllableInputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="f6d7bdfe-0dbe-4293-ac9d-2aa08d38eae4"/>
+    <controllableOutputRatesMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="3dd2f154-a7a9-4eaf-a336-a55ad0aee8c1"/>
+    <dataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="7a91a842-743b-441f-b947-59658122b0be">
+      <compDataInputPorts>0</compDataInputPorts>
+      <compDataInputPorts>1</compDataInputPorts>
+      <compDataInputPorts>2</compDataInputPorts>
+      <compDataInputPorts>3</compDataInputPorts>
+      <compDataInputPorts>4</compDataInputPorts>
+      <compDataInputPorts>5</compDataInputPorts>
+      <compDataInputPorts>6</compDataInputPorts>
+      <compDataInputPorts>7</compDataInputPorts>
+      <compDataOutputPorts>0</compDataOutputPorts>
+      <compDataOutputPorts>1</compDataOutputPorts>
+      <compDataOutputPorts>2</compDataOutputPorts>
+      <compDataOutputPorts>3</compDataOutputPorts>
+      <dataInputPorts>0</dataInputPorts>
+      <dataInputPorts>1</dataInputPorts>
+      <dataInputPorts>2</dataInputPorts>
+      <dataInputPorts>3</dataInputPorts>
+      <dataInputPorts>4</dataInputPorts>
+      <dataInputPorts>5</dataInputPorts>
+      <dataInputPorts>6</dataInputPorts>
+      <dataInputPorts>7</dataInputPorts>
+      <dataOutputPorts>0</dataOutputPorts>
+      <dataOutputPorts>1</dataOutputPorts>
+      <dataOutputPorts>2</dataOutputPorts>
+      <dataOutputPorts>3</dataOutputPorts>
+    </dataPortGroup>
+    <expFcnUnconnectedDataPortGroup type="ModelRefInfoRepo.DataPortGroup" uuid="989510e0-7547-4ded-bf23-366566a04306"/>
+    <interfaceParameterInfo type="ModelRefInfoRepo.InterfaceParameterInfo" uuid="f4a50a01-de3d-4e94-8962-d93d8240a07f">
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="3bd99a55-e903-4788-978d-78bd276889db">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Dead_Time</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="48e3f17c-9724-4f11-8d74-0ff5566bd6e5">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>SpeedFilter_Fn</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="52b61cc4-f781-418a-9caa-6cd238b784e3">
+        <datatypeID>3</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Dead_Com_Enable</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="134662ed-73ba-417c-8ab5-e668c5a16d6d">
+        <datatypeID>3</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>FF_Enable</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="351b618b-9da9-420a-959f-cb805b0d7c62">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Angle_offset</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="a81b6a3e-a5c8-4cf4-94e1-d5f945475489">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>FluxWeak_Idref_max</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="f39cb2d1-dd0f-4ca3-bec5-b663786f80ef">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>FluxWeak_Idref_min</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="0488c53e-6420-40b7-a930-e7c840a66f69">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>FluxWeak_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="b61899a8-70be-4041-9c96-597343ce407c">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>FluxWeak_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="c5467cc2-f662-4093-918e-7b7fdca4efca">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_AngleShift</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="50fa7e9d-4679-4e6c-a09a-0b6ef46a538f">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_Sector1</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="b2b6dd73-974b-46ee-ba43-89d466eba93a">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_Sector2</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="d31a6495-1e1b-438c-8dea-ec67787d7982">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_Sector3</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="6a48d804-6215-46b4-a5c7-9ed629ca5d2e">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_Sector4</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="b6e41bb6-cf22-4e18-bdee-68f57f584f79">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_Sector5</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="1f415393-ac27-41ed-ad57-d8628b869bde">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_Sector6</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="c2aac21b-17dd-4d11-80f8-287abfa32db8">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>HaLL_Timer_T</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="cb852003-9a65-4a52-b8aa-ea8ab7a8a896">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id5th_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="a8b704fb-031d-4367-87da-311c3247c233">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id5th_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="ed6a8f14-9539-4788-8a61-12ddcec97335">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id5th_Max</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="e96d7c82-a931-465c-be7f-b1e092a48964">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id5th_Min</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="8e88129c-0447-4343-a927-32fea67b519c">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id7th_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="7724dbdc-bdf9-4eb9-b383-baaea1087b12">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id7th_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="35877b91-c129-4d57-b6d1-0eda3f4bc728">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id7th_Max</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="c17deaaa-4bd7-46fe-88f7-ae6f7b39b276">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Id7th_Min</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="025c0a30-12f7-4783-b3fb-0b1ebed751e6">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq5th_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="52e9bedd-3b6a-42bf-92fd-aeb194f7b2cd">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq5th_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="fd4edf3e-a679-4308-98e4-e8ff351e53af">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq5th_Max</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="ea6cf1c1-da36-4cdc-885b-54e23c17e16d">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq5th_Min</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="28d1c9b6-4aff-4529-86db-f84eb44b48fc">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq7th_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="b2da392f-1e80-4ae2-9f60-6630775f978a">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq7th_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="14cec6a4-3998-4e20-a445-d7b2cf8e9978">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq7th_Max</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="1d143429-29b0-4d89-a1ee-476e6d876659">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Iq7th_Min</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="fb875ae2-3246-400e-b5f5-39bb038389b9">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>ID_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="89a00f65-a08e-4496-8dd0-60c78cd495e8">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>ID_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="ca9dd848-ca86-4b3f-99c7-3370ad9b6e64">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>IQ_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="74e34522-3755-4735-ad61-e680e19b5c5f">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>IQ_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="0f2003a2-c2be-4d74-bf6b-9f0541f14e39">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Speed_Ki</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="db69b654-4906-4dd4-b516-c877190ee2c3">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Speed_Kp</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="fe254853-e69f-4b8a-a5bb-2d2e0e096b85">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Speed_PI_OutputMax</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="5c76e164-42ea-4598-b637-425e83112874">
+        <datatypeID>1</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Speed_PI_OutputMin</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="5baddf08-927d-43d6-afff-4955dda4db74">
+        <datatypeID>8</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Over_modulation</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="815aa019-2ee2-405a-b022-82ed15ad8566">
+        <datatypeID>3</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Angle</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="39cae5cd-c19a-45ea-a5e0-cdf4920c3c0d">
+        <datatypeID>3</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>FluxWeak_Enable</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="b076215a-138d-4411-8a77-3593d819fb12">
+        <datatypeID>3</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>Harmonic_Com_Enable</parameterName>
+      </globalVariables>
+      <globalVariables type="ModelRefInfoRepo.BuiltinParameter" uuid="bc1b1782-895b-4355-84ab-864e64f28b17">
+        <datatypeID>3</datatypeID>
+        <dimensions>1</dimensions>
+        <dimensions>1</dimensions>
+        <isUsed>true</isUsed>
+        <numDimensions>2</numDimensions>
+        <parameterName>TorqueMode</parameterName>
+      </globalVariables>
+    </interfaceParameterInfo>
+    <messageInfo type="ModelRefInfoRepo.MessageInformation" uuid="44416d05-0c69-4a4a-8278-39a501e7f85d"/>
+    <methodInfo type="ModelRefInfoRepo.MethodExistenceInfo" uuid="2ad6c1e2-9501-41f3-8df3-335ec4c102cb">
+      <hasDisableMethod>true</hasDisableMethod>
+      <hasEnableMethod>true</hasEnableMethod>
+      <hasSystemInitializeMethod>true</hasSystemInitializeMethod>
+      <hasSystemResetMethod>true</hasSystemResetMethod>
+      <hasTerminateMethod>true</hasTerminateMethod>
+      <hasUpdateMethod>true</hasUpdateMethod>
+    </methodInfo>
+    <periodicEventPortUnsupportedBlockInfo type="ModelRefInfoRepo.PeriodicEventPortUnsupportedBlockInfo" uuid="f9883a30-3a80-4b3f-9622-f568ae42c49b"/>
+    <portGroupsRequireSameRate type="ModelRefInfoRepo.PortGroupsRequireSameRate" uuid="a31741a0-acb5-4be4-87a3-c2b2bc784b9b">
+      <DSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="ece51fa8-4d4e-423d-9dd6-21d0c9816ddd"/>
+      <GlobalDSMPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="51eb9545-e048-4a7b-aab8-beb463123aad"/>
+      <mergedPortGroups type="ModelRefInfoRepo.NameToPortGroupIdxVectMap" uuid="63915bb8-9006-4b7c-bf26-becba9233075"/>
+    </portGroupsRequireSameRate>
+    <rateSpecOfGlobalDSMAccessedByDescExpFcnMdlMap type="ModelRefInfoRepo.GlobalDSMRateSpecMap" uuid="1aa94909-4b08-4849-9f5a-1e5857c2e81f"/>
+    <rootBlockDiagramInterface type="ci.Model" uuid="f02871fa-0bac-4750-86fa-f521487657d2">
+      <p_RootComponentInterface type="ci.ComponentInterface" uuid="1993880d-9b85-479e-baf6-52394cb16e92">
+        <p_InputPorts type="ci.SignalInterface" uuid="0415f18a-8d5d-4930-baa0-93ca0e97bd31">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.002</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_InputPorts>
+        <p_InputPorts type="ci.SignalInterface" uuid="6934d7eb-71b4-46c7-aac5-89f2d506b6ea">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.002</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_InputPorts>
+        <p_InputPorts type="ci.SignalInterface" uuid="8d390551-2bdf-4656-8861-21ddac9ea4f7">
+          <p_ComputedNumericDimensions>3.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_InputPorts>
+        <p_InputPorts type="ci.SignalInterface" uuid="4a961946-7c82-405a-964b-eacb6afbc0fe">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_InputPorts>
+        <p_InputPorts type="ci.SignalInterface" uuid="8a532d59-f603-4c42-b5f3-5ccb66af7032">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_InputPorts>
+        <p_InputPorts type="ci.SignalInterface" uuid="28fcfa14-a90d-4eed-9bac-b1b955a8fa11">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.01</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>uint8</p_ComputedType>
+        </p_InputPorts>
+        <p_InputPorts type="ci.SignalInterface" uuid="2d84d54d-6f04-4931-befe-134df89b6ca8">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_InputPorts>
+        <p_InputPorts type="ci.SignalInterface" uuid="e298256c-6e97-4e33-a706-df1ee958caec">
+          <p_ComputedNumericDimensions>3.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>uint8</p_ComputedType>
+        </p_InputPorts>
+        <p_Name>FOC_Motor_Control</p_Name>
+        <p_OutputPorts type="ci.SignalInterface" uuid="37c7e0d7-0022-4d67-aba4-1154b83dfe68">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_OutputPorts>
+        <p_OutputPorts type="ci.SignalInterface" uuid="a8c35fd9-6b52-4006-a289-78cce2459674">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_OutputPorts>
+        <p_OutputPorts type="ci.SignalInterface" uuid="af02c39b-f6c2-48ec-9058-dc9aa116eea9">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_OutputPorts>
+        <p_OutputPorts type="ci.SignalInterface" uuid="06913ca2-2154-4a9b-8656-d4791005698b">
+          <p_ComputedNumericDimensions>1.0</p_ComputedNumericDimensions>
+          <p_ComputedSampleTime>.0001</p_ComputedSampleTime>
+          <p_ComputedSampleTime>0.0</p_ComputedSampleTime>
+          <p_ComputedType>single</p_ComputedType>
+        </p_OutputPorts>
+        <p_Type>ROOT</p_Type>
+      </p_RootComponentInterface>
+    </rootBlockDiagramInterface>
+    <simulinkFunctions type="ModelRefInfoRepo.SimulinkFunctions" uuid="df655f83-cf95-4d34-87a1-5dbef326fa25">
+      <compSimulinkFunctionCatalog></compSimulinkFunctionCatalog>
+    </simulinkFunctions>
+    <stateWriterToOwnerMap type="ModelRefInfoRepo.StateWriterInfo" uuid="60e8bed4-a12b-4c32-bace-1eca9aca738d"/>
+    <stoClientDataRegistry type="sto.ClientDataRegistry" uuid="13e38aea-ca4d-43ae-93b2-e2b3208c3a7a">
+      <dataSets type="sto.ClientClockNamedDataSet" uuid="8fefd3db-423f-4897-b6da-823526315555">
+        <tag>sltpEvents</tag>
+      </dataSets>
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="a63cada7-55d7-4682-85bb-8ff1f2bc61e3">
+        <tag>sltpTaskGroups</tag>
+      </dataSets>
+      <dataSets type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="4d8df727-1a74-4fc8-bdce-edc652bdc461">
+        <dSet type="ModelRefInfoRepo.SltpTaskData" uuid="4797d9d7-2b3e-4f5f-bba0-ffad59adab72"/>
+        <tSet type="ModelRefInfoRepo.SltpTaskData" uuid="4797d9d7-2b3e-4f5f-bba0-ffad59adab72">
+          <dataName>D1</dataName>
+          <linkedSet type="sto.ClientTaskHierarchyElementNamedDataSet" uuid="4d8df727-1a74-4fc8-bdce-edc652bdc461"/>
+          <id type="sto.TaskHierarchyElementId">
+            <id>_task0</id>
+          </id>
+        </tSet>
+        <tag>sltpTasks</tag>
+      </dataSets>
+    </stoClientDataRegistry>
+    <varTsUIDMap type="ModelRefInfoRepo.VarTsUIDMap" uuid="1d21ed99-68ad-4a1f-b566-5bfb7c6d4117"/>
+  </ModelRefInfoRepo.ModelRefInfoRoot>
+</MF0>

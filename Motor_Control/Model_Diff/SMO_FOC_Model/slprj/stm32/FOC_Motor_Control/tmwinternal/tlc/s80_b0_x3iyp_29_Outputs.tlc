@@ -1,0 +1,53 @@
+%implements s80_b0_x3iyp_29_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[69], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Resolver_Angle_cacl",69,0)
+%<SLibCG_AccessArg(29 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Resolver_Angle_cacl",69,1)
+%<SLibCG_AccessArg(29 ,0, 1)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5661c*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Resolver_Angle_cacl", ["%<_modelSS>", "FOC_Motor_Controlrtrty_Speed_Measured", "&/*@>566ad*/FOC_Motor_ControlrtDW./*@>566ac*/UnitDelay4_DSTATE_j"], 69, 0, 6, 1, 6, 76),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[67], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_calibration",67,0)
+%<SLibCG_AccessArg(29 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5661d*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Angle_calibration", ["%<_modelSS>"], 67, 0, 6, 1, 6, 76),"/*@]*/")>\
+
+%endif
+/*@>56430*/FOC_Motor_ControlrtB./*@>5665e*/Merge1/*@>d9be*/ = /*@>56436*/FOC_Motor_ControlrtB./*@>56661*/Merge1_o;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[29].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(29, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(29, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(29, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Resolver_Observer(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(29, 0, fcnProtoType)>
+%endfunction

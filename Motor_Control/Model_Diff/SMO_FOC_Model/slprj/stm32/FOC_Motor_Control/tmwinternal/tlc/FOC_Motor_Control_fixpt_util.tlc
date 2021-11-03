@@ -1,0 +1,60 @@
+%function CGIRBlockRegisterFixPointFunctions() void
+%if !ISFIELD(FixPtUtils,"plook_u32f_evencka")
+%assign tmpRet = SETFIELD(FixPtUtils,"plook_u32f_evencka",1)
+%assign fcnProBuf =""
+%openfile fcnProBuf
+extern uint32_T plook_u32f_evencka(real32_T u, real32_T bp0, real32_T bpSpace, uint32_T maxIndex);
+%closefile fcnProBuf
+%assign fcnDefBuf =""
+%openfile fcnDefBuf
+%assign fcnRec = SLibFcnPrototypeToRec(fcnProBuf)
+%addtorecord fcnRec Abstract "" Category "utility" ...
+             GeneratedBy "" Type "Utility"
+%<SLibDumpFunctionBanner(fcnRec)>
+%undef fcnRec
+uint32_T plook_u32f_evencka(real32_T u, real32_T bp0, real32_T bpSpace, uint32_T maxIndex)
+{
+    real32_T fbpIndex;
+    uint32_T bpIndex;
+    /* Prelookup - Index only
+   Index Search method: 'even'
+   Extrapolation method: 'Clip'
+   Use previous index: 'off'
+   Use last breakpoint for index at or above upper limit: 'on'
+   Remove protection against out-of-range input in generated code: 'off'
+ */
+    if (u <= bp0) {
+        bpIndex = 0U;
+    } else {
+        fbpIndex = (u - bp0) * (1.0F / bpSpace);
+        if (fbpIndex < maxIndex) {
+            bpIndex = (uint32_T)fbpIndex;
+        } else {
+            bpIndex = maxIndex;
+        }
+    }
+    return bpIndex;
+}
+%closefile fcnDefBuf
+%<LibPushEmptyStackSharedUtils()>
+%<SLibDumpUtilsSourceCode("plook_u32f_evencka",fcnProBuf,fcnDefBuf)>
+%if !EXISTS(::CompiledModel.GenUtilsSrcInSharedLocation) || (::CompiledModel.GenUtilsSrcInSharedLocation == 0)
+%assign fcnProPragmaBuf =""
+%openfile fcnProPragmaBuf
+  %<SLibGetFcnMemSecPragmaOnDecl("plook_u32f_evencka", "MemSecFuncSharedUtil", "Pre")>\
+  %<fcnProBuf>
+  %<SLibGetFcnMemSecPragmaOnDecl("plook_u32f_evencka", "MemSecFuncSharedUtil", "Post")>\
+%closefile fcnProPragmaBuf
+  %<LibCacheFunctionPrototype(fcnProPragmaBuf)>
+%endif
+%assign incStackBuf = LibPopStackSharedUtilsIncludes()
+%undef incStackBuf
+%undef fcnProPragmaBuf
+%undef fcnProBuf
+%undef fcnDefBuf
+%endif %% !ISFIELD(FixPtUtils,"plook_u32f_evencka")
+
+
+%endfunction
+
+

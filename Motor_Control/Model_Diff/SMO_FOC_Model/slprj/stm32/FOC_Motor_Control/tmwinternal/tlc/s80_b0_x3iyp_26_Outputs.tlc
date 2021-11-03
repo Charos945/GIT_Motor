@@ -1,0 +1,49 @@
+%implements s80_b0_x3iyp_26_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real32_T rtb_Subtract1_o;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+/*@>50bcb*/rtb_Subtract1_o/*@>1237e*/ = /*@>510d3*/FOC_Motor_ControlrtDW./*@>511d8*/UnitDelay4_DSTATE_j/*@>1237b*/ + %<SLibCG_DumpSSCode("/*@[51190*/",(SLibCG_SE(SLibCGIR_CSCP(257, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+/*@>d6ef*/if (/*@>50bc2*/rtb_Subtract1_o/*@>d6ee*/ > /*@>50bc4*/6.28318548F) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[2], "Output",1)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_IfActionSubsystem2",2,0)
+%<SLibCG_AccessArg(26 ,0, 0)>
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCG_DumpSSCode("/*@[51172*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_IfActionSubsystem2", ["%<_modelSS>", "/*@>51222*/rtb_Subtract1_o", "&/*@>5122e*/FOC_Motor_ControlrtB./*@>5122d*/Merge1_o"], 2, 1, 6, 1, 6, 76),"/*@]*/")>\
+
+%endif
+} else {
+    /*@>50f97*/FOC_Motor_ControlrtB./*@>511d2*/Merge1_o/*@>d70b*/ = /*@>50bc7*/rtb_Subtract1_o;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[26].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(26, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(26, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(26, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Angle_calibration(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(26, 0, fcnProtoType)>
+%endfunction

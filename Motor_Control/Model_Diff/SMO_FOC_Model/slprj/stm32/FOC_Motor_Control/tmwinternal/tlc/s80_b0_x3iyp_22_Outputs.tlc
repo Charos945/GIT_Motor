@@ -1,0 +1,67 @@
+%implements s80_b0_x3iyp_22_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real32_T rtb_Gain3_m;
+real32_T rtb_dt1;
+%closefile localVarDecl
+/*@>9040*/if ((((/*@>4e455*/FOC_Motor_Controlrtrtu_Hall/*@>4e457*/[/*@>4e453*/0]/*@>4d718*/ > /*@>4d71f*/0)/*@>4d716*/ != (/*@>4e88e*/FOC_Motor_ControlrtPrevZCX./*@>4edbf*/ACC_OMG_Trig_ZCE/*@>4e45c*/[/*@>4e459*/0]/*@>4d721*/ == /*@>4e919*/POS_ZCSIG))/*@>4d715*/ && (/*@>4e894*/FOC_Motor_ControlrtPrevZCX./*@>4edc2*/ACC_OMG_Trig_ZCE/*@>4e461*/[/*@>4e45e*/0]/*@>4d729*/ != /*@>4e91c*/UNINITIALIZED_ZCSIG))/*@>4d714*/ || (((/*@>4e465*/FOC_Motor_Controlrtrtu_Hall/*@>4e467*/[/*@>4e463*/1]/*@>4d734*/ > /*@>4d73b*/0)/*@>4d732*/ != (/*@>4e89a*/FOC_Motor_ControlrtPrevZCX./*@>4edc5*/ACC_OMG_Trig_ZCE/*@>4e46c*/[/*@>4e469*/1]/*@>4d73d*/ == /*@>4e91f*/POS_ZCSIG))/*@>4d731*/ && (/*@>4e8a0*/FOC_Motor_ControlrtPrevZCX./*@>4edc8*/ACC_OMG_Trig_ZCE/*@>4e471*/[/*@>4e46e*/1]/*@>4d745*/ != /*@>4e922*/UNINITIALIZED_ZCSIG))/*@>4d713*/ || (((/*@>4e475*/FOC_Motor_Controlrtrtu_Hall/*@>4e477*/[/*@>4e473*/2]/*@>4d750*/ > /*@>4d757*/0)/*@>4d74e*/ != (/*@>4e8a6*/FOC_Motor_ControlrtPrevZCX./*@>4edcb*/ACC_OMG_Trig_ZCE/*@>4e47c*/[/*@>4e479*/2]/*@>4d759*/ == /*@>4e925*/POS_ZCSIG))/*@>4d74d*/ && (/*@>4e8ac*/FOC_Motor_ControlrtPrevZCX./*@>4edce*/ACC_OMG_Trig_ZCE/*@>4e481*/[/*@>4e47e*/2]/*@>4d761*/ != /*@>4e928*/UNINITIALIZED_ZCSIG))) {
+    /*@>4e740*/FOC_Motor_ControlrtB./*@>4ed9b*/Timer_Counter/*@>d759*/ = */*@<4ecca*/FOC_Motor_Controlrtrtu_Timer_counter;
+    /*@>4ce1e*/rtb_Gain3_m/*@>d761*/ = %<SLibCG_DumpSSCode("/*@[4eaf5*/",(SLibCG_SE(SLibCGIR_CSCP(269, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>4cf1a*/ * /*@>4e746*/FOC_Motor_ControlrtB./*@>4ed9e*/Timer_Counter;
+    /*@>4ce50*/rtb_dt1/*@>12013*/ = /*@>4ce20*/rtb_Gain3_m/*@>12010*/ - /*@>4e8ee*/FOC_Motor_ControlrtDW./*@>4edda*/Memory_PreviousInput;
+    /*@>4e74c*/FOC_Motor_ControlrtB./*@>4eda1*/Gain2/*@>d771*/ = /*@>4ce7e*/1.04719758F/*@>4cf16*/ / /*@>4ce62*/rtb_dt1;
+    /*@>4e752*/FOC_Motor_ControlrtB./*@>4eda4*/a/*@>d81b*/ = (/*@>4e758*/FOC_Motor_ControlrtB./*@>4eda7*/Gain2/*@>4c002*/ - /*@>4e8f4*/FOC_Motor_ControlrtDW./*@>4eddd*/Memory1_PreviousInput)/*@>4cf12*/ / (/*@>4e8fa*/FOC_Motor_ControlrtDW./*@>4ede0*/Memory2_PreviousInput/*@>4bf98*/ + /*@>4ce66*/rtb_dt1);
+/*@>d82a*/    switch (/*@>4cefa*/(uint8_T)(/*@>4d102*/(uint32_T)/*@>4cf07*/(uint8_T)(/*@>4d101*/(uint32_T)/*@>4e2de*/(uint8_T)(/*@>4e497*/FOC_Motor_Controlrtrtu_Hall/*@>4e499*/[/*@>4e495*/1]/*@>4cf0c*/ << /*@>4ce7f*/1U)/*@>4cf03*/ + /*@>4e49d*/FOC_Motor_Controlrtrtu_Hall/*@>4e49f*/[/*@>4e49b*/0])/*@>4cef6*/ + /*@>4e2df*/(uint8_T)(/*@>4e4a3*/FOC_Motor_Controlrtrtu_Hall/*@>4e4a5*/[/*@>4e4a1*/2]/*@>4cf0f*/ << /*@>4ce80*/2U))) {
+      case /*@>4ce32*/1:
+        /*@>4e75e*/FOC_Motor_ControlrtB./*@>4edaa*/Merge2/*@>12028*/ = %<SLibCG_DumpSSCode("/*@[4eb33*/",(SLibCG_SE(SLibCGIR_CSCP(263, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>12025*/ + %<SLibCG_DumpSSCode("/*@[4eb14*/",(SLibCG_SE(SLibCGIR_CSCP(262, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+        break;
+      case /*@>4ce33*/2:
+        /*@>4e764*/FOC_Motor_ControlrtB./*@>4edad*/Merge2/*@>1202d*/ = %<SLibCG_DumpSSCode("/*@[4eb71*/",(SLibCG_SE(SLibCGIR_CSCP(264, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>1202a*/ + %<SLibCG_DumpSSCode("/*@[4eb52*/",(SLibCG_SE(SLibCGIR_CSCP(262, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+        break;
+      case /*@>4ce34*/3:
+        /*@>4e76a*/FOC_Motor_ControlrtB./*@>4edb0*/Merge2/*@>12032*/ = %<SLibCG_DumpSSCode("/*@[4ebaf*/",(SLibCG_SE(SLibCGIR_CSCP(265, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>1202f*/ + %<SLibCG_DumpSSCode("/*@[4eb90*/",(SLibCG_SE(SLibCGIR_CSCP(262, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+        break;
+      case /*@>4ce35*/4:
+        /*@>4e770*/FOC_Motor_ControlrtB./*@>4edb3*/Merge2/*@>12037*/ = %<SLibCG_DumpSSCode("/*@[4ebed*/",(SLibCG_SE(SLibCGIR_CSCP(266, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>12034*/ + %<SLibCG_DumpSSCode("/*@[4ebce*/",(SLibCG_SE(SLibCGIR_CSCP(262, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+        break;
+      case /*@>4ce36*/5:
+        /*@>4e776*/FOC_Motor_ControlrtB./*@>4edb6*/Merge2/*@>1203c*/ = %<SLibCG_DumpSSCode("/*@[4ec2b*/",(SLibCG_SE(SLibCGIR_CSCP(267, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>12039*/ + %<SLibCG_DumpSSCode("/*@[4ec0c*/",(SLibCG_SE(SLibCGIR_CSCP(262, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+        break;
+      case /*@>4ce37*/6:
+        /*@>4e77c*/FOC_Motor_ControlrtB./*@>4edb9*/Merge2/*@>12041*/ = %<SLibCG_DumpSSCode("/*@[4ec69*/",(SLibCG_SE(SLibCGIR_CSCP(268, 0, 1, "", -1, "", 0))),"/*@]*/")>/*@>1203e*/ + %<SLibCG_DumpSSCode("/*@[4ec4a*/",(SLibCG_SE(SLibCGIR_CSCP(262, 0, 1, "", -1, "", 0))),"/*@]*/")>;
+        break;
+    }
+    /*@>4e900*/FOC_Motor_ControlrtDW./*@>4ede3*/Memory_PreviousInput/*@>d7e3*/ = /*@>4ce24*/rtb_Gain3_m;
+    /*@>4e906*/FOC_Motor_ControlrtDW./*@>4ede6*/Memory1_PreviousInput/*@>d7e5*/ = /*@>4e782*/FOC_Motor_ControlrtB./*@>4edbc*/Gain2;
+    /*@>4e90c*/FOC_Motor_ControlrtDW./*@>4ede9*/Memory2_PreviousInput/*@>d7e7*/ = /*@>4ce2c*/rtb_dt1;
+}
+/*@>4e8b2*/FOC_Motor_ControlrtPrevZCX./*@>4edd1*/ACC_OMG_Trig_ZCE/*@>4cb82*/[/*@>4cec3*/0]/*@>4cb81*/ = (ZCSigState)(/*@>4e485*/FOC_Motor_Controlrtrtu_Hall/*@>4e487*/[/*@>4e483*/0]/*@>4cb87*/ > /*@>4cebf*/0);
+/*@>4e8b8*/FOC_Motor_ControlrtPrevZCX./*@>4edd4*/ACC_OMG_Trig_ZCE/*@>4cb99*/[/*@>4cecd*/1]/*@>4cb98*/ = (ZCSigState)(/*@>4e48b*/FOC_Motor_Controlrtrtu_Hall/*@>4e48d*/[/*@>4e489*/1]/*@>4cb9e*/ > /*@>4cec9*/0);
+/*@>4e8be*/FOC_Motor_ControlrtPrevZCX./*@>4edd7*/ACC_OMG_Trig_ZCE/*@>4cbb0*/[/*@>4ced7*/2]/*@>4cbaf*/ = (ZCSigState)(/*@>4e491*/FOC_Motor_Controlrtrtu_Hall/*@>4e493*/[/*@>4e48f*/2]/*@>4cbb5*/ > /*@>4ced3*/0);
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[22].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(22, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(22, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(22, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_ACC_OMG(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(22, 0, fcnProtoType)>
+%endfunction

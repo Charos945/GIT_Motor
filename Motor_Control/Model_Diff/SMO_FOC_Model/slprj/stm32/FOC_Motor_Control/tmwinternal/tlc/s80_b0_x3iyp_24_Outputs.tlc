@@ -1,0 +1,36 @@
+%implements s80_b0_x3iyp_24_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int32_T rtb_Wrap_To_Pi;
+%closefile localVarDecl
+/*@>4fb10*/rtb_Wrap_To_Pi/*@>d2e8*/ = /*@>4fb44*/(int32_T)/*@>4fd7b*/floorf(/*@>4fb25*/1.70891312E+8F/*@>4fb48*/ * */*@<50065*/FOC_Motor_Controlrtrtu_Angle_Theta)/*@>4fb40*/ << /*@>4fbce*/2;
+/*@>4ffc4*/FOC_Motor_ControlrtDW./*@>50080*/UnitDelay_DSTATE_f/*@>50060*/ += (/*@>4f8d2*/(real32_T)(/*@>4fb20*/rtb_Wrap_To_Pi/*@>4f8d3*/ - /*@>4ffca*/FOC_Motor_ControlrtDW./*@>50083*/Position_Delay_DSTATE)/*@>4fb37*/ * /*@>4fb28*/1.46291804E-5F/*@>4fb33*/ * /*@>4fb27*/9.54929638F/*@>4fb2f*/ * /*@>4fb26*/0.5F/*@>4f87b*/ - /*@>4ffd0*/FOC_Motor_ControlrtDW./*@>50086*/UnitDelay_DSTATE_f)/*@>4fb2b*/ * /*@>4fb1a*/SpeedFilter_Fn;
+/*@>4ffdc*/FOC_Motor_ControlrtDW./*@>50089*/Position_Delay_DSTATE/*@>d3b1*/ = /*@>4fb12*/rtb_Wrap_To_Pi;
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[24].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(24, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(24, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(24, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Speed_cacl(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(24, 0, fcnProtoType)>
+%endfunction

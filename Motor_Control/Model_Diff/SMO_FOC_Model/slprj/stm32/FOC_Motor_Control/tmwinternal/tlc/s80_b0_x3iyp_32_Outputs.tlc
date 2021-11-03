@@ -1,0 +1,198 @@
+%implements s80_b0_x3iyp_32_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+/*@>12f65*/if (%<SLibCG_DumpSSCode("/*@[5ab09*/",(SLibCGIRIsSampleHit(1, 75)),"/*@]*/")>) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[71], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_Speed_100us",71,0)
+%<SLibCG_AccessArg(32 ,1, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_Speed_100us",71,1)
+%<SLibCG_AccessArg(32 ,1, 4)>
+%<SLibCG_TrackIArg(76, 3, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_Speed_100us",71,2)
+%<SLibCG_AccessArg(32 ,1, 7)>
+%<SLibCG_TrackIArg(76, 6, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_Speed_100us",71,3)
+%<SLibCG_AccessArg(32 ,1, 8)>
+%<SLibCG_TrackIArg(76, 7, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Angle_Speed_100us",71,4)
+%<SLibCG_AccessArg(32 ,1, 12)>
+%<SLibCG_TrackOArg(76, 3, 1, 0)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5ab15*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Angle_Speed_100us", ["/*@>5ad70*/%<::tSimStruct>", "rtu_Angle_Theta", "rtu_Timer_counter", "rtu_Hall", "rty_Speed_Measured"], 71, 0, 6, 0, 6, 76),"/*@]*/")>\
+
+%endif
+    /*@>5a62b*/FOC_Motor_ControlrtB./*@>5ad1b*/UnitDelay2/*@>ddfd*/ = /*@>5a791*/FOC_Motor_ControlrtDW./*@>5ad2d*/UnitDelay2_DSTATE;
+    /*@>5a631*/FOC_Motor_ControlrtB./*@>5ad1e*/UnitDelay1/*@>de0d*/ = /*@>5a797*/FOC_Motor_ControlrtDW./*@>5ad30*/UnitDelay1_DSTATE;
+    /*@>5a637*/FOC_Motor_ControlrtB./*@>5ad21*/UnitDelay3/*@>de1d*/ = /*@>5a79d*/FOC_Motor_ControlrtDW./*@>5ad33*/UnitDelay3_DSTATE;
+    /*@>5a63d*/FOC_Motor_ControlrtB./*@>5ad24*/UnitDelay4/*@>de2d*/ = /*@>5a7a3*/FOC_Motor_ControlrtDW./*@>5ad36*/UnitDelay4_DSTATE;
+}
+/*@>12f6f*/if (%<SLibCG_DumpSSCode("/*@[5ab0c*/",(SLibCGIRIsSampleHit(3, 75)),"/*@]*/")>) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[74], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_SYM_State_10ms",74,0)
+%<SLibCG_AccessArg(32 ,1, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_SYM_State_10ms",74,1)
+%<SLibCG_AccessArg(32 ,1, 6)>
+%<SLibCG_TrackIArg(76, 5, 1, 0)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5ab16*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_SYM_State_10ms", ["/*@>5adb8*/%<::tSimStruct>", "rtu_Start_Stop"], 74, 0, 6, 0, 6, 76),"/*@]*/")>\
+
+%endif
+}
+/*@>12f73*/if (%<SLibCG_DumpSSCode("/*@[5ab0f*/",(SLibCGIRIsSampleHit(2, 75)),"/*@]*/")>) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[51], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_k",51,0)
+%<SLibCG_AccessArg(32 ,1, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_k",51,1)
+%<SLibCG_AccessArg(32 ,1, 1)>
+%<SLibCG_TrackIArg(76, 0, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_k",51,2)
+%<SLibCG_AccessArg(32 ,1, 2)>
+%<SLibCG_TrackIArg(76, 1, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_k",51,3)
+%<SLibCG_AccessArg(32 ,1, 5)>
+%<SLibCG_TrackIArg(76, 4, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_k",51,4)
+%<SLibCG_AccessArg(32 ,1, 12)>
+%<SLibCG_TrackOArg(76, 3, 1, 0)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5ab17*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Control_Command_2ms_k", ["/*@>5ade8*/%<::tSimStruct>", "rtu_Speed_target", "rtu_Torque_ref", "rtu_Bus_Voltage", "rty_Speed_Measured"], 51, 0, 6, 0, 6, 76),"/*@]*/")>\
+
+%endif
+}
+/*@>12f77*/if (%<SLibCG_DumpSSCode("/*@[5ab12*/",(SLibCGIRIsSampleHit(1, 75)),"/*@]*/")>) {
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[42], "Output",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us",42,0)
+%<SLibCG_AccessArg(32 ,1, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us",42,1)
+%<SLibCG_AccessArg(32 ,1, 3)>
+%<SLibCG_TrackIArg(76, 2, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us",42,2)
+%<SLibCG_AccessArg(32 ,1, 5)>
+%<SLibCG_TrackIArg(76, 4, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us",42,3)
+%<SLibCG_AccessArg(32 ,1, 9)>
+%<SLibCG_TrackOArg(76, 0, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us",42,4)
+%<SLibCG_AccessArg(32 ,1, 10)>
+%<SLibCG_TrackOArg(76, 1, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us",42,5)
+%<SLibCG_AccessArg(32 ,1, 11)>
+%<SLibCG_TrackOArg(76, 2, 1, 0)>
+%endif
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us",42,6)
+%<SLibCG_AccessArg(32 ,1, 12)>
+%<SLibCG_TrackOArg(76, 3, 1, 0)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5ab18*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_FOC_Control_100us", ["/*@>5ae3a*/%<::tSimStruct>", "rtu_Phase_CurrentABC", "rtu_Bus_Voltage", "rty_Ta", "rty_Tb", "rty_Tc", "rty_Speed_Measured"], 42, 0, 6, 0, 6, 76),"/*@]*/")>\
+
+%endif
+    /*@>5a7a9*/FOC_Motor_ControlrtDW./*@>5ad39*/UnitDelay2_DSTATE/*@>de67*/ = /*@>59581*/Id_measured;
+    /*@>5a7af*/FOC_Motor_ControlrtDW./*@>5ad3c*/UnitDelay1_DSTATE/*@>de77*/ = /*@>5a643*/FOC_Motor_ControlrtB./*@>5ad27*/Add;
+    /*@>5a7b5*/FOC_Motor_ControlrtDW./*@>5ad3f*/UnitDelay3_DSTATE/*@>de87*/ = /*@>59589*/Iq_measured;
+    /*@>5a7bb*/FOC_Motor_ControlrtDW./*@>5ad42*/UnitDelay4_DSTATE/*@>de97*/ = /*@>5a649*/FOC_Motor_ControlrtB./*@>5ad2a*/Add1_a;
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[32].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(32, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(32, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(32, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(32, 1, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%assign rtmArgSys = SLibGetModuleFileNameOwnerSystemIdx(32)
+%assign sourceFile = SLibGetFullFileNameForSystemCode("sys_fcn_defn", rtmArgSys)
+%<SLibUpdateLocalSymbolTableForFile(sourceFile, SLibGetFcnDefinitionRTMSymbolName())>\
+%endif
+%if SLibCG_ArgAccessed(32, 1, 1)
+%<comma>const real32_T *rtu_Speed_target\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 2)
+%<comma>const real32_T *rtu_Torque_ref\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 3)
+%<comma>const real32_T rtu_Phase_CurrentABC[3]\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 4)
+%<comma>const real32_T *rtu_Angle_Theta\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 5)
+%<comma>const real32_T *rtu_Bus_Voltage\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 6)
+%<comma>const uint8_T *rtu_Start_Stop\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 7)
+%<comma>const real32_T *rtu_Timer_counter\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 8)
+%<comma>const uint8_T rtu_Hall[3]\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 9)
+%<comma>real32_T *rty_Ta\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 10)
+%<comma>real32_T *rty_Tb\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 11)
+%<comma>real32_T *rty_Tc\
+%assign comma = ", "
+%endif
+%if SLibCG_ArgAccessed(32, 1, 12)
+%<comma>real32_T *rty_Speed_Measured\
+%assign comma = ", "
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(32, 1, fcnProtoType)>
+%endfunction

@@ -1,0 +1,129 @@
+%implements s80_b0_x3iyp_13_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+int32_T rtb_Saturation;
+real32_T rtb_Add1_fq;
+real32_T rtb_IndexVector;
+real32_T rtb_IndexVector1;
+real32_T rtb_IndexVector1_p;
+real32_T rtb_IndexVector_c;
+%closefile localVarDecl
+/*@>3ab4b*/rtb_IndexVector1_p/*@>3ab4d*/ = /*@>39835*/1.73205078F/*@>39921*/ * /*@>3be17*/FOC_Motor_ControlrtB./*@>3c53c*/Add3;
+/*@>39c23*/rtb_IndexVector_c/*@>39c25*/ = /*@>39aeb*/(real32_T)((((/*@>3ac9f*/rtb_IndexVector1_p/*@>37796*/ - /*@>3be1d*/FOC_Motor_ControlrtB./*@>3c53f*/Add4/*@>37795*/ >= /*@>39838*/0.0F)/*@>3c377*/ << /*@>3c376*/1)/*@>374cf*/ + (/*@>3be23*/FOC_Motor_ControlrtB./*@>3c542*/Add4/*@>374d1*/ >= /*@>39836*/0.0F))/*@>374ce*/ + (((/*@>397d4*/0.0F/*@>377a9*/ - /*@>3be29*/FOC_Motor_ControlrtB./*@>3c545*/Add4)/*@>377a8*/ - /*@>3aca1*/rtb_IndexVector1_p/*@>377a7*/ >= /*@>3983a*/0.0F)/*@>3c37a*/ << /*@>3c379*/2));
+/*@>3a7bd*/if (/*@>3a0bd*/rtb_IndexVector_c/*@>3a0bb*/ > /*@>3a0be*/6.0F) {
+    /*@>3a7c1*/rtb_Saturation/*@>3a7c0*/ = /*@>3c3f6*/6;
+} else /*@>3a7c3*/if (/*@>3a0c3*/rtb_IndexVector_c/*@>3a0c1*/ < /*@>3a0c4*/1.0F) {
+    /*@>3a7c7*/rtb_Saturation/*@>3a7c6*/ = /*@>3c3f9*/1;
+} else {
+    /*@>39721*/rtb_Saturation/*@>ca48*/ = /*@>39aec*/(int32_T)/*@>3a0c7*/rtb_IndexVector_c;
+}
+/*@>3a7d2*/if (*/*@<3c4c4*/FOC_Motor_Controlrtrtu_Bus_Voltage/*@>3a0ce*/ > /*@>3a0d1*/1200.0F) {
+    /*@>3a7d6*/rtb_IndexVector_c/*@>3a7d5*/ = /*@>3a0d2*/1200.0F;
+} else /*@>3a7d7*/if (*/*@<3c4c5*/FOC_Motor_Controlrtrtu_Bus_Voltage/*@>3a0d4*/ < /*@>3a0d7*/0.0001F) {
+    /*@>3a7db*/rtb_IndexVector_c/*@>3a7da*/ = /*@>3a0d8*/0.0001F;
+} else {
+    /*@>3a7cb*/rtb_IndexVector_c/*@>3a7cd*/ = */*@<3c4c6*/FOC_Motor_Controlrtrtu_Bus_Voltage;
+}
+/*@>39797*/rtb_Add1_fq/*@>ccc8*/ = /*@>3985b*/0.000173205073F/*@>39911*/ / /*@>3a7cf*/rtb_IndexVector_c;
+/*@>caf2*/switch (/*@>39727*/rtb_Saturation) {
+  case /*@>39729*/1:
+    /*@>39730*/rtb_IndexVector_c/*@>caf6*/ = (rtb_IndexVector1_p/*@>37d4a*/ - /*@>3be35*/FOC_Motor_ControlrtB./*@>3c54b*/Add4)/*@>398d6*/ * /*@>39841*/-0.5F/*@>398d2*/ * /*@>397fe*/rtb_Add1_fq;
+    /*@>3973c*/rtb_IndexVector1_p/*@>cb05*/ = ((/*@>39804*/0.0F/*@>37d5a*/ - /*@>3be59*/FOC_Motor_ControlrtB./*@>3c55d*/Add4)/*@>37d59*/ - rtb_IndexVector1_p)/*@>398ce*/ * /*@>39845*/-0.5F/*@>398ca*/ * /*@>39809*/rtb_Add1_fq;
+    break;
+  case /*@>3972a*/2:
+    /*@>39732*/rtb_IndexVector_c/*@>caf8*/ = ((/*@>3980b*/0.0F/*@>37d6d*/ - /*@>3be3b*/FOC_Motor_ControlrtB./*@>3c54e*/Add4)/*@>37d6c*/ - rtb_IndexVector1_p)/*@>398e3*/ * /*@>39842*/-0.5F/*@>398df*/ * /*@>39810*/rtb_Add1_fq;
+    /*@>3973e*/rtb_IndexVector1_p/*@>cb07*/ = -/*@<398d8*/(/*@>3be5f*/FOC_Motor_ControlrtB./*@>3c560*/Add4/*@>398db*/ * /*@>39814*/rtb_Add1_fq);
+    break;
+  case /*@>3972b*/3:
+    /*@>39734*/rtb_IndexVector_c/*@>cafa*/ = -/*@<398e9*/((rtb_IndexVector1_p/*@>37d8c*/ - /*@>3be41*/FOC_Motor_ControlrtB./*@>3c551*/Add4)/*@>398f0*/ * /*@>39843*/-0.5F/*@>398ec*/ * /*@>39816*/rtb_Add1_fq);
+    /*@>39740*/rtb_IndexVector1_p/*@>cb09*/ = /*@>3be65*/FOC_Motor_ControlrtB./*@>3c563*/Add4/*@>398e7*/ * /*@>3981e*/rtb_Add1_fq;
+    break;
+  case /*@>3972c*/4:
+    /*@>39736*/rtb_IndexVector_c/*@>cafc*/ = -/*@<398fa*/(/*@>3be47*/FOC_Motor_ControlrtB./*@>3c554*/Add4/*@>398fd*/ * /*@>39822*/rtb_Add1_fq);
+    /*@>39742*/rtb_IndexVector1_p/*@>cb0b*/ = (rtb_IndexVector1_p/*@>37db3*/ - /*@>3be6b*/FOC_Motor_ControlrtB./*@>3c566*/Add4)/*@>398f8*/ * /*@>39846*/-0.5F/*@>398f4*/ * /*@>39824*/rtb_Add1_fq;
+    break;
+  case /*@>3972d*/5:
+    /*@>39738*/rtb_IndexVector_c/*@>cafe*/ = /*@>3be4d*/FOC_Motor_ControlrtB./*@>3c557*/Add4/*@>3990a*/ * /*@>3982c*/rtb_Add1_fq;
+    /*@>39744*/rtb_IndexVector1_p/*@>cb0d*/ = -/*@<398ff*/(((/*@>3982e*/0.0F/*@>37dce*/ - /*@>3be71*/FOC_Motor_ControlrtB./*@>3c569*/Add4)/*@>37dcd*/ - rtb_IndexVector1_p)/*@>39906*/ * /*@>39847*/-0.5F/*@>39902*/ * /*@>39833*/rtb_Add1_fq);
+    break;
+  default:
+    /*@>3972e*/rtb_IndexVector_c/*@>caf4*/ = -/*@<398bf*/(((/*@>397f1*/0.0F/*@>37d25*/ - /*@>3be2f*/FOC_Motor_ControlrtB./*@>3c548*/Add4)/*@>37d24*/ - rtb_IndexVector1_p)/*@>398c6*/ * /*@>39840*/-0.5F/*@>398c2*/ * /*@>397f6*/rtb_Add1_fq);
+    /*@>3973a*/rtb_IndexVector1_p/*@>cb03*/ = -/*@<398b6*/((rtb_IndexVector1_p/*@>37d39*/ - /*@>3be53*/FOC_Motor_ControlrtB./*@>3c55a*/Add4)/*@>398bd*/ * /*@>39844*/-0.5F/*@>398b9*/ * /*@>397f8*/rtb_Add1_fq);
+    break;
+}
+/*@>397a8*/rtb_Add1_fq/*@>10dbe*/ = /*@>39746*/rtb_IndexVector_c/*@>10dbb*/ + /*@>39748*/rtb_IndexVector1_p;
+/*@>cd29*/if (!/*@<3b3ba*/(/*@>3a14f*/0.0001F/*@>3a14e*/ - /*@>3a151*/rtb_Add1_fq/*@>cd1b*/ > /*@>39849*/0.0F)) {
+    /*@>3979f*/rtb_IndexVector_c/*@>cd27*/ = /*@>397bd*/rtb_IndexVector_c/*@>398b4*/ * /*@>3984a*/0.0001F/*@>398b0*/ / /*@>397bf*/rtb_Add1_fq;
+    /*@>397a5*/rtb_IndexVector1_p/*@>3c402*/ *= /*@>397c1*/1.0F/*@>398ac*/ / /*@>397c2*/rtb_Add1_fq/*@>398a8*/ * /*@>3984b*/0.0001F;
+}
+/*@>3974c*/rtb_Add1_fq/*@>cb7c*/ = ((/*@>3984d*/0.0001F/*@>373f9*/ - /*@>397c6*/rtb_IndexVector_c)/*@>373f8*/ - /*@>397c8*/rtb_IndexVector1_p)/*@>398a0*/ * /*@>3984c*/0.25F;
+/*@>397ac*/rtb_IndexVector_c/*@>10dce*/ = /*@>3984e*/0.5F/*@>3989c*/ * /*@>397ca*/rtb_IndexVector_c/*@>10dcb*/ + /*@>3974e*/rtb_Add1_fq;
+/*@>cb99*/switch (/*@>39750*/rtb_Saturation) {
+  case /*@>39752*/1:
+    /*@>3975d*/rtb_IndexVector/*@>cb9d*/ = /*@>3975b*/rtb_IndexVector_c;
+    /*@>3976f*/rtb_IndexVector1/*@>cbac*/ = /*@>3976d*/rtb_Add1_fq;
+    /*@>39783*/rtb_Add1_fq/*@>cbbb*/ = /*@>39853*/0.5F/*@>39885*/ * /*@>397dd*/rtb_IndexVector1_p/*@>37c89*/ + /*@>397df*/rtb_IndexVector_c;
+    break;
+  case /*@>39753*/2:
+    /*@>39761*/rtb_IndexVector/*@>cb9f*/ = /*@>3975f*/rtb_Add1_fq;
+    /*@>39771*/rtb_IndexVector1/*@>cbae*/ = /*@>39852*/0.5F/*@>39889*/ * /*@>397e1*/rtb_IndexVector1_p/*@>37c9c*/ + /*@>397e3*/rtb_IndexVector_c;
+    /*@>39787*/rtb_Add1_fq/*@>cbbd*/ = /*@>39785*/rtb_IndexVector_c;
+    break;
+  case /*@>39754*/3:
+    /*@>39765*/rtb_IndexVector/*@>cba1*/ = /*@>39763*/rtb_Add1_fq;
+    /*@>39775*/rtb_IndexVector1/*@>cbb0*/ = /*@>39773*/rtb_IndexVector_c;
+    /*@>39789*/rtb_Add1_fq/*@>cbbf*/ = /*@>39854*/0.5F/*@>3988d*/ * /*@>397e5*/rtb_IndexVector1_p/*@>37cb9*/ + /*@>397e7*/rtb_IndexVector_c;
+    break;
+  case /*@>39755*/4:
+    /*@>39767*/rtb_IndexVector/*@>cba3*/ = /*@>3984f*/0.5F/*@>39891*/ * /*@>397e9*/rtb_IndexVector1_p/*@>37cc7*/ + /*@>397eb*/rtb_IndexVector_c;
+    /*@>39779*/rtb_IndexVector1/*@>cbb2*/ = /*@>39777*/rtb_IndexVector_c;
+    break;
+  case /*@>39756*/5:
+    /*@>39769*/rtb_IndexVector/*@>cba5*/ = /*@>39850*/0.5F/*@>39895*/ * /*@>397ed*/rtb_IndexVector1_p/*@>37cdf*/ + /*@>397ef*/rtb_IndexVector_c;
+    /*@>3977d*/rtb_IndexVector1/*@>cbb4*/ = /*@>3977b*/rtb_Add1_fq;
+    /*@>39791*/rtb_Add1_fq/*@>cbc3*/ = /*@>3978f*/rtb_IndexVector_c;
+    break;
+  default:
+    /*@>39759*/rtb_IndexVector/*@>cb9b*/ = /*@>39757*/rtb_IndexVector_c;
+    /*@>3976b*/rtb_IndexVector1/*@>cbaa*/ = /*@>39851*/0.5F/*@>39881*/ * /*@>397d9*/rtb_IndexVector1_p/*@>37c6c*/ + /*@>397db*/rtb_IndexVector_c;
+    break;
+}
+/*@>c9e4*/if (/*@>3be77*/FOC_Motor_ControlrtB./*@>3c56c*/Merge1_a/*@>c9e3*/ == /*@>39719*/0) {
+    *FOC_Motor_Controlrtrty_Ta/*@>cc34*/ = /*@>39857*/8.399E+7F/*@>39875*/ * /*@>397cc*/rtb_IndexVector;
+    *FOC_Motor_Controlrtrty_Tb/*@>cc36*/ = /*@>3a1c6*/8.399E+7F/*@>3a1c5*/ * /*@>3a1c8*/rtb_IndexVector1;
+    *FOC_Motor_Controlrtrty_Tc/*@>cc38*/ = /*@>3a1cf*/8.399E+7F/*@>3a1ce*/ * /*@>3a1d1*/rtb_Add1_fq;
+} else {
+    /*@>c9e8*/if (/*@>3be7d*/FOC_Motor_ControlrtB./*@>3c56f*/Merge1_a/*@>c9e7*/ == /*@>3971c*/1) {
+        *FOC_Motor_Controlrtrty_Ta/*@>cc4e*/ = /*@>39858*/0.0F;
+        *FOC_Motor_Controlrtrty_Tb/*@>cc50*/ = /*@>39859*/0.0F;
+        *FOC_Motor_Controlrtrty_Tc/*@>cc52*/ = /*@>3985a*/0.0F;
+    }
+}
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[13].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(13, 1, 0)>
+%endif
+%if SLibCG_ArgAccessed(13, 1, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(13, 1, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_SVPWM(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(13, 1, fcnProtoType)>
+%endfunction

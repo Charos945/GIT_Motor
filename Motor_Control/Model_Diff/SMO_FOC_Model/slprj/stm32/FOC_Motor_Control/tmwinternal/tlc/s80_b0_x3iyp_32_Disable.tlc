@@ -1,0 +1,55 @@
+%implements s80_b0_x3iyp_32_Disable "C"
+
+%function Disable(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[51], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_Control_Command_2ms_i_Disable",51,0)
+%<SLibCG_AccessArg(32 ,2, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5ab63*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_Control_Command_2ms_i_Disable", ["/*@>5aeb1*/%<::tSimStruct>"], 51, 0, 14, 0, 14, 76),"/*@]*/")>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[42], "Disable",0)
+%if SLibCG_SystemFcnArgAccessed("FOC_Motor_Control_FOC_Control_100us_Disable",42,0)
+%<SLibCG_AccessArg(32 ,2, 0)>
+%<SLibCG_TrackGlobalRTMArg(76)>
+%endif
+
+%<SLibCG_DumpSSCode("/*@[5ab64*/",SLibCGIRGenReusableSysCall("FOC_Motor_Control_FOC_Control_100us_Disable", ["/*@>5aecf*/%<::tSimStruct>"], 42, 0, 14, 0, 14, 76),"/*@]*/")>\
+
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[32].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Disable", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))
+%<SLibCG_AccessArg(32, 2, 0)>
+%endif
+%if SLibCG_ArgAccessed(32, 2, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Disable", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Disable"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(32, 2, 0)>
+%endif
+%endfunction
+%function DisableFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Disable(\
+%assign comma = ""
+%if SLibCG_ArgAccessed(32, 2, 0)
+%<comma>%<::tSimStructType> * const %<::tSimStruct>\
+%assign comma = ", "
+%assign rtmArgSys = SLibGetModuleFileNameOwnerSystemIdx(32)
+%assign sourceFile = SLibGetFullFileNameForSystemCode("sys_fcn_defn", rtmArgSys)
+%<SLibUpdateLocalSymbolTableForFile(sourceFile, SLibGetFcnDefinitionRTMSymbolName())>\
+%endif
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(32, 2, fcnProtoType)>
+%endfunction

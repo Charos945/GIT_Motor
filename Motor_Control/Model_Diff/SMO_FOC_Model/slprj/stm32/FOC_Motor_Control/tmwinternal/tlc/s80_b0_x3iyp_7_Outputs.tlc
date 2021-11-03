@@ -1,0 +1,44 @@
+%implements s80_b0_x3iyp_7_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+real32_T rtb_Saturation;
+uint32_T Cosine_tmp;
+%closefile localVarDecl
+/*@>25a86*/if (/*@>25e76*/FOC_Motor_ControlrtB./*@>26099*/Sum12/*@>25920*/ > /*@>259ab*/6.28308535F) {
+    /*@>25a8a*/rtb_Saturation/*@>25a89*/ = /*@>259b1*/6.28308535F;
+} else /*@>25a8b*/if (/*@>25e7c*/FOC_Motor_ControlrtB./*@>2609c*/Sum12/*@>2591d*/ < /*@>259ad*/0.0001F) {
+    /*@>25a8f*/rtb_Saturation/*@>25a8e*/ = /*@>259af*/0.0001F;
+} else {
+    /*@>25936*/rtb_Saturation/*@>25927*/ = /*@>25e82*/FOC_Motor_ControlrtB./*@>2609f*/Sum12;
+}
+/*@>25b22*/Cosine_tmp/*@>25b24*/ = /*@>25c99*/plook_u32f_evencka(/*@>257d9*/rtb_Saturation, 0.0F, /*@>257e8*/0.00153435534F, /*@>257db*/4095U);
+/*@>25e88*/FOC_Motor_ControlrtB./*@>260a2*/Cosine/*@>f18f*/ = /*@>25d8b*/rtCP_Cosine_tableData/*@>25d8d*/[/*@>25d8a*/Cosine_tmp];
+/*@>25e8e*/FOC_Motor_ControlrtB./*@>260a5*/Sine_k/*@>f1e5*/ = /*@>25d91*/rtCP_Sine_tableData/*@>25d93*/[Cosine_tmp];
+%closefile cfgTxt
+%<cfgTxt>
+%assign rtmArgSys = ::CompiledModel.System[::CompiledModel.System[::CompiledModel.RTWCGModules.RTWCGModule[7].CGSystemIdx].NonInlinedParentSystemIdx]
+%if SysFcnArgNeeded("Output", rtmArgSys.Interface.RTMArgDef, rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))
+%<SLibCG_AccessArg(7, 0, 0)>
+%endif
+%if SLibCG_ArgAccessed(7, 0, 0)
+%<SLibAccessArg(rtmArgSys.Interface.RTMArgDef, "Output", rtmArgSys.CurrentTID, FcnSysModuleIsRateGrouping(rtmArgSys, "Output"))>
+%endif
+%if (IsModelReferenceBaseSys(rtmArgSys) && (IsModelRefScalableBuild() || GenerateClassInterface)) ||...
+(GenerateClassInterface && SLibIsMultiInstanceServer(rtmArgSys))
+%<SLibCG_UndoAccessArg(7, 0, 0)>
+%endif
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void FOC_Motor_Control_Sine_Cosine1(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(7, 0, fcnProtoType)>
+%endfunction
