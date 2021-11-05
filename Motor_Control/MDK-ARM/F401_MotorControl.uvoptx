@@ -355,6 +355,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>Harmonic_Com</ItemText>
         </Ww>
+        <Ww>
+          <count>41</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>SMO_Parameter</ItemText>
+        </Ww>
       </WatchWindow1>
       <MemoryWindow1>
         <Mm>

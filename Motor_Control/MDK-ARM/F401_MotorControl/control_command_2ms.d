@@ -12,5 +12,6 @@ f401_motorcontrol\control_command_2ms.o: ..\Motor_Control_ert_rtw\Resolver_Angle
 f401_motorcontrol\control_command_2ms.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\float.h
 f401_motorcontrol\control_command_2ms.o: ..\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.h
 f401_motorcontrol\control_command_2ms.o: ..\Motor_Control_ert_rtw\FOC_Control_100us.h
+f401_motorcontrol\control_command_2ms.o: ..\Motor_Control_ert_rtw\rtGetNaN.h
 f401_motorcontrol\control_command_2ms.o: ..\Motor_Control_ert_rtw\SYM_State_10ms.h
 f401_motorcontrol\control_command_2ms.o: ..\Motor_Control_ert_rtw\Motor_Control_private.h

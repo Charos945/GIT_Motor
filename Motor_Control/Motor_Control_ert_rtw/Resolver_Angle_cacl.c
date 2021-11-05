@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
+ * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -47,10 +47,10 @@ void Sine_Cosine_b(void)
   /* DiscreteFilter: '<S11>/LPF' incorporates:
    *  Lookup_n-D: '<S15>/Cosine'
    */
-  rtDW.LPF = rtConstP.pooled28[LPF_tmp];
+  rtDW.LPF = rtConstP.pooled30[LPF_tmp];
 
   /* Lookup_n-D: '<S15>/Sine' */
-  rtDW.Angle_Theta = rtConstP.pooled30[LPF_tmp];
+  rtDW.Angle_Theta = rtConstP.pooled32[LPF_tmp];
 }
 
 real32_T rt_modf_snf(real32_T u0, real32_T u1)
@@ -95,7 +95,7 @@ real32_T rt_modf_snf(real32_T u0, real32_T u1)
 void Resolver_Angle_cacl(void)
 {
   real32_T rtb_DiscreteTimeIntegrator;
-  real32_T rtb_Sum;
+  real32_T rtb_Sum_j;
 
   /* Product: '<S11>/Product' incorporates:
    *  UnitDelay: '<S11>/Unit Delay4'
@@ -119,10 +119,10 @@ void Resolver_Angle_cacl(void)
    *  DiscreteIntegrator: '<S47>/Integrator'
    *  Gain: '<S52>/Proportional Gain'
    */
-  rtb_Sum = 141.0F * rtb_DiscreteTimeIntegrator + rtDW.Integrator_DSTATE;
+  rtb_Sum_j = 141.0F * rtb_DiscreteTimeIntegrator + rtDW.Integrator_DSTATE;
 
   /* Gain: '<S11>/Gain' */
-  rtDW.Speed_RPM = 2.38732409F * rtb_Sum;
+  rtDW.Speed_RPM = 2.38732409F * rtb_Sum_j;
 
   /* Math: '<S11>/Math Function' incorporates:
    *  Constant: '<S11>/2*pi'
@@ -142,7 +142,7 @@ void Resolver_Angle_cacl(void)
   rtDW.Integrator_DSTATE += 10000.0F * rtb_DiscreteTimeIntegrator * 0.0001F;
 
   /* Update for DiscreteIntegrator: '<S11>/Discrete-Time Integrator' */
-  rtDW.DiscreteTimeIntegrator_DSTATE += 0.0001F * rtb_Sum;
+  rtDW.DiscreteTimeIntegrator_DSTATE += 0.0001F * rtb_Sum_j;
 
   /* Update for DiscreteFilter: '<S11>/LPF' */
   rtDW.LPF_states = rtDW.Speed_RPM - -0.96F * rtDW.LPF_states;

@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
+ * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -23,13 +23,13 @@
 
 /*
  * Output and update for action system:
- *    '<S108>/If Action Subsystem2'
+ *    '<S113>/If Action Subsystem2'
  *    '<S10>/If Action Subsystem2'
  */
 void IfActionSubsystem2(real32_T rtu_In1, real32_T *rty_Out1)
 {
-  /* Sum: '<S113>/Subtract1' incorporates:
-   *  Constant: '<S113>/2pi'
+  /* Sum: '<S118>/Subtract1' incorporates:
+   *  Constant: '<S118>/2pi'
    */
   *rty_Out1 = rtu_In1 - 6.28318548F;
 }

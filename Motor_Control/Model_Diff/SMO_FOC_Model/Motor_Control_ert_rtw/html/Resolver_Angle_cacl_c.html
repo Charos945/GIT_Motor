@@ -21,11 +21,11 @@
 <tr name="5" id="5">
 <td><a id="l5" class='ln'>5</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="6" id="6">
-<td><a id="l6" class='ln'>6</a></td><td><span class="ct"> * Model version                  : 1.44</span></td></tr>
+<td><a id="l6" class='ln'>6</a></td><td><span class="ct"> * Model version                  : 1.47</span></td></tr>
 <tr name="7" id="7">
 <td><a id="l7" class='ln'>7</a></td><td><span class="ct"> * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020</span></td></tr>
 <tr name="8" id="8">
-<td><a id="l8" class='ln'>8</a></td><td><span class="ct"> * C/C++ source code generated on : Mon Nov  1 17:42:50 2021</span></td></tr>
+<td><a id="l8" class='ln'>8</a></td><td><span class="ct"> * C/C++ source code generated on : Thu Nov  4 09:51:01 2021</span></td></tr>
 <tr name="9" id="9">
 <td><a id="l9" class='ln'>9</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="10" id="10">
@@ -109,13 +109,13 @@
 <tr name="49" id="49">
 <td><a id="l49" class='ln'>49</a></td><td><span class="ct">   */</span></td></tr>
 <tr name="50" id="50">
-<td><a id="l50" class='ln'>50</a></td><td>  <a id="50c3" class="tk">rtDW</a>.<a id="50c8" class="tk">LPF</a> = <a id="50c14" class="tk">rtConstP</a>.<a id="50c23" class="tk">pooled28</a>[<a id="50c32" class="tk">LPF_tmp</a>];</td></tr>
+<td><a id="l50" class='ln'>50</a></td><td>  <a id="50c3" class="tk">rtDW</a>.<a id="50c8" class="tk">LPF</a> = <a id="50c14" class="tk">rtConstP</a>.<a id="50c23" class="tk">pooled30</a>[<a id="50c32" class="tk">LPF_tmp</a>];</td></tr>
 <tr name="51" id="51">
 <td><a id="l51" class='ln'>51</a></td><td></td></tr>
 <tr name="52" id="52">
 <td><a id="l52" class='ln'>52</a></td><td>  <span class="ct">/* Lookup_n-D: '&lt;S15&gt;/Sine' */</span></td></tr>
 <tr name="53" id="53">
-<td><a id="l53" class='ln'>53</a></td><td>  <a id="53c3" class="tk">rtDW</a>.<a id="53c8" class="tk">Angle_Theta</a> = <a id="53c22" class="tk">rtConstP</a>.<a id="53c31" class="tk">pooled30</a>[<a id="53c40" class="tk">LPF_tmp</a>];</td></tr>
+<td><a id="l53" class='ln'>53</a></td><td>  <a id="53c3" class="tk">rtDW</a>.<a id="53c8" class="tk">Angle_Theta</a> = <a id="53c22" class="tk">rtConstP</a>.<a id="53c31" class="tk">pooled32</a>[<a id="53c40" class="tk">LPF_tmp</a>];</td></tr>
 <tr name="54" id="54">
 <td><a id="l54" class='ln'>54</a></td><td><span class="br">}</span></td></tr>
 <tr name="55" id="55">
@@ -205,7 +205,7 @@
 <tr name="97" id="97">
 <td><a id="l97" class='ln'>97</a></td><td>  <a id="97c3" class="tk">real32_T</a> <a id="97c12" class="tk">rtb_DiscreteTimeIntegrator</a>;</td></tr>
 <tr name="98" id="98">
-<td><a id="l98" class='ln'>98</a></td><td>  <a id="98c3" class="tk">real32_T</a> <a id="98c12" class="tk">rtb_Sum</a>;</td></tr>
+<td><a id="l98" class='ln'>98</a></td><td>  <a id="98c3" class="tk">real32_T</a> <a id="98c12" class="tk">rtb_Sum_j</a>;</td></tr>
 <tr name="99" id="99">
 <td><a id="l99" class='ln'>99</a></td><td></td></tr>
 <tr name="100" id="100">
@@ -253,13 +253,13 @@
 <tr name="121" id="121">
 <td><a id="l121" class='ln'>121</a></td><td><span class="ct">   */</span></td></tr>
 <tr name="122" id="122">
-<td><a id="l122" class='ln'>122</a></td><td>  <a id="122c3" class="tk">rtb_Sum</a> = 141.0F <a id="122c20" class="tk">*</a> <a id="122c22" class="tk">rtb_DiscreteTimeIntegrator</a> <a id="122c49" class="tk">+</a> <a id="122c51" class="tk">rtDW</a>.<a id="122c56" class="tk">Integrator_DSTATE</a>;</td></tr>
+<td><a id="l122" class='ln'>122</a></td><td>  <a id="122c3" class="tk">rtb_Sum_j</a> = 141.0F <a id="122c22" class="tk">*</a> <a id="122c24" class="tk">rtb_DiscreteTimeIntegrator</a> <a id="122c51" class="tk">+</a> <a id="122c53" class="tk">rtDW</a>.<a id="122c58" class="tk">Integrator_DSTATE</a>;</td></tr>
 <tr name="123" id="123">
 <td><a id="l123" class='ln'>123</a></td><td></td></tr>
 <tr name="124" id="124">
 <td><a id="l124" class='ln'>124</a></td><td>  <span class="ct">/* Gain: '&lt;S11&gt;/Gain' */</span></td></tr>
 <tr name="125" id="125">
-<td><a id="l125" class='ln'>125</a></td><td>  <a id="125c3" class="tk">rtDW</a>.<a id="125c8" class="tk">Speed_RPM</a> = 2.38732409F <a id="125c32" class="tk">*</a> <a id="125c34" class="tk">rtb_Sum</a>;</td></tr>
+<td><a id="l125" class='ln'>125</a></td><td>  <a id="125c3" class="tk">rtDW</a>.<a id="125c8" class="tk">Speed_RPM</a> = 2.38732409F <a id="125c32" class="tk">*</a> <a id="125c34" class="tk">rtb_Sum_j</a>;</td></tr>
 <tr name="126" id="126">
 <td><a id="l126" class='ln'>126</a></td><td></td></tr>
 <tr name="127" id="127">
@@ -299,7 +299,7 @@
 <tr name="144" id="144">
 <td><a id="l144" class='ln'>144</a></td><td>  <span class="ct">/* Update for DiscreteIntegrator: '&lt;S11&gt;/Discrete-Time Integrator' */</span></td></tr>
 <tr name="145" id="145">
-<td><a id="l145" class='ln'>145</a></td><td>  <a id="145c3" class="tk">rtDW</a>.<a id="145c8" class="tk">DiscreteTimeIntegrator_DSTATE</a> <a id="145c38" class="tk">+=</a> 0.0001F <a id="145c49" class="tk">*</a> <a id="145c51" class="tk">rtb_Sum</a>;</td></tr>
+<td><a id="l145" class='ln'>145</a></td><td>  <a id="145c3" class="tk">rtDW</a>.<a id="145c8" class="tk">DiscreteTimeIntegrator_DSTATE</a> <a id="145c38" class="tk">+=</a> 0.0001F <a id="145c49" class="tk">*</a> <a id="145c51" class="tk">rtb_Sum_j</a>;</td></tr>
 <tr name="146" id="146">
 <td><a id="l146" class='ln'>146</a></td><td></td></tr>
 <tr name="147" id="147">

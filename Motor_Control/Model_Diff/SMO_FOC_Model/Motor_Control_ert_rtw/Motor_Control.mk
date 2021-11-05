@@ -2,7 +2,7 @@
 ## Makefile generated for component 'Motor_Control'. 
 ## 
 ## Makefile     : Motor_Control.mk
-## Generated on : Mon Nov 01 17:43:03 2021
+## Generated on : Thu Nov 04 09:51:15 2021
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)\Motor_Control.exe
 ## Product type : executable
 ## 
@@ -23,7 +23,7 @@ MAKEFILE                  = Motor_Control.mk
 MATLAB_ROOT               = D:\Program Files\Polyspace\R2020b
 MATLAB_BIN                = D:\Program Files\Polyspace\R2020b\bin
 MATLAB_ARCH_BIN           = $(MATLAB_BIN)\win64
-START_DIR                 = F:\GIT_Motor\Motor_Control\Motor_Control\Model_Diff\Hall_FOC_Model
+START_DIR                 = F:\GIT_Motor\Motor_Control\Motor_Control\Model_Diff\SMO_FOC_Model
 SOLVER                    = 
 SOLVER_OBJ                = 
 CLASSIC_INTERFACE         = 0

@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
+ * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -22,11 +22,9 @@
 #include "Motor_Control_private.h"
 
 /* Output and update for trigger system: '<S8>/ACC_OMG' */
-real32_T delta_t;
 void ACC_OMG(void)
 {
   real32_T rtb_Gain3_m;
-  real32_T rtb_UnitDelay_dq;
   real32_T rtb_dt1;
 
   /* Outputs for Triggered SubSystem: '<S8>/ACC_OMG' incorporates:
@@ -51,8 +49,6 @@ void ACC_OMG(void)
      *  Memory: '<S64>/Memory'
      */
     rtb_dt1 = rtb_Gain3_m - rtDW.Memory_PreviousInput;
-		
-		delta_t=rtb_dt1;
 
     /* Gain: '<S64>/Gain2' incorporates:
      *  Constant: '<S64>/Constant6'
@@ -69,18 +65,14 @@ void ACC_OMG(void)
     rtDW.a = (rtDW.Gain2 - rtDW.Memory1_PreviousInput) /
       (rtDW.Memory2_PreviousInput + rtb_dt1);
 
-    /* UnitDelay: '<S66>/Unit Delay' */
-    rtb_UnitDelay_dq = rtDW.UnitDelay_DSTATE_ec;
-
     /* Sum: '<S66>/Add1' incorporates:
      *  Constant: '<S66>/Constant1'
      *  Gain: '<S64>/Gain1'
-     *  Outport: '<Root>/Speed_Measured'
      *  Product: '<S66>/Divide1'
      *  Sum: '<S66>/Add'
+     *  UnitDelay: '<S66>/Unit Delay'
      */
-    rtY.Speed_Measured = (95.4929657F * rtDW.Gain2 - rtb_UnitDelay_dq) *
-      SpeedFilter_Fn + rtb_UnitDelay_dq;
+    Hall_Speed += (95.4929657F * rtDW.Gain2 - Hall_Speed) * SpeedFilter_Fn;
 
     /* Outputs for Atomic SubSystem: '<S64>/Six_point' */
     /* SwitchCase: '<S67>/Switch Case2' incorporates:
@@ -189,11 +181,6 @@ void ACC_OMG(void)
 
     /* Update for Memory: '<S64>/Memory2' */
     rtDW.Memory2_PreviousInput = rtb_dt1;
-
-    /* Update for UnitDelay: '<S66>/Unit Delay' incorporates:
-     *  Outport: '<Root>/Speed_Measured'
-     */
-    rtDW.UnitDelay_DSTATE_ec = rtY.Speed_Measured;
   }
 
   rtPrevZCX.ACC_OMG_Trig_ZCE[0] = (ZCSigState)(rtU.Hall[0] > 0);
@@ -205,7 +192,6 @@ void ACC_OMG(void)
 }
 
 /* Output and update for atomic system: '<S8>/ADC_IRQ' */
-
 void ADC_IRQ(void)
 {
   real32_T rtb_Add6;

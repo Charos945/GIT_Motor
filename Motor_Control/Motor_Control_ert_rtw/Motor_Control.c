@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
+ * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -19,33 +19,34 @@
 #include "Motor_Control_private.h"
 
 /* Exported block signals */
-real32_T Motor_Power;                  /* '<S164>/Add1' */
-real32_T Motor_Torque;                 /* '<S165>/Add1' */
+real32_T Obs_Speed;                    /* '<S2>/Unit Delay6' */
+real32_T Obs_Theta;                    /* '<S2>/Unit Delay5' */
+real32_T Motor_Power;                  /* '<S212>/Add1' */
+real32_T Motor_Torque;                 /* '<S213>/Add1' */
+real32_T Hall_Speed;                   /* '<S66>/Add1' */
 real32_T Id_ref;                       /* '<S81>/Merge' */
 real32_T Iq_ref;                       /* '<S81>/Merge1' */
-real32_T Vq_voltage;                   /* '<S155>/Switch2' */
-real32_T Id_measured;                  /* '<S99>/Add1' */
-real32_T Iq_measured;                  /* '<S99>/Add2' */
-real32_T V_alpha;                      /* '<S98>/Add' */
-real32_T V_beta;                       /* '<S98>/Add3' */
-real32_T Vd_voltage;                   /* '<S128>/Switch2' */
-real32_T Ialpha;                       /* '<S103>/Gain2' */
-real32_T Ibeta;                        /* '<S103>/Gain5' */
+real32_T Vq_voltage;                   /* '<S203>/Switch2' */
+real32_T Id_measured;                  /* '<S104>/Add1' */
+real32_T Iq_measured;                  /* '<S104>/Add2' */
+real32_T V_alpha;                      /* '<S101>/Add' */
+real32_T V_beta;                       /* '<S101>/Add3' */
+real32_T Vd_voltage;                   /* '<S133>/Switch2' */
+real32_T Ialpha;                       /* '<S108>/Gain2' */
+real32_T Ibeta;                        /* '<S108>/Gain5' */
 
 /* Exported block parameters */
 real32_T Dead_Time = 0.0F;             /* Variable: Dead_Time
-                                        * Referenced by: '<S92>/IdRef2'
+                                        * Referenced by: '<S95>/IdRef2'
                                         */
 real32_T SpeedFilter_Fn = 0.3F;        /* Variable: SpeedFilter_Fn
                                         * Referenced by:
+                                        *   '<S102>/Constant1'
                                         *   '<S66>/Constant1'
                                         *   '<S79>/Constant1'
                                         */
 uint8_T Dead_Com_Enable = 0U;          /* Variable: Dead_Com_Enable
-                                        * Referenced by: '<S92>/Constant3'
-                                        */
-uint8_T FF_Enable = 0U;                /* Variable: FF_Enable
-                                        * Referenced by: '<S92>/Constant1'
+                                        * Referenced by: '<S95>/Constant3'
                                         */
 
 /* Exported data definition */
@@ -84,7 +85,7 @@ FluxWeak_Parameter_type FluxWeak_Parameter = {
 
 Hall_Parameter_type Hall_Parameter = {
   /* HaLL_AngleShift */
-  1.0F,
+   1.0F,
 
   0.0F,
   1.04719758F,
@@ -97,83 +98,44 @@ Hall_Parameter_type Hall_Parameter = {
   5E-5F
 };
 
-Harmonic_Com_type Harmonic_Com = {
-  /* Harmonic_Id5th_Ki */
-  32.0F,
-
-  /* Harmonic_Id5th_Kp */
-  1.2F,
-
-  /* Harmonic_Id5th_Max */
-  60.0F,
-
-  /* Harmonic_Id5th_Min */
-  -60.0F,
-
-  /* Harmonic_Id7th_Ki */
-  24.0F,
-
-  /* Harmonic_Id7th_Kp */
-  0.8F,
-
-  /* Harmonic_Id7th_Max */
-  60.0F,
-
-  /* Harmonic_Id7th_Min */
-  -60.0F,
-
-  /* Harmonic_Iq5th_Ki */
-  32.0F,
-
-  /* Harmonic_Iq5th_Kp */
-  1.2F,
-
-  /* Harmonic_Iq5th_Max */
-  60.0F,
-
-  /* Harmonic_Iq5th_Min */
-  -60.0F,
-
-  /* Harmonic_Iq7th_Ki */
-  24.0F,
-
-  /* Harmonic_Iq7th_Kp */
-  0.8F,
-
-  /* Harmonic_Iq7th_Max */
-  60.0F,
-
-  /* Harmonic_Iq7th_Min */
-  -60.0F,
-
-  /* Harmonic_Com_Enable */
-  0U
-};
-
 PI_Parameter_type PI_Parameter = {
   /* ID_Ki */
   0.8F,
 
   /* ID_Kp */
-  0.05F,
+  3.2F,
 
   /* IQ_Ki */
-  0.8F,
+  0.32F,
 
   /* IQ_Kp */
-  0.05F,
+  3.3F,
 
   /* Speed_Ki */
-  0.00633F,
+  0.633F,
 
   /* Speed_Kp */
-  0.00267F,
+  0.0267F,
 
   /* Speed_PI_OutputMax */
-  8.0F,
+  5.0F,
 
   /* Speed_PI_OutputMin */
-  -8.0F
+  -5.0F
+};
+
+SMO_Parameter_type SMO_Parameter = {
+  /* SMO_K */
+  0.5F,
+
+  /* SMO_M */
+  0.15F,
+
+  /* SMO_PLL_W */
+  50.0F,
+
+  /* SMO_Theta_Enable */
+  1U
 };
 
 /* Block signals and states (default storage) */
@@ -272,6 +234,8 @@ void Motor_Control_step(void)
     /* End of Outputs for S-Function (fcgen): '<S2>/Function-Call Generator3' */
   }
 
+  /* UnitDelay: '<S2>/Unit Delay6' */
+  Obs_Speed = rtDW.UnitDelay6_DSTATE;
   if (rtM->Timing.TaskCounters.TID[1] == 0) {
     /* S-Function (fcgen): '<S2>/Function-Call Generator1' incorporates:
      *  SubSystem: '<S2>/Control_Command_2ms'
@@ -288,17 +252,26 @@ void Motor_Control_step(void)
 
   /* End of Outputs for S-Function (fcgen): '<S2>/Function-Call Generator' */
 
+  /* UnitDelay: '<S2>/Unit Delay5' */
+  Obs_Theta = rtDW.UnitDelay5_DSTATE;
+
   /* Update for UnitDelay: '<S2>/Unit Delay2' */
   rtDW.UnitDelay2_DSTATE = Id_measured;
 
   /* Update for UnitDelay: '<S2>/Unit Delay1' */
-  rtDW.UnitDelay1_DSTATE = rtDW.Add;
+  rtDW.UnitDelay1_DSTATE = Vd_voltage;
 
   /* Update for UnitDelay: '<S2>/Unit Delay3' */
   rtDW.UnitDelay3_DSTATE = Iq_measured;
 
   /* Update for UnitDelay: '<S2>/Unit Delay4' */
-  rtDW.UnitDelay4_DSTATE = rtDW.Add1_a;
+  rtDW.UnitDelay4_DSTATE = Vq_voltage;
+
+  /* Update for UnitDelay: '<S2>/Unit Delay6' */
+  rtDW.UnitDelay6_DSTATE = rtDW.Add1_c;
+
+  /* Update for UnitDelay: '<S2>/Unit Delay5' */
+  rtDW.UnitDelay5_DSTATE = rtDW.UnitDelay;
 
   /* End of Outputs for SubSystem: '<Root>/Motor_Control' */
 
@@ -331,6 +304,13 @@ void Motor_Control_initialize(void)
   Control_Command_2ms_o_Init();
 
   /* End of SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator1' */
+
+  /* SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S2>/FOC_Control_100us'
+   */
+  FOC_Control_100us_Init();
+
+  /* End of SystemInitialize for S-Function (fcgen): '<S2>/Function-Call Generator' */
   /* End of SystemInitialize for SubSystem: '<Root>/Motor_Control' */
 
   /* SystemInitialize for Outport: '<Root>/Ta' */
@@ -341,6 +321,15 @@ void Motor_Control_initialize(void)
 
   /* SystemInitialize for Outport: '<Root>/Tc' */
   rtY.Tc = rtDW.Merge2_d;
+
+  /* Enable for Atomic SubSystem: '<Root>/Motor_Control' */
+  /* Enable for S-Function (fcgen): '<S2>/Function-Call Generator' incorporates:
+   *  SubSystem: '<S2>/FOC_Control_100us'
+   */
+  FOC_Control_100us_Enable();
+
+  /* End of Enable for S-Function (fcgen): '<S2>/Function-Call Generator' */
+  /* End of Enable for SubSystem: '<Root>/Motor_Control' */
 }
 
 /*

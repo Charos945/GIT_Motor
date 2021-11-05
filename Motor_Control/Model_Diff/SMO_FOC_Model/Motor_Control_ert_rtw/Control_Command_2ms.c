@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
+ * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -24,7 +24,7 @@
 /* Disable for action system: '<S80>/Speed_PI' */
 void Speed_PI_Disable(void)
 {
-  /* Disable for DiscreteIntegrator: '<S85>/Discrete-Time Integrator' */
+  /* Disable for DiscreteIntegrator: '<S86>/Discrete-Time Integrator' */
   rtDW.DiscreteTimeIntegrator_DSTATE_g = rtDW.DiscreteTimeIntegrator_f;
 }
 
@@ -35,15 +35,14 @@ void Speed_PI(void)
   real32_T rtb_Saturation;
   real32_T tmp;
 
-  /* Sum: '<S84>/Sum' incorporates:
+  /* Sum: '<S85>/Sum' incorporates:
    *  Inport: '<Root>/Speed_target'
-   *  Outport: '<Root>/Speed_Measured'
    */
-  rtb_Saturation = rtU.Speed_target - rtY.Speed_Measured;
+  rtb_Saturation = rtU.Speed_target - rtDW.Merge_h;
 
-  /* Switch: '<S85>/Switch' incorporates:
-   *  Constant: '<S85>/Cons'
-   *  UnitDelay: '<S85>/Unit Delay3'
+  /* Switch: '<S86>/Switch' incorporates:
+   *  Constant: '<S86>/Cons'
+   *  UnitDelay: '<S86>/Unit Delay3'
    */
   if (rtDW.UnitDelay3_DSTATE_m) {
     tmp = rtb_Saturation;
@@ -51,25 +50,25 @@ void Speed_PI(void)
     tmp = 0.0F;
   }
 
-  /* End of Switch: '<S85>/Switch' */
+  /* End of Switch: '<S86>/Switch' */
 
-  /* DiscreteIntegrator: '<S85>/Discrete-Time Integrator' */
+  /* DiscreteIntegrator: '<S86>/Discrete-Time Integrator' */
   if ((rtDW.Merge1_a != 0) || (rtDW.DiscreteTimeIntegrator_PrevResetState_h != 0))
   {
     rtDW.DiscreteTimeIntegrator_DSTATE_g = 0.0F;
   }
 
-  /* DiscreteIntegrator: '<S85>/Discrete-Time Integrator' */
+  /* DiscreteIntegrator: '<S86>/Discrete-Time Integrator' */
   rtDW.DiscreteTimeIntegrator_f = rtDW.DiscreteTimeIntegrator_DSTATE_g;
 
-  /* Sum: '<S85>/Add' incorporates:
-   *  Constant: '<S85>/Kp'
-   *  Product: '<S85>/Product'
+  /* Sum: '<S86>/Add' incorporates:
+   *  Constant: '<S86>/Kp'
+   *  Product: '<S86>/Product'
    */
   rtb_Add_i = PI_Parameter.Speed_Kp * rtb_Saturation +
     rtDW.DiscreteTimeIntegrator_f;
 
-  /* Saturate: '<S85>/Saturation' */
+  /* Saturate: '<S86>/Saturation' */
   if (rtb_Add_i > PI_Parameter.Speed_PI_OutputMax) {
     rtb_Saturation = PI_Parameter.Speed_PI_OutputMax;
   } else if (rtb_Add_i < PI_Parameter.Speed_PI_OutputMin) {
@@ -78,21 +77,21 @@ void Speed_PI(void)
     rtb_Saturation = rtb_Add_i;
   }
 
-  /* End of Saturate: '<S85>/Saturation' */
+  /* End of Saturate: '<S86>/Saturation' */
 
   /* Merge: '<S80>/Merge' incorporates:
-   *  SignalConversion generated from: '<S82>/Iq_ref'
+   *  SignalConversion generated from: '<S83>/Iq_ref'
    */
   rtDW.Merge_c = rtb_Saturation;
 
-  /* Update for UnitDelay: '<S85>/Unit Delay3' incorporates:
-   *  RelationalOperator: '<S85>/Relational Operator1'
+  /* Update for UnitDelay: '<S86>/Unit Delay3' incorporates:
+   *  RelationalOperator: '<S86>/Relational Operator1'
    */
   rtDW.UnitDelay3_DSTATE_m = (rtb_Add_i == rtb_Saturation);
 
-  /* Update for DiscreteIntegrator: '<S85>/Discrete-Time Integrator' incorporates:
-   *  Constant: '<S85>/Ki'
-   *  Product: '<S85>/Product1'
+  /* Update for DiscreteIntegrator: '<S86>/Discrete-Time Integrator' incorporates:
+   *  Constant: '<S86>/Ki'
+   *  Product: '<S86>/Product1'
    */
   rtDW.DiscreteTimeIntegrator_DSTATE_g += PI_Parameter.Speed_Ki * tmp * 0.002F;
   rtDW.DiscreteTimeIntegrator_PrevResetState_h = (int8_T)(rtDW.Merge1_a > 0);
@@ -101,7 +100,7 @@ void Speed_PI(void)
 /* Output and update for action system: '<S80>/Switch Case Action Subsystem' */
 void SwitchCaseActionSubsystem(void)
 {
-  /* Inport: '<S83>/Iq_in' incorporates:
+  /* Inport: '<S84>/Iq_in' incorporates:
    *  Inport: '<Root>/Torque_ref'
    */
   rtDW.Merge_c = rtU.Torque_ref;
@@ -146,7 +145,7 @@ void Control_Command_2ms(void)
   switch (rtAction) {
    case 0:
     /* Outputs for IfAction SubSystem: '<S80>/Speed_PI' incorporates:
-     *  ActionPort: '<S82>/Action Port'
+     *  ActionPort: '<S83>/Action Port'
      */
     Speed_PI();
 
@@ -155,7 +154,7 @@ void Control_Command_2ms(void)
 
    case 1:
     /* Outputs for IfAction SubSystem: '<S80>/Switch Case Action Subsystem' incorporates:
-     *  ActionPort: '<S83>/Action Port'
+     *  ActionPort: '<S84>/Action Port'
      */
     SwitchCaseActionSubsystem();
 
@@ -212,61 +211,61 @@ real32_T rt_powf_snf(real32_T u0, real32_T u1)
   return y;
 }
 
-/* Disable for atomic system: '<S86>/Flux_weak' */
+/* Disable for atomic system: '<S87>/Flux_weak' */
 void Flux_weak_Disable(void)
 {
-  /* Disable for DiscreteIntegrator: '<S89>/Discrete-Time Integrator' */
+  /* Disable for DiscreteIntegrator: '<S90>/Discrete-Time Integrator' */
   rtDW.DiscreteTimeIntegrator_DSTATE_l = rtDW.DiscreteTimeIntegrator;
 }
 
-/* Output and update for atomic system: '<S86>/Flux_weak' */
+/* Output and update for atomic system: '<S87>/Flux_weak' */
 void Flux_weak(void)
 {
   real32_T rtb_Add_g;
   real32_T rtb_Saturation;
   real32_T tmp;
 
-  /* Fcn: '<S88>/Fcn' */
+  /* Fcn: '<S89>/Fcn' */
   rtb_Saturation = rt_powf_snf(rtDW.UnitDelay1, 2.0F) + rt_powf_snf
     (rtDW.UnitDelay4, 2.0F);
 
-  /* If: '<S88>/If1' incorporates:
-   *  Constant: '<S88>/Over_modulation'
-   *  Gain: '<S90>/Gain'
+  /* If: '<S89>/If1' incorporates:
+   *  Constant: '<S89>/Over_modulation'
    *  Gain: '<S91>/Gain'
+   *  Gain: '<S92>/Gain'
    *  Inport: '<Root>/Bus_Voltage'
    */
   if (CTL_Parameter.Over_modulation) {
-    /* Outputs for IfAction SubSystem: '<S88>/Over_M' incorporates:
-     *  ActionPort: '<S91>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S89>/Over_M' incorporates:
+     *  ActionPort: '<S92>/Action Port'
      */
     tmp = 0.666666687F * rtU.Bus_Voltage;
 
-    /* End of Outputs for SubSystem: '<S88>/Over_M' */
+    /* End of Outputs for SubSystem: '<S89>/Over_M' */
   } else {
-    /* Outputs for IfAction SubSystem: '<S88>/Normal' incorporates:
-     *  ActionPort: '<S90>/Action Port'
+    /* Outputs for IfAction SubSystem: '<S89>/Normal' incorporates:
+     *  ActionPort: '<S91>/Action Port'
      */
     tmp = 0.577350259F * rtU.Bus_Voltage;
 
-    /* End of Outputs for SubSystem: '<S88>/Normal' */
+    /* End of Outputs for SubSystem: '<S89>/Normal' */
   }
 
-  /* End of If: '<S88>/If1' */
+  /* End of If: '<S89>/If1' */
 
-  /* Fcn: '<S88>/Fcn' */
+  /* Fcn: '<S89>/Fcn' */
   if (rtb_Saturation < 0.0F) {
     rtb_Saturation = -sqrtf(-rtb_Saturation);
   } else {
     rtb_Saturation = sqrtf(rtb_Saturation);
   }
 
-  /* Sum: '<S88>/Sum1' */
+  /* Sum: '<S89>/Sum1' */
   rtb_Saturation = tmp - rtb_Saturation;
 
-  /* Switch: '<S89>/Switch' incorporates:
-   *  Constant: '<S89>/Cons'
-   *  UnitDelay: '<S89>/Unit Delay3'
+  /* Switch: '<S90>/Switch' incorporates:
+   *  Constant: '<S90>/Cons'
+   *  UnitDelay: '<S90>/Unit Delay3'
    */
   if (rtDW.UnitDelay3_DSTATE_c) {
     tmp = rtb_Saturation;
@@ -274,25 +273,25 @@ void Flux_weak(void)
     tmp = 0.0F;
   }
 
-  /* End of Switch: '<S89>/Switch' */
+  /* End of Switch: '<S90>/Switch' */
 
-  /* DiscreteIntegrator: '<S89>/Discrete-Time Integrator' */
+  /* DiscreteIntegrator: '<S90>/Discrete-Time Integrator' */
   if ((rtDW.Merge1_a != 0) || (rtDW.DiscreteTimeIntegrator_PrevResetState != 0))
   {
     rtDW.DiscreteTimeIntegrator_DSTATE_l = 0.0F;
   }
 
-  /* DiscreteIntegrator: '<S89>/Discrete-Time Integrator' */
+  /* DiscreteIntegrator: '<S90>/Discrete-Time Integrator' */
   rtDW.DiscreteTimeIntegrator = rtDW.DiscreteTimeIntegrator_DSTATE_l;
 
-  /* Sum: '<S89>/Add' incorporates:
-   *  Constant: '<S89>/Kp'
-   *  Product: '<S89>/Product'
+  /* Sum: '<S90>/Add' incorporates:
+   *  Constant: '<S90>/Kp'
+   *  Product: '<S90>/Product'
    */
   rtb_Add_g = FluxWeak_Parameter.FluxWeak_Kp * rtb_Saturation +
     rtDW.DiscreteTimeIntegrator;
 
-  /* Saturate: '<S89>/Saturation' */
+  /* Saturate: '<S90>/Saturation' */
   if (rtb_Add_g > FluxWeak_Parameter.FluxWeak_Idref_max) {
     rtb_Saturation = FluxWeak_Parameter.FluxWeak_Idref_max;
   } else if (rtb_Add_g < FluxWeak_Parameter.FluxWeak_Idref_min) {
@@ -301,22 +300,22 @@ void Flux_weak(void)
     rtb_Saturation = rtb_Add_g;
   }
 
-  /* End of Saturate: '<S89>/Saturation' */
+  /* End of Saturate: '<S90>/Saturation' */
 
-  /* Sum: '<S88>/Add1' */
+  /* Sum: '<S89>/Add1' */
   Id_ref = rtb_Saturation;
 
-  /* Inport: '<S88>/Iq_input' */
+  /* Inport: '<S89>/Iq_input' */
   Iq_ref = rtDW.Merge_c;
 
-  /* Update for UnitDelay: '<S89>/Unit Delay3' incorporates:
-   *  RelationalOperator: '<S89>/Relational Operator1'
+  /* Update for UnitDelay: '<S90>/Unit Delay3' incorporates:
+   *  RelationalOperator: '<S90>/Relational Operator1'
    */
   rtDW.UnitDelay3_DSTATE_c = (rtb_Add_g == rtb_Saturation);
 
-  /* Update for DiscreteIntegrator: '<S89>/Discrete-Time Integrator' incorporates:
-   *  Constant: '<S89>/Ki'
-   *  Product: '<S89>/Product1'
+  /* Update for DiscreteIntegrator: '<S90>/Discrete-Time Integrator' incorporates:
+   *  Constant: '<S90>/Ki'
+   *  Product: '<S90>/Product1'
    */
   rtDW.DiscreteTimeIntegrator_DSTATE_l += FluxWeak_Parameter.FluxWeak_Ki * tmp *
     0.002F;
@@ -341,6 +340,31 @@ void Control_Command_2ms_k(void)
   int8_T rtAction;
   int8_T rtPrevAction;
 
+  /* If: '<S82>/If1' incorporates:
+   *  Constant: '<S82>/SMO_Enable'
+   *  Inport: '<S93>/Hall_Speed'
+   *  Inport: '<S94>/Obs_Speed'
+   */
+  if (SMO_Parameter.SMO_Theta_Enable == 1) {
+    /* Outputs for IfAction SubSystem: '<S82>/Obs_Spd' incorporates:
+     *  ActionPort: '<S94>/Action Port'
+     */
+    rtDW.Merge_h = Obs_Speed;
+
+    /* End of Outputs for SubSystem: '<S82>/Obs_Spd' */
+  } else {
+    if (SMO_Parameter.SMO_Theta_Enable == 0) {
+      /* Outputs for IfAction SubSystem: '<S82>/Hall_Spd' incorporates:
+       *  ActionPort: '<S93>/Action Port'
+       */
+      rtDW.Merge_h = Hall_Speed;
+
+      /* End of Outputs for SubSystem: '<S82>/Hall_Spd' */
+    }
+  }
+
+  /* End of If: '<S82>/If1' */
+
   /* Outputs for Atomic SubSystem: '<S4>/Control_Command_2ms' */
   Control_Command_2ms();
 
@@ -349,31 +373,31 @@ void Control_Command_2ms_k(void)
   /* If: '<S81>/If1' incorporates:
    *  Constant: '<S4>/Constant'
    *  Constant: '<S4>/Constant1'
-   *  Inport: '<S87>/Id'
-   *  Inport: '<S87>/Iq'
+   *  Inport: '<S88>/Id'
+   *  Inport: '<S88>/Iq'
    */
   rtPrevAction = rtDW.If1_ActiveSubsystem;
   rtAction = (int8_T)(FluxWeak_Parameter.FluxWeak_Enable != 1);
   rtDW.If1_ActiveSubsystem = rtAction;
   if ((rtPrevAction != rtAction) && (rtPrevAction == 0)) {
-    /* Disable for Atomic SubSystem: '<S86>/Flux_weak' */
+    /* Disable for Atomic SubSystem: '<S87>/Flux_weak' */
     Flux_weak_Disable();
 
-    /* End of Disable for SubSystem: '<S86>/Flux_weak' */
+    /* End of Disable for SubSystem: '<S87>/Flux_weak' */
   }
 
   if (rtAction == 0) {
     /* Outputs for IfAction SubSystem: '<S81>/Subsystem' incorporates:
-     *  ActionPort: '<S86>/Action Port'
+     *  ActionPort: '<S87>/Action Port'
      */
-    /* Outputs for Atomic SubSystem: '<S86>/Flux_weak' */
+    /* Outputs for Atomic SubSystem: '<S87>/Flux_weak' */
     Flux_weak();
 
-    /* End of Outputs for SubSystem: '<S86>/Flux_weak' */
+    /* End of Outputs for SubSystem: '<S87>/Flux_weak' */
     /* End of Outputs for SubSystem: '<S81>/Subsystem' */
   } else {
     /* Outputs for IfAction SubSystem: '<S81>/Subsystem1' incorporates:
-     *  ActionPort: '<S87>/Action Port'
+     *  ActionPort: '<S88>/Action Port'
      */
     Id_ref = 0.0F;
     Iq_ref = rtDW.Merge_c;

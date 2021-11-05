@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
+ * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -22,9 +22,9 @@
 const ConstP rtConstP = {
   /* Pooled Parameter (Expression: atan_table)
    * Referenced by:
-   *   '<S114>/1-D Lookup Table4'
-   *   '<S117>/1-D Lookup Table4'
-   *   '<S118>/1-D Lookup Table4'
+   *   '<S119>/1-D Lookup Table4'
+   *   '<S122>/1-D Lookup Table4'
+   *   '<S123>/1-D Lookup Table4'
    */
   { -1.56905115F, -1.56905031F, -1.56904948F, -1.56904852F, -1.56904769F,
     -1.56904685F, -1.56904602F, -1.56904519F, -1.56904423F, -1.5690434F,
@@ -781,10 +781,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: Cosine_table)
    * Referenced by:
-   *   '<S102>/Cosine'
+   *   '<S107>/Cosine'
    *   '<S15>/Cosine'
-   *   '<S133>/Cosine'
-   *   '<S134>/Cosine'
+   *   '<S141>/Cosine'
    */
   { 1.0F, 0.999995291F, 0.999990582F, 0.999985874F, 0.999981165F, 0.999967039F,
     0.999952912F, 0.999938846F, 0.999924719F, 0.999901175F, 0.999877632F,
@@ -1612,10 +1611,9 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: Sine_table)
    * Referenced by:
-   *   '<S102>/Sine'
+   *   '<S107>/Sine'
    *   '<S15>/Sine'
-   *   '<S133>/Sine'
-   *   '<S134>/Sine'
+   *   '<S141>/Sine'
    */
   { 0.0F, 0.00153398793F, 0.0030679768F, 0.00460196566F, 0.00613595545F,
     0.00766988657F, 0.0092038177F, 0.0107377488F, 0.0122716809F, 0.0138054974F,

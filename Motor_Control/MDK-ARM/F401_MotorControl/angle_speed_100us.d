@@ -12,5 +12,6 @@ f401_motorcontrol\angle_speed_100us.o: ..\Motor_Control_ert_rtw\rt_sys_FOC_Contr
 f401_motorcontrol\angle_speed_100us.o: ..\Motor_Control_ert_rtw\Motor_Control.h
 f401_motorcontrol\angle_speed_100us.o: ..\Motor_Control_ert_rtw\Control_Command_2ms.h
 f401_motorcontrol\angle_speed_100us.o: ..\Motor_Control_ert_rtw\FOC_Control_100us.h
+f401_motorcontrol\angle_speed_100us.o: ..\Motor_Control_ert_rtw\rtGetNaN.h
 f401_motorcontrol\angle_speed_100us.o: ..\Motor_Control_ert_rtw\SYM_State_10ms.h
 f401_motorcontrol\angle_speed_100us.o: ..\Motor_Control_ert_rtw\Motor_Control_private.h

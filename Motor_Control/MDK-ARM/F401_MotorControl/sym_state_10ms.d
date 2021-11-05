@@ -13,4 +13,5 @@ f401_motorcontrol\sym_state_10ms.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 f401_motorcontrol\sym_state_10ms.o: ..\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.h
 f401_motorcontrol\sym_state_10ms.o: ..\Motor_Control_ert_rtw\Control_Command_2ms.h
 f401_motorcontrol\sym_state_10ms.o: ..\Motor_Control_ert_rtw\FOC_Control_100us.h
+f401_motorcontrol\sym_state_10ms.o: ..\Motor_Control_ert_rtw\rtGetNaN.h
 f401_motorcontrol\sym_state_10ms.o: ..\Motor_Control_ert_rtw\Motor_Control_private.h

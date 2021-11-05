@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.44
+ * Model version                  : 1.47
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Mon Nov  1 17:42:50 2021
+ * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -43,11 +43,7 @@
 
 /* Block signals and states (default storage) for system '<Root>' */
 typedef struct {
-  real32_T Merge_p[3];                 /* '<S106>/Merge' */
-  real32_T UnitDelay_DSTATE_m[2];      /* '<S138>/Unit Delay' */
-  real32_T UnitDelay_DSTATE_c[2];      /* '<S139>/Unit Delay' */
-  real32_T UnitDelay_DSTATE_p[2];      /* '<S141>/Unit Delay' */
-  real32_T UnitDelay_DSTATE_l[2];      /* '<S142>/Unit Delay' */
+  real32_T Merge_p[3];                 /* '<S111>/Merge' */
   real32_T UnitDelay2;                 /* '<S2>/Unit Delay2' */
   real32_T UnitDelay1;                 /* '<S2>/Unit Delay1' */
   real32_T UnitDelay3;                 /* '<S2>/Unit Delay3' */
@@ -61,72 +57,75 @@ typedef struct {
   real32_T Gain2;                      /* '<S64>/Gain2' */
   real32_T a;                          /* '<S64>/Divide1' */
   real32_T Merge2;                     /* '<S67>/Merge2' */
-  real32_T DiscreteTimeIntegrator;     /* '<S89>/Discrete-Time Integrator' */
+  real32_T Merge_h;                    /* '<S82>/Merge' */
+  real32_T DiscreteTimeIntegrator;     /* '<S90>/Discrete-Time Integrator' */
   real32_T Merge_c;                    /* '<S80>/Merge' */
-  real32_T DiscreteTimeIntegrator_f;   /* '<S85>/Discrete-Time Integrator' */
-  real32_T Constant1;                  /* '<S92>/Constant1' */
-  real32_T Add1_a;                     /* '<S92>/Add1' */
-  real32_T Add;                        /* '<S92>/Add' */
-  real32_T Constant3;                  /* '<S92>/Constant3' */
-  real32_T Constant5;                  /* '<S92>/Constant5' */
-  real32_T Sine;                       /* '<S102>/Sine' */
-  real32_T Merge_c4;                   /* '<S101>/Merge' */
-  real32_T Merge1_h;                   /* '<S101>/Merge1' */
-  real32_T Merge2_d;                   /* '<S101>/Merge2' */
-  real32_T DiscreteTimeIntegrator_o;   /* '<S147>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_d;   /* '<S149>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_a;   /* '<S146>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_g;   /* '<S148>/Discrete-Time Integrator' */
-  real32_T Sine_g;                     /* '<S134>/Sine' */
-  real32_T Cosine;                     /* '<S133>/Cosine' */
-  real32_T Sine_k;                     /* '<S133>/Sine' */
-  real32_T Subtract3;                  /* '<S129>/Subtract3' */
-  real32_T Subtract1;                  /* '<S129>/Subtract1' */
-  real32_T Merge2_n;                   /* '<S111>/Merge2' */
-  real32_T Fcn;                        /* '<S107>/Fcn' */
-  real32_T Fcn1;                       /* '<S107>/Fcn1' */
+  real32_T DiscreteTimeIntegrator_f;   /* '<S86>/Discrete-Time Integrator' */
+  real32_T Constant3;                  /* '<S95>/Constant3' */
+  real32_T Merge_g;                    /* '<S95>/Merge' */
+  real32_T Add3;                       /* '<S95>/Add3' */
+  real32_T Merge_c4;                   /* '<S106>/Merge' */
+  real32_T Merge1_h;                   /* '<S106>/Merge1' */
+  real32_T Merge2_d;                   /* '<S106>/Merge2' */
+  real32_T UnitDelay;                  /* '<S142>/Unit Delay' */
+  real32_T Cosine;                     /* '<S141>/Cosine' */
+  real32_T Sine;                       /* '<S141>/Sine' */
+  real32_T Merge2_n;                   /* '<S116>/Merge2' */
+  real32_T Fcn;                        /* '<S112>/Fcn' */
+  real32_T Fcn1;                       /* '<S112>/Fcn1' */
   real32_T Speed_RPM;                  /* '<S11>/Gain' */
   real32_T Angle_Theta;                /* '<S11>/Math Function' */
   real32_T LPF;                        /* '<S11>/LPF' */
-  real32_T Add3;                       /* '<S92>/Add3' */
-  real32_T Add4;                       /* '<S92>/Add4' */
-  real32_T Sum13;                      /* '<S137>/Sum13' */
-  real32_T Sum12;                      /* '<S137>/Sum12' */
+  real32_T Add4;                       /* '<S95>/Add4' */
+  real32_T Add1_c;                     /* '<S102>/Add1' */
   real32_T UnitDelay2_DSTATE;          /* '<S2>/Unit Delay2' */
   real32_T UnitDelay1_DSTATE;          /* '<S2>/Unit Delay1' */
   real32_T UnitDelay3_DSTATE;          /* '<S2>/Unit Delay3' */
   real32_T UnitDelay4_DSTATE;          /* '<S2>/Unit Delay4' */
+  real32_T UnitDelay6_DSTATE;          /* '<S2>/Unit Delay6' */
+  real32_T UnitDelay5_DSTATE;          /* '<S2>/Unit Delay5' */
   real32_T UnitDelay4_DSTATE_j;        /* '<S11>/Unit Delay4' */
   real32_T Integrator_DSTATE;          /* '<S47>/Integrator' */
   real32_T DiscreteTimeIntegrator_DSTATE;/* '<S11>/Discrete-Time Integrator' */
   real32_T LPF_states;                 /* '<S11>/LPF' */
-  real32_T UnitDelay_DSTATE_ec;        /* '<S66>/Unit Delay' */
-  real32_T DiscreteTimeIntegrator_DSTATE_l;/* '<S89>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_DSTATE_g;/* '<S85>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_DSTATE_i;/* '<S152>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_DSTATE_h;/* '<S147>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_DSTATE_d;/* '<S149>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_DSTATE_m;/* '<S146>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_DSTATE_k;/* '<S148>/Discrete-Time Integrator' */
-  real32_T DiscreteTimeIntegrator_DSTATE_a;/* '<S125>/Discrete-Time Integrator' */
-  real32_T UnitDelay_DSTATE_pd;        /* '<S110>/Unit Delay' */
-  real32_T UnitDelay_DSTATE_n;         /* '<S109>/Unit Delay' */
+  real32_T DiscreteTimeIntegrator_DSTATE_l;/* '<S90>/Discrete-Time Integrator' */
+  real32_T DiscreteTimeIntegrator_DSTATE_g;/* '<S86>/Discrete-Time Integrator' */
+  real32_T UnitDelay2_DSTATE_k;        /* '<S95>/Unit Delay2' */
+  real32_T UnitDelay_DSTATE_fl;        /* '<S102>/Unit Delay' */
+  real32_T DiscreteTimeIntegrator_DSTATE_i;/* '<S200>/Discrete-Time Integrator' */
+  real32_T UnitDelay_DSTATE_k;         /* '<S134>/Unit Delay' */
+  real32_T UnitDelay1_DSTATE_e;        /* '<S135>/Unit Delay1' */
+  real32_T UnitDelay_DSTATE_h;         /* '<S138>/Unit Delay' */
+  real32_T UnitDelay2_DSTATE_e;        /* '<S136>/Unit Delay2' */
+  real32_T Integrator_DSTATE_n;        /* '<S134>/Integrator' */
+  real32_T UnitDelay3_DSTATE_n;        /* '<S137>/Unit Delay3' */
+  real32_T Integrator2_DSTATE;         /* '<S136>/Integrator2' */
+  real32_T Integrator1_DSTATE;         /* '<S135>/Integrator1' */
+  real32_T Integrator3_DSTATE;         /* '<S137>/Integrator3' */
+  real32_T UnitDelay_DSTATE_j;         /* '<S142>/Unit Delay' */
+  real32_T Integrator_DSTATE_i;        /* '<S177>/Integrator' */
+  real32_T DiscreteTimeIntegrator_DSTATE_a;/* '<S130>/Discrete-Time Integrator' */
+  real32_T UnitDelay_DSTATE_p;         /* '<S115>/Unit Delay' */
+  real32_T UnitDelay_DSTATE_n;         /* '<S114>/Unit Delay' */
   real32_T Memory_PreviousInput;       /* '<S64>/Memory' */
   real32_T Memory1_PreviousInput;      /* '<S64>/Memory1' */
   real32_T Memory2_PreviousInput;      /* '<S64>/Memory2' */
   int32_T Position_Delay_DSTATE;       /* '<S78>/Position_Delay' */
   int8_T If1_ActiveSubsystem;          /* '<S81>/If1' */
-  int8_T DiscreteTimeIntegrator_PrevResetState;/* '<S89>/Discrete-Time Integrator' */
+  int8_T DiscreteTimeIntegrator_PrevResetState;/* '<S90>/Discrete-Time Integrator' */
   int8_T SwitchCase_ActiveSubsystem;   /* '<S80>/Switch Case' */
-  int8_T DiscreteTimeIntegrator_PrevResetState_h;/* '<S85>/Discrete-Time Integrator' */
-  int8_T DiscreteTimeIntegrator_PrevResetState_p;/* '<S152>/Discrete-Time Integrator' */
-  int8_T DiscreteTimeIntegrator_PrevResetState_pb;/* '<S125>/Discrete-Time Integrator' */
+  int8_T DiscreteTimeIntegrator_PrevResetState_h;/* '<S86>/Discrete-Time Integrator' */
+  int8_T DiscreteTimeIntegrator_PrevResetState_p;/* '<S200>/Discrete-Time Integrator' */
+  int8_T DiscreteTimeIntegrator_PrevResetState_pb;/* '<S130>/Discrete-Time Integrator' */
   uint8_T Merge1_a;                    /* '<S6>/Merge1' */
-  boolean_T UnitDelay3_DSTATE_c;       /* '<S89>/Unit Delay3' */
-  boolean_T UnitDelay3_DSTATE_m;       /* '<S85>/Unit Delay3' */
-  boolean_T UnitDelay3_DSTATE_i;       /* '<S152>/Unit Delay3' */
-  boolean_T UnitDelay3_DSTATE_k;       /* '<S125>/Unit Delay3' */
-  boolean_T Har_Compensation_MODE;     /* '<S97>/Har_Compensation' */
+  uint8_T Integrator_SYSTEM_ENABLE;    /* '<S134>/Integrator' */
+  uint8_T Integrator2_SYSTEM_ENABLE;   /* '<S136>/Integrator2' */
+  uint8_T Integrator1_SYSTEM_ENABLE;   /* '<S135>/Integrator1' */
+  uint8_T Integrator3_SYSTEM_ENABLE;   /* '<S137>/Integrator3' */
+  boolean_T UnitDelay3_DSTATE_c;       /* '<S90>/Unit Delay3' */
+  boolean_T UnitDelay3_DSTATE_m;       /* '<S86>/Unit Delay3' */
+  boolean_T UnitDelay3_DSTATE_i;       /* '<S200>/Unit Delay3' */
+  boolean_T UnitDelay3_DSTATE_k;       /* '<S130>/Unit Delay3' */
 } DW;
 
 /* Zero-crossing (trigger) state */
@@ -138,29 +137,27 @@ typedef struct {
 typedef struct {
   /* Pooled Parameter (Expression: atan_table)
    * Referenced by:
-   *   '<S114>/1-D Lookup Table4'
-   *   '<S117>/1-D Lookup Table4'
-   *   '<S118>/1-D Lookup Table4'
+   *   '<S119>/1-D Lookup Table4'
+   *   '<S122>/1-D Lookup Table4'
+   *   '<S123>/1-D Lookup Table4'
    */
-  real32_T pooled6[4097];
+  real32_T pooled7[4097];
 
   /* Pooled Parameter (Expression: Cosine_table)
    * Referenced by:
-   *   '<S102>/Cosine'
+   *   '<S107>/Cosine'
    *   '<S15>/Cosine'
-   *   '<S133>/Cosine'
-   *   '<S134>/Cosine'
+   *   '<S141>/Cosine'
    */
-  real32_T pooled28[4096];
+  real32_T pooled30[4096];
 
   /* Pooled Parameter (Expression: Sine_table)
    * Referenced by:
-   *   '<S102>/Sine'
+   *   '<S107>/Sine'
    *   '<S15>/Sine'
-   *   '<S133>/Sine'
-   *   '<S134>/Sine'
+   *   '<S141>/Sine'
    */
-  real32_T pooled30[4096];
+  real32_T pooled32[4096];
 } ConstP;
 
 /* External inputs (root inport signals with default storage) */
@@ -180,26 +177,25 @@ typedef struct {
   real32_T Ta;                         /* '<Root>/Ta' */
   real32_T Tb;                         /* '<Root>/Tb' */
   real32_T Tc;                         /* '<Root>/Tc' */
-  real32_T Speed_Measured;             /* '<Root>/Speed_Measured' */
 } ExtY;
 
 /* Type definition for custom storage class: Struct */
 typedef struct CTL_Parameter_tag {
   real32_T Angle_offset;               /* Referenced by: '<S10>/Angle_offset' */
   boolean_T Over_modulation;           /* Referenced by:
-                                        * '<S88>/Over_modulation'
-                                        * '<S125>/Over_modulation'
-                                        * '<S152>/Over_modulation'
+                                        * '<S89>/Over_modulation'
+                                        * '<S130>/Over_modulation'
+                                        * '<S200>/Over_modulation'
                                         */
   uint8_T Angle;                       /* Referenced by: '<S2>/Select_Angle' */
   uint8_T TorqueMode;                  /* Referenced by: '<S2>/Control_Mode' */
 } CTL_Parameter_type;
 
 typedef struct FluxWeak_Parameter_tag {
-  real32_T FluxWeak_Idref_max;         /* Referenced by: '<S89>/Saturation' */
-  real32_T FluxWeak_Idref_min;         /* Referenced by: '<S89>/Saturation' */
-  real32_T FluxWeak_Ki;                /* Referenced by: '<S89>/Ki' */
-  real32_T FluxWeak_Kp;                /* Referenced by: '<S89>/Kp' */
+  real32_T FluxWeak_Idref_max;         /* Referenced by: '<S90>/Saturation' */
+  real32_T FluxWeak_Idref_min;         /* Referenced by: '<S90>/Saturation' */
+  real32_T FluxWeak_Ki;                /* Referenced by: '<S90>/Ki' */
+  real32_T FluxWeak_Kp;                /* Referenced by: '<S90>/Kp' */
   uint8_T FluxWeak_Enable;             /* Referenced by: '<S4>/Constant1' */
 } FluxWeak_Parameter_type;
 
@@ -226,36 +222,33 @@ typedef struct Hall_Parameter_tag {
                                         */
 } Hall_Parameter_type;
 
-typedef struct Harmonic_Com_tag {
-  real32_T Harmonic_Id5th_Ki;          /* Referenced by: '<S146>/Ki' */
-  real32_T Harmonic_Id5th_Kp;          /* Referenced by: '<S146>/Kp' */
-  real32_T Harmonic_Id5th_Max;         /* Referenced by: '<S146>/Saturation' */
-  real32_T Harmonic_Id5th_Min;         /* Referenced by: '<S146>/Saturation' */
-  real32_T Harmonic_Id7th_Ki;          /* Referenced by: '<S147>/Ki' */
-  real32_T Harmonic_Id7th_Kp;          /* Referenced by: '<S147>/Kp' */
-  real32_T Harmonic_Id7th_Max;         /* Referenced by: '<S147>/Saturation' */
-  real32_T Harmonic_Id7th_Min;         /* Referenced by: '<S147>/Saturation' */
-  real32_T Harmonic_Iq5th_Ki;          /* Referenced by: '<S148>/Ki' */
-  real32_T Harmonic_Iq5th_Kp;          /* Referenced by: '<S148>/Kp' */
-  real32_T Harmonic_Iq5th_Max;         /* Referenced by: '<S148>/Saturation' */
-  real32_T Harmonic_Iq5th_Min;         /* Referenced by: '<S148>/Saturation' */
-  real32_T Harmonic_Iq7th_Ki;          /* Referenced by: '<S149>/Ki' */
-  real32_T Harmonic_Iq7th_Kp;          /* Referenced by: '<S149>/Kp' */
-  real32_T Harmonic_Iq7th_Max;         /* Referenced by: '<S149>/Saturation' */
-  real32_T Harmonic_Iq7th_Min;         /* Referenced by: '<S149>/Saturation' */
-  uint8_T Harmonic_Com_Enable;         /* Referenced by: '<S92>/Constant5' */
-} Harmonic_Com_type;
-
 typedef struct PI_Parameter_tag {
-  real32_T ID_Ki;                      /* Referenced by: '<S125>/Ki' */
-  real32_T ID_Kp;                      /* Referenced by: '<S125>/Kp' */
-  real32_T IQ_Ki;                      /* Referenced by: '<S152>/Ki' */
-  real32_T IQ_Kp;                      /* Referenced by: '<S152>/Kp' */
-  real32_T Speed_Ki;                   /* Referenced by: '<S85>/Ki' */
-  real32_T Speed_Kp;                   /* Referenced by: '<S85>/Kp' */
-  real32_T Speed_PI_OutputMax;         /* Referenced by: '<S85>/Saturation' */
-  real32_T Speed_PI_OutputMin;         /* Referenced by: '<S85>/Saturation' */
+  real32_T ID_Ki;                      /* Referenced by: '<S130>/Ki' */
+  real32_T ID_Kp;                      /* Referenced by: '<S130>/Kp' */
+  real32_T IQ_Ki;                      /* Referenced by: '<S200>/Ki' */
+  real32_T IQ_Kp;                      /* Referenced by: '<S200>/Kp' */
+  real32_T Speed_Ki;                   /* Referenced by: '<S86>/Ki' */
+  real32_T Speed_Kp;                   /* Referenced by: '<S86>/Kp' */
+  real32_T Speed_PI_OutputMax;         /* Referenced by: '<S86>/Saturation' */
+  real32_T Speed_PI_OutputMin;         /* Referenced by: '<S86>/Saturation' */
 } PI_Parameter_type;
+
+typedef struct SMO_Parameter_tag {
+  real32_T SMO_K;                      /* Referenced by:
+                                        * '<S134>/Gain4'
+                                        * '<S135>/Gain6'
+                                        * '<S137>/Gain10'
+                                        */
+  real32_T SMO_M;                      /* Referenced by: '<S136>/Gain9' */
+  real32_T SMO_PLL_W;                  /* Referenced by:
+                                        * '<S138>/Ki'
+                                        * '<S138>/Kp'
+                                        */
+  uint8_T SMO_Theta_Enable;            /* Referenced by:
+                                        * '<S82>/SMO_Enable'
+                                        * '<S95>/SMO_Enable'
+                                        */
+} SMO_Parameter_type;
 
 /* Real-time Model Data Structure */
 struct tag_RTM {
@@ -296,18 +289,21 @@ extern const ConstP rtConstP;
  * these signals and export their symbols.
  *
  */
-extern real32_T Motor_Power;           /* '<S164>/Add1' */
-extern real32_T Motor_Torque;          /* '<S165>/Add1' */
+extern real32_T Obs_Speed;             /* '<S2>/Unit Delay6' */
+extern real32_T Obs_Theta;             /* '<S2>/Unit Delay5' */
+extern real32_T Motor_Power;           /* '<S212>/Add1' */
+extern real32_T Motor_Torque;          /* '<S213>/Add1' */
+extern real32_T Hall_Speed;            /* '<S66>/Add1' */
 extern real32_T Id_ref;                /* '<S81>/Merge' */
 extern real32_T Iq_ref;                /* '<S81>/Merge1' */
-extern real32_T Vq_voltage;            /* '<S155>/Switch2' */
-extern real32_T Id_measured;           /* '<S99>/Add1' */
-extern real32_T Iq_measured;           /* '<S99>/Add2' */
-extern real32_T V_alpha;               /* '<S98>/Add' */
-extern real32_T V_beta;                /* '<S98>/Add3' */
-extern real32_T Vd_voltage;            /* '<S128>/Switch2' */
-extern real32_T Ialpha;                /* '<S103>/Gain2' */
-extern real32_T Ibeta;                 /* '<S103>/Gain5' */
+extern real32_T Vq_voltage;            /* '<S203>/Switch2' */
+extern real32_T Id_measured;           /* '<S104>/Add1' */
+extern real32_T Iq_measured;           /* '<S104>/Add2' */
+extern real32_T V_alpha;               /* '<S101>/Add' */
+extern real32_T V_beta;                /* '<S101>/Add3' */
+extern real32_T Vd_voltage;            /* '<S133>/Switch2' */
+extern real32_T Ialpha;                /* '<S108>/Gain2' */
+extern real32_T Ibeta;                 /* '<S108>/Gain5' */
 
 /*
  * Exported Global Parameters
@@ -318,18 +314,16 @@ extern real32_T Ibeta;                 /* '<S103>/Gain5' */
  *
  */
 extern real32_T Dead_Time;             /* Variable: Dead_Time
-                                        * Referenced by: '<S92>/IdRef2'
+                                        * Referenced by: '<S95>/IdRef2'
                                         */
 extern real32_T SpeedFilter_Fn;        /* Variable: SpeedFilter_Fn
                                         * Referenced by:
+                                        *   '<S102>/Constant1'
                                         *   '<S66>/Constant1'
                                         *   '<S79>/Constant1'
                                         */
 extern uint8_T Dead_Com_Enable;        /* Variable: Dead_Com_Enable
-                                        * Referenced by: '<S92>/Constant3'
-                                        */
-extern uint8_T FF_Enable;              /* Variable: FF_Enable
-                                        * Referenced by: '<S92>/Constant1'
+                                        * Referenced by: '<S95>/Constant3'
                                         */
 
 /* Model entry point functions */
@@ -342,8 +336,8 @@ extern void Motor_Control_step(void);
 extern CTL_Parameter_type CTL_Parameter;
 extern FluxWeak_Parameter_type FluxWeak_Parameter;
 extern Hall_Parameter_type Hall_Parameter;
-extern Harmonic_Com_type Harmonic_Com;
 extern PI_Parameter_type PI_Parameter;
+extern SMO_Parameter_type SMO_Parameter;
 
 /* Real-time Model object */
 extern RT_MODEL *const rtM;
@@ -373,35 +367,35 @@ extern RT_MODEL *const rtM;
  * Block '<S67>/Scope' : Unused code path elimination
  * Block '<S8>/Scope' : Unused code path elimination
  * Block '<S78>/Scope' : Unused code path elimination
- * Block '<S85>/Scope' : Unused code path elimination
- * Block '<S93>/Scope' : Unused code path elimination
- * Block '<S105>/Scope2' : Unused code path elimination
- * Block '<S105>/Scope3' : Unused code path elimination
- * Block '<S114>/Scope' : Unused code path elimination
- * Block '<S117>/Scope' : Unused code path elimination
- * Block '<S118>/Scope' : Unused code path elimination
- * Block '<S104>/Scope' : Unused code path elimination
- * Block '<S128>/Data Type Duplicate' : Unused code path elimination
- * Block '<S128>/Data Type Propagation' : Unused code path elimination
- * Block '<S131>/Scope' : Unused code path elimination
- * Block '<S130>/Scope1' : Unused code path elimination
- * Block '<S133>/Scope' : Unused code path elimination
- * Block '<S134>/Scope' : Unused code path elimination
- * Block '<S137>/Speed,Te 5' : Unused code path elimination
- * Block '<S137>/Uab1' : Unused code path elimination
- * Block '<S137>/Uab7' : Unused code path elimination
- * Block '<S137>/Ualpha,beta57' : Unused code path elimination
- * Block '<S137>/id5' : Unused code path elimination
- * Block '<S137>/id7' : Unused code path elimination
- * Block '<S137>/iq5' : Unused code path elimination
- * Block '<S137>/iq7' : Unused code path elimination
- * Block '<S98>/Scope' : Unused code path elimination
- * Block '<S155>/Data Type Duplicate' : Unused code path elimination
- * Block '<S155>/Data Type Propagation' : Unused code path elimination
- * Block '<S160>/Scope2' : Unused code path elimination
- * Block '<S92>/Scope2' : Unused code path elimination
- * Block '<S92>/Scope3' : Unused code path elimination
- * Block '<S102>/Scope' : Unused code path elimination
+ * Block '<S86>/Scope' : Unused code path elimination
+ * Block '<S96>/Scope' : Unused code path elimination
+ * Block '<S110>/Scope2' : Unused code path elimination
+ * Block '<S110>/Scope3' : Unused code path elimination
+ * Block '<S119>/Scope' : Unused code path elimination
+ * Block '<S122>/Scope' : Unused code path elimination
+ * Block '<S123>/Scope' : Unused code path elimination
+ * Block '<S109>/Scope' : Unused code path elimination
+ * Block '<S133>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S133>/Data Type Propagation' : Unused code path elimination
+ * Block '<S139>/Add' : Unused code path elimination
+ * Block '<S139>/Discrete-Time Integrator' : Unused code path elimination
+ * Block '<S139>/Ki' : Unused code path elimination
+ * Block '<S139>/Kp' : Unused code path elimination
+ * Block '<S139>/Product' : Unused code path elimination
+ * Block '<S139>/Product1' : Unused code path elimination
+ * Block '<S139>/Saturation' : Unused code path elimination
+ * Block '<S138>/Scope' : Unused code path elimination
+ * Block '<S141>/Scope' : Unused code path elimination
+ * Block '<S101>/Scope' : Unused code path elimination
+ * Block '<S203>/Data Type Duplicate' : Unused code path elimination
+ * Block '<S203>/Data Type Propagation' : Unused code path elimination
+ * Block '<S208>/Scope2' : Unused code path elimination
+ * Block '<S95>/Scope' : Unused code path elimination
+ * Block '<S95>/Scope1' : Unused code path elimination
+ * Block '<S95>/Scope2' : Unused code path elimination
+ * Block '<S95>/Scope3' : Unused code path elimination
+ * Block '<S95>/Scope4' : Unused code path elimination
+ * Block '<S107>/Scope' : Unused code path elimination
  * Block '<S6>/Scope1' : Unused code path elimination
  * Block '<S6>/Scope2' : Unused code path elimination
  * Block '<S6>/Scope3' : Unused code path elimination
@@ -516,92 +510,140 @@ extern RT_MODEL *const rtM;
  * '<S79>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Angle_Speed_100us/Speed_Resolver/Speed_cacl/LPF'
  * '<S80>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms'
  * '<S81>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening '
- * '<S82>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI'
- * '<S83>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Switch Case Action Subsystem'
- * '<S84>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI/Speed_PI'
- * '<S85>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI/Speed_PI/Speed_Control'
- * '<S86>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem'
- * '<S87>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem1'
- * '<S88>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak'
- * '<S89>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak/ID_Control'
- * '<S90>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak/Normal'
- * '<S91>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak/Over_M'
- * '<S92>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC'
- * '<S93>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Clarke_Transform'
- * '<S94>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation'
- * '<S95>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI'
- * '<S96>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/FeedForward'
- * '<S97>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation'
- * '<S98>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Inverse_Park_Transform'
- * '<S99>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Park_Transform'
- * '<S100>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI'
- * '<S101>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM'
- * '<S102>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Sine_Cosine'
- * '<S103>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Clarke_Transform/Clark1'
- * '<S104>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation'
- * '<S105>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal'
- * '<S106>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem'
- * '<S107>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Uabc_alphabeta'
- * '<S108>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/Angle_calibration'
- * '<S109>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/LPF'
- * '<S110>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/LPF1'
- * '<S111>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan'
- * '<S112>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/Angle_calibration/If Action Subsystem1'
- * '<S113>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/Angle_calibration/If Action Subsystem2'
- * '<S114>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem10'
- * '<S115>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem11'
- * '<S116>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem12'
- * '<S117>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem8'
- * '<S118>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem9'
- * '<S119>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem'
- * '<S120>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem1'
- * '<S121>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem2'
- * '<S122>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem3'
- * '<S123>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem4'
- * '<S124>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem5'
- * '<S125>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control'
- * '<S126>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Normal'
- * '<S127>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Over_M'
- * '<S128>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Saturation Dynamic'
- * '<S129>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/FeedForward/Subsystem'
- * '<S130>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation'
- * '<S131>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq5'
- * '<S132>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq7'
- * '<S133>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Sine_Cosine1'
- * '<S134>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Sine_Cosine2'
- * '<S135>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Switch_2pi'
- * '<S136>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Switch_2pi1'
- * '<S137>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller'
- * '<S138>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq5/LPF'
- * '<S139>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq5/LPF2'
- * '<S140>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq5/Park1'
- * '<S141>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq7/LPF'
- * '<S142>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq7/LPF2'
- * '<S143>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/Idq7/Park1'
- * '<S144>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/I-park'
- * '<S145>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/I-park1'
- * '<S146>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/ID_5'
- * '<S147>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/ID_7'
- * '<S148>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/IQ_5'
- * '<S149>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/IQ_7'
- * '<S150>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/Subsystem1'
- * '<S151>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Har_Compensation/Har_Compensation/idq57_Controller/Subsystem2'
- * '<S152>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control'
- * '<S153>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Normal'
- * '<S154>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Over_M'
- * '<S155>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Saturation Dynamic'
- * '<S156>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/Disable_Motor'
- * '<S157>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/Enable_Motor'
- * '<S158>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/N Sector  Caculate'
- * '<S159>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/T1 T2  Caculate'
- * '<S160>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/Tcm calculate'
- * '<S161>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/XYZ Caculate'
- * '<S162>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/If Action Subsystem1'
- * '<S163>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/If Action Subsystem2'
- * '<S164>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/LPF'
- * '<S165>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/LPF1'
- * '<S166>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/Power_Cacl'
- * '<S167>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/Torque_Cacl'
+ * '<S82>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Subsystem'
+ * '<S83>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI'
+ * '<S84>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Switch Case Action Subsystem'
+ * '<S85>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI/Speed_PI'
+ * '<S86>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Control_Command_2ms/Speed_PI/Speed_PI/Speed_Control'
+ * '<S87>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem'
+ * '<S88>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem1'
+ * '<S89>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak'
+ * '<S90>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak/ID_Control'
+ * '<S91>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak/Normal'
+ * '<S92>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening /Subsystem/Flux_weak/Over_M'
+ * '<S93>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Subsystem/Hall_Spd'
+ * '<S94>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Subsystem/Obs_Spd'
+ * '<S95>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC'
+ * '<S96>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Clarke_Transform'
+ * '<S97>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation'
+ * '<S98>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI'
+ * '<S99>'  : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO'
+ * '<S100>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Hall_Angle'
+ * '<S101>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Inverse_Park_Transform'
+ * '<S102>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/LPF'
+ * '<S103>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Obs_Angle'
+ * '<S104>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Park_Transform'
+ * '<S105>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI'
+ * '<S106>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM'
+ * '<S107>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Sine_Cosine'
+ * '<S108>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Clarke_Transform/Clark1'
+ * '<S109>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation'
+ * '<S110>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal'
+ * '<S111>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem'
+ * '<S112>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Uabc_alphabeta'
+ * '<S113>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/Angle_calibration'
+ * '<S114>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/LPF'
+ * '<S115>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/LPF1'
+ * '<S116>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan'
+ * '<S117>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/Angle_calibration/If Action Subsystem1'
+ * '<S118>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/Angle_calibration/If Action Subsystem2'
+ * '<S119>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem10'
+ * '<S120>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem11'
+ * '<S121>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem12'
+ * '<S122>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem8'
+ * '<S123>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/IsTheta_Cal/atan/If Action Subsystem9'
+ * '<S124>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem'
+ * '<S125>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem1'
+ * '<S126>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem2'
+ * '<S127>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem3'
+ * '<S128>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem4'
+ * '<S129>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/DT_Compensation/DT_Compensation/Subsystem/Subsystem5'
+ * '<S130>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control'
+ * '<S131>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Normal'
+ * '<S132>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Over_M'
+ * '<S133>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/D_Current_PI/ID_Control/Saturation Dynamic'
+ * '<S134>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/Equ1'
+ * '<S135>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/Equ2'
+ * '<S136>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/Equ3'
+ * '<S137>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/Equ4'
+ * '<S138>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL'
+ * '<S139>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/ID_Control'
+ * '<S140>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl'
+ * '<S141>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/Sine_Cosine'
+ * '<S142>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/SpeedToTheta'
+ * '<S143>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/Subsystem1'
+ * '<S144>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Anti-windup'
+ * '<S145>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/D Gain'
+ * '<S146>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Filter'
+ * '<S147>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Filter ICs'
+ * '<S148>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/I Gain'
+ * '<S149>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Ideal P Gain'
+ * '<S150>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Ideal P Gain Fdbk'
+ * '<S151>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Integrator'
+ * '<S152>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Integrator ICs'
+ * '<S153>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/N Copy'
+ * '<S154>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/N Gain'
+ * '<S155>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/P Copy'
+ * '<S156>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Parallel P Gain'
+ * '<S157>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Reset Signal'
+ * '<S158>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Saturation'
+ * '<S159>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Saturation Fdbk'
+ * '<S160>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Sum'
+ * '<S161>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Sum Fdbk'
+ * '<S162>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tracking Mode'
+ * '<S163>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tracking Mode Sum'
+ * '<S164>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tsamp - Integral'
+ * '<S165>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tsamp - Ngain'
+ * '<S166>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/postSat Signal'
+ * '<S167>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/preSat Signal'
+ * '<S168>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Anti-windup/Disc. Clamping Parallel'
+ * '<S169>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Anti-windup/Disc. Clamping Parallel/Dead Zone'
+ * '<S170>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Anti-windup/Disc. Clamping Parallel/Dead Zone/Enabled'
+ * '<S171>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/D Gain/Disabled'
+ * '<S172>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Filter/Disabled'
+ * '<S173>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Filter ICs/Disabled'
+ * '<S174>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/I Gain/External Parameters'
+ * '<S175>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Ideal P Gain/Passthrough'
+ * '<S176>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Ideal P Gain Fdbk/Disabled'
+ * '<S177>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Integrator/Discrete'
+ * '<S178>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Integrator ICs/Internal IC'
+ * '<S179>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/N Copy/Disabled wSignal Specification'
+ * '<S180>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/N Gain/Disabled'
+ * '<S181>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/P Copy/Disabled'
+ * '<S182>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Parallel P Gain/External Parameters'
+ * '<S183>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Reset Signal/Disabled'
+ * '<S184>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Saturation/Enabled'
+ * '<S185>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Saturation Fdbk/Disabled'
+ * '<S186>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Sum/Sum_PI'
+ * '<S187>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Sum Fdbk/Disabled'
+ * '<S188>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tracking Mode/Disabled'
+ * '<S189>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tracking Mode Sum/Passthrough'
+ * '<S190>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tsamp - Integral/Passthrough'
+ * '<S191>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/Tsamp - Ngain/Passthrough'
+ * '<S192>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/postSat Signal/Forward_Path'
+ * '<S193>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/PIDTheta_Ctrl/preSat Signal/Forward_Path'
+ * '<S194>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/SpeedToTheta/RangeLimit'
+ * '<S195>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/SpeedToTheta/RangeLimit/If Action Subsystem'
+ * '<S196>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/SpeedToTheta/RangeLimit/If Action Subsystem1'
+ * '<S197>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/SpeedToTheta/RangeLimit/If Action Subsystem2'
+ * '<S198>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/Subsystem1/If Action Subsystem'
+ * '<S199>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/HIGH_SMO/QPLL/Subsystem1/If Action Subsystem1'
+ * '<S200>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control'
+ * '<S201>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Normal'
+ * '<S202>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Over_M'
+ * '<S203>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/Q_Current_PI/IQ_Control/Saturation Dynamic'
+ * '<S204>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/Disable_Motor'
+ * '<S205>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/Enable_Motor'
+ * '<S206>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/N Sector  Caculate'
+ * '<S207>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/T1 T2  Caculate'
+ * '<S208>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/Tcm calculate'
+ * '<S209>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/FOC_Control_100us/FOC/SVPWM/XYZ Caculate'
+ * '<S210>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/If Action Subsystem1'
+ * '<S211>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/If Action Subsystem2'
+ * '<S212>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/LPF'
+ * '<S213>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/LPF1'
+ * '<S214>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/Power_Cacl'
+ * '<S215>' : 'FOC_Motor_Control/Motor_Control/Motor_Control_Function/SYM_State_10ms/Torque_Cacl'
  */
 #endif                                 /* RTW_HEADER_Motor_Control_h_ */
 
