@@ -141,6 +141,7 @@ void DMA1_Stream6_IRQHandler(void)
 /**
   * @brief This function handles ADC1 global interrupt.
   */
+
 void ADC_IRQHandler(void)
 {
   /* USER CODE BEGIN ADC_IRQn 0 */
@@ -164,7 +165,14 @@ void ADC_IRQHandler(void)
 	W_voltage=(float)ADC_Value[5]*0.017947f;
 //	
 
-	rtU.Speed_target = Speed_In;
+  if(Debug_SetSpeed<100)
+	{
+	 rtU.Speed_target = Speed_In;
+	}else if(Debug_SetSpeed>100)
+	{
+	  rtU.Speed_target = Debug_SetSpeed;
+	}
+	
 	rtU.Phase_CurrentABC[0] = Ia_A;
 	rtU.Phase_CurrentABC[1] = Ib_A;
 	rtU.Phase_CurrentABC[2] = Ic_A;
@@ -185,7 +193,7 @@ Sampling_cnt++;
 	{
 		UploadData();
 		Sampling_cnt=0;
-	Ia_arr[arr_index]=rtDW.Merge1_i;
+	Ia_arr[arr_index]=Hall_Angle;
 	arr_index++;
 	if(arr_index>=1999)
 	{
@@ -299,6 +307,7 @@ void TIM3_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM3_IRQn 0 */
 	//HAL_GPIO_TogglePin(GPIOB,LED1_Pin);
+	
 	Bus_volt_V=ADC_Value[0]*0.017947;
 	Speed_In = (float)ADC_Value[1]*0.45945f+800;
 	if(Speed_In<800)Speed_In=800;
@@ -426,9 +435,9 @@ void UploadData(void)
 	{
 		time_count++;
 		temp[0] = *(int16_T*)"AA";
-		temp[1] =(int16_T)(Bus_volt_V*100);
+		temp[1] =(int16_T)(Hall_Speed*10);
 		temp[2] =(int16_T)(Obs_Speed*10);
-		temp[3] =(int16_T)(rtDW.Merge1_i*1000);
+		temp[3] =(int16_T)(Hall_Angle*1000);
 		temp[4] =(int16_T)(Obs_Theta*1000);
 		temp[5] =(int16_T)(Ia_A*100);
 	
@@ -439,9 +448,9 @@ void UploadData(void)
 	}
 	else if( time_count == 999)
 	{
-		temp[0] = (int16_T)(Bus_volt_V*100);
+		temp[0] = (int16_T)(Hall_Speed*10);
 		temp[1] = (int16_T)(Obs_Speed*10);
-		temp[2] = (int16_T)(rtDW.Merge1_i*1000);
+		temp[2] = (int16_T)(Hall_Angle*1000);
 		temp[3] = (int16_T)(Obs_Theta*1000);
 		temp[4] = (int16_T)(Ia_A*100);
 		
@@ -455,9 +464,9 @@ void UploadData(void)
 	else
 	{
 		time_count++;
-		temp[0] = (int16_T)(Bus_volt_V*100);
+		temp[0] = (int16_T)(Hall_Speed*10);
 		temp[1] = (int16_T)(Obs_Speed*10);
-		temp[2] = (int16_T)(rtDW.Merge1_i*1000);
+		temp[2] = (int16_T)(Hall_Angle*1000);
 		temp[3] = (int16_T)(Obs_Theta*1000);
 		temp[4] = (int16_T)(Ia_A*100);
 		

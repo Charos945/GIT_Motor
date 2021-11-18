@@ -153,212 +153,162 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>MotorControl_B</ItemText>
+          <ItemText>ADC_Value,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtb_TmpSignalConversionAtModelI</ItemText>
+          <ItemText>Bus_volt_V</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>MotorControl_DWork</ItemText>
+          <ItemText>Task_100ms,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ADC_Value,0x0A</ItemText>
+          <ItemText>Speed_In,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Bus_volt_V</ItemText>
+          <ItemText>Ia_A,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Task_100ms,0x0A</ItemText>
+          <ItemText>Ib_A</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Speed_In,0x0A</ItemText>
+          <ItemText>Ic_A</ItemText>
         </Ww>
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Ia_A,0x0A</ItemText>
+          <ItemText>Ia_arr,0x0A</ItemText>
         </Ww>
         <Ww>
           <count>8</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Ib_A</ItemText>
+          <ItemText>rtY</ItemText>
         </Ww>
         <Ww>
           <count>9</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Ic_A</ItemText>
+          <ItemText>rtU</ItemText>
         </Ww>
         <Ww>
           <count>10</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Ia_arr,0x0A</ItemText>
+          <ItemText>rtDW</ItemText>
         </Ww>
         <Ww>
           <count>11</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtY</ItemText>
+          <ItemText>Hall_Sector</ItemText>
         </Ww>
         <Ww>
           <count>12</count>
           <WinNumber>1</WinNumber>
-          <ItemText>SMO,0x0A</ItemText>
+          <ItemText>Hall_Arr</ItemText>
         </Ww>
         <Ww>
           <count>13</count>
           <WinNumber>1</WinNumber>
-          <ItemText>CL_Param</ItemText>
+          <ItemText>Hall_a</ItemText>
         </Ww>
         <Ww>
           <count>14</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtU</ItemText>
+          <ItemText>Hall_b</ItemText>
         </Ww>
         <Ww>
           <count>15</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rtDW</ItemText>
+          <ItemText>Hall_c</ItemText>
         </Ww>
         <Ww>
           <count>16</count>
           <WinNumber>1</WinNumber>
-          <ItemText>OPL_Param</ItemText>
+          <ItemText>Hall_Parameter</ItemText>
         </Ww>
         <Ww>
           <count>17</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Hall_Sector</ItemText>
+          <ItemText>Hall_TimerCnt</ItemText>
         </Ww>
         <Ww>
           <count>18</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Hall_Arr</ItemText>
+          <ItemText>SpeedFilter_Fn</ItemText>
         </Ww>
         <Ww>
           <count>19</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Hall_a</ItemText>
+          <ItemText>PI_Parameter</ItemText>
         </Ww>
         <Ww>
           <count>20</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Hall_b</ItemText>
+          <ItemText>Id_ref</ItemText>
         </Ww>
         <Ww>
           <count>21</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Hall_c</ItemText>
+          <ItemText>Iq_ref</ItemText>
         </Ww>
         <Ww>
           <count>22</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Hall_Parameter</ItemText>
+          <ItemText>Id_measured</ItemText>
         </Ww>
         <Ww>
           <count>23</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Delta_T</ItemText>
+          <ItemText>Iq_measured</ItemText>
         </Ww>
         <Ww>
           <count>24</count>
           <WinNumber>1</WinNumber>
-          <ItemText>T1</ItemText>
+          <ItemText>CTL_Parameter</ItemText>
         </Ww>
         <Ww>
           <count>25</count>
           <WinNumber>1</WinNumber>
-          <ItemText>T2</ItemText>
+          <ItemText>SpeedFilter_Fn</ItemText>
         </Ww>
         <Ww>
           <count>26</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Hall_TimerCnt</ItemText>
+          <ItemText>Flux_Parameter</ItemText>
         </Ww>
         <Ww>
           <count>27</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ctrlParamsPI</ItemText>
+          <ItemText>Obs_Speed</ItemText>
         </Ww>
         <Ww>
           <count>28</count>
           <WinNumber>1</WinNumber>
-          <ItemText>FluxObsever</ItemText>
+          <ItemText>Obs_Theta</ItemText>
         </Ww>
         <Ww>
           <count>29</count>
           <WinNumber>1</WinNumber>
-          <ItemText>SpeedFilter_Fn</ItemText>
+          <ItemText>Hall_Speed</ItemText>
         </Ww>
         <Ww>
           <count>30</count>
           <WinNumber>1</WinNumber>
-          <ItemText>PI_Parameter</ItemText>
+          <ItemText>Debug_SetSpeed</ItemText>
         </Ww>
         <Ww>
           <count>31</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Id_ref</ItemText>
-        </Ww>
-        <Ww>
-          <count>32</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Iq_ref</ItemText>
-        </Ww>
-        <Ww>
-          <count>33</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Id_measured</ItemText>
-        </Ww>
-        <Ww>
-          <count>34</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Iq_measured</ItemText>
-        </Ww>
-        <Ww>
-          <count>35</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>CTL_Parameter</ItemText>
-        </Ww>
-        <Ww>
-          <count>36</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>SpeedFilter_Fn</ItemText>
-        </Ww>
-        <Ww>
-          <count>37</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Dead_Time</ItemText>
-        </Ww>
-        <Ww>
-          <count>38</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Dead_Com_Enable</ItemText>
-        </Ww>
-        <Ww>
-          <count>39</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>delta_t</ItemText>
-        </Ww>
-        <Ww>
-          <count>40</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>Harmonic_Com</ItemText>
-        </Ww>
-        <Ww>
-          <count>41</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>SMO_Parameter</ItemText>
+          <ItemText>EnDisable_flag</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>
@@ -780,7 +730,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\Angle_Speed_100us.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c</PathWithFileName>
       <FilenameWithoutPath>Angle_Speed_100us.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -792,7 +742,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\Control_Command_2ms.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.c</PathWithFileName>
       <FilenameWithoutPath>Control_Command_2ms.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -804,7 +754,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\FOC_Control_100us.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c</PathWithFileName>
       <FilenameWithoutPath>FOC_Control_100us.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -816,7 +766,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\Motor_Control.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Motor_Control.c</PathWithFileName>
       <FilenameWithoutPath>Motor_Control.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -828,7 +778,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\Motor_Control_data.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Motor_Control_data.c</PathWithFileName>
       <FilenameWithoutPath>Motor_Control_data.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -840,8 +790,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\Resolver_Angle_cacl.c</PathWithFileName>
-      <FilenameWithoutPath>Resolver_Angle_cacl.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.c</PathWithFileName>
+      <FilenameWithoutPath>rt_nonfinite.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -852,8 +802,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\rt_nonfinite.c</PathWithFileName>
-      <FilenameWithoutPath>rt_nonfinite.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rtGetInf.c</PathWithFileName>
+      <FilenameWithoutPath>rtGetInf.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -864,8 +814,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.c</PathWithFileName>
-      <FilenameWithoutPath>rt_sys_FOC_Control_100us_2.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.c</PathWithFileName>
+      <FilenameWithoutPath>rtGetNaN.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -876,31 +826,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\rtGetInf.c</PathWithFileName>
-      <FilenameWithoutPath>rtGetInf.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>5</GroupNumber>
-      <FileNumber>34</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\rtGetNaN.c</PathWithFileName>
-      <FilenameWithoutPath>rtGetNaN.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>5</GroupNumber>
-      <FileNumber>35</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Motor_Control_ert_rtw\SYM_State_10ms.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.c</PathWithFileName>
       <FilenameWithoutPath>SYM_State_10ms.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

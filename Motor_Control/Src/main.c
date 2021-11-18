@@ -98,6 +98,7 @@ int16_t Task_100ms;
 int16_t Task_2ms;
 float Bus_volt_V,Ia_A,Ib_A,Ic_A;
 float Tempreture,U_voltage,V_voltage,W_voltage,Speed_In;
+float Debug_SetSpeed;
 uint8_t EnDisable_flag;
 /* USER CODE END 0 */
 

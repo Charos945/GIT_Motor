@@ -1,0 +1,962 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" type="text/css" href="rtwreport.css" /><script language="JavaScript" type="text/javascript" src="rtwshrink.js"></script><title>
+Non-virtual subsystems in Motor_Control
+</title>
+
+</head>
+<body onload="try {if (top) {if (top.rtwPageOnLoad) top.rtwPageOnLoad('rtwIdSubsystem'); else local_onload();}} catch(err) {};">
+<h1>
+Non-virtual subsystems in Motor_Control
+</h1>
+<div>
+
+</div>
+<div>
+
+</div>
+<h3 name="sec_Code_Mapping" id="sec_code_mapping">
+1. Code Mapping <span title="Click to shrink or expand section" style="cursor:pointer;font-weight:normal;" id="rtwIdSubsystem_table_001_control" onclick ="if (rtwTableShrink) rtwTableShrink(window.document, this, 'rtwIdSubsystem_table_001', false)"><span class="shrink-button">[<u>hide</u>]</span></span>
+</h3>
+<table width="100%" name="rtwIdSubsystem_table_001" id="rtwIdSubsystem_table_001" border="0">
+<tr>
+<td align="left" valign="top">
+<p>
+The following table: <br /><ul>
+<li>
+provides a mapping from the non-virtual subsystems in the model to functions or reusable functions in the generated code and
+</li>
+<li>
+notes exceptions that caused some non-virtual subsystems to not reuse code even though they were assigned a function packaging setting ('Function packaging' entry on the Subsystem Block Dialog) of 'Auto' or 'Reusable function'.
+</li>
+
+</ul>
+
+</p>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<table class="AltRow FirstColumn" cellspacing="0">
+<tr class="heading">
+<th align="left" valign="top">
+<b>
+Subsystem
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Reuse Setting
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Reuse Outcome
+</b>
+
+</th>
+<th align="left" valign="top">
+<b>
+Outcome Diagnostic
+</b>
+
+</th>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S54&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Over_M" TARGET="rtwreport_document_frame">Reusable Function(S54)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S120&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Over_M" TARGET="rtwreport_document_frame">Reusable Function(S54)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S53&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Normal" TARGET="rtwreport_document_frame">Reusable Function(S53)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S119&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Normal" TARGET="rtwreport_document_frame">Reusable Function(S53)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S41&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Clarke_Transform" TARGET="rtwreport_document_frame">Function(S41)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S42&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_D_Current_PI" TARGET="rtwreport_document_frame">Function(S42)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S62&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Sine_Cosine" TARGET="rtwreport_document_frame">Function(S62)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S45&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Inverse_Park_Transform" TARGET="rtwreport_document_frame">Function(S45)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S47&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Park_Transform" TARGET="rtwreport_document_frame">Function(S47)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S48&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Q_Current_PI" TARGET="rtwreport_document_frame">Function(S48)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S49&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_SVPWM" TARGET="rtwreport_document_frame">Function(S49)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S50&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_Sine_Cosine_m" TARGET="rtwreport_document_frame">Function(S50)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S40&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_FOC" TARGET="rtwreport_document_frame">Function(S40)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S5&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="FOC_Control_100us_c.html#fcn_FOC_Control_100us" TARGET="rtwreport_document_frame">Function(S5)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S28&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Control_Command_2ms_c.html#fcn_Speed_PI" TARGET="rtwreport_document_frame">Function(S28)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S29&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Control_Command_2ms_c.html#fcn_SwitchCaseActionSubsystem" TARGET="rtwreport_document_frame">Function(S29)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S25&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Control_Command_2ms_c.html#fcn_Control_Command_2ms" TARGET="rtwreport_document_frame">Function(S25)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S34&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Control_Command_2ms_c.html#fcn_Flux_weak" TARGET="rtwreport_document_frame">Function(S34)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S4&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Control_Command_2ms_c.html#fcn_Control_Command_2ms_k" TARGET="rtwreport_document_frame">Function(S4)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S9&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Angle_Speed_100us_c.html#fcn_ACC_OMG" TARGET="rtwreport_document_frame">Function(S9)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S10&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Angle_Speed_100us_c.html#fcn_ADC_IRQ" TARGET="rtwreport_document_frame">Function(S10)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S23&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Angle_Speed_100us_c.html#fcn_Speed_cacl" TARGET="rtwreport_document_frame">Function(S23)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S8&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Angle_Speed_100us_c.html#fcn_Speed_Resolver" TARGET="rtwreport_document_frame">Function(S8)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S3&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="Angle_Speed_100us_c.html#fcn_Angle_Speed_100us" TARGET="rtwreport_document_frame">Function(S3)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S6&gt;
+</td>
+<td align="left" valign="top">
+Function
+</td>
+<td align="left" valign="top">
+<A HREF="SYM_State_10ms_c.html#fcn_SYM_State_10ms" TARGET="rtwreport_document_frame">Function(S6)</A>
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S51&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S116&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S115&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S117&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S46&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S44&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S123&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S122&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S124&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S125&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S126&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S127&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S37&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S36&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S32&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<A HREF="#S32blker"TARGET="rtwreport_document_frame"><FONT COLOR="red">[exceptions]</FONT></A>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S33&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S39&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S38&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S13&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S14&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S15&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S16&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S17&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S18&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S12&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S21&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S22&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S20&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S129&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="even">
+<td align="left" valign="top">
+&lt;S128&gt;
+</td>
+<td align="left" valign="top">
+Auto
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+<tr class="odd">
+<td align="left" valign="top">
+&lt;S1&gt;
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+Inline
+</td>
+<td align="left" valign="top">
+<FONT COLOR="green">normal</FONT>
+</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+<h3 name="sec_Code_Reuse_Exceptions" id="sec_reuse_exception">
+2. Code Reuse Exceptions <span title="Click to shrink or expand section" style="cursor:pointer;font-weight:normal;" id="rtwIdSubsystem_table_002_control" onclick ="if (rtwTableShrink) rtwTableShrink(window.document, this, 'rtwIdSubsystem_table_002', false)"><span class="shrink-button">[<u>hide</u>]</span></span>
+</h3>
+<table width="100%" name="rtwIdSubsystem_table_002" id="rtwIdSubsystem_table_002" border="0">
+<tr>
+<td align="left" valign="top">
+<p>
+The following section provides details on each exception that caused a non-virtual subsystem with a function packaging setting of<br /><ul>
+<li>
+'Auto' to become an inlined code segment,
+</li>
+<li>
+'Auto' to become a non-reusable function without arguments, or
+</li>
+<li>
+'Reusable function' to become a non-reusable function without arguments.
+</li>
+
+</ul>
+<b>Note:</b>This section does not report graphically identical non-virtual subsystems marked as 'Auto' that were not reused due to differences in their functional properties (such as dimensions, datatypes, work vectors, parameters, etc.).  You may identify reasons for non-reuse in such cases by inspecting the differences in the functional attributes of the subsystems in the model or in the inlined generated code.
+</p>
+
+</td>
+
+</tr>
+<tr>
+<td align="left" valign="top">
+<A NAME="S32blker">Contents of &lt;S32&gt; not reusable because: </B><BR />
+
+<ul>
+
+<li>The following block was marked as 'Function'. [FOC_Motor_Control/Motor_Control/Motor_Control_Function/Control_Command_2ms/Flux_weakening
+/Subsystem/Flux_weak]</li>
+</ul>
+
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>

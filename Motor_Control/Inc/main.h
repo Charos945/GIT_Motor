@@ -122,6 +122,7 @@ extern int16_t Task_2ms;
 extern uint32_t ADC_Value[6];
 extern float Bus_volt_V,Ia_A,Ib_A,Ic_A;
 extern float Tempreture,U_voltage,V_voltage,W_voltage,Speed_In;
+extern float Debug_SetSpeed;
 extern uint8_t EnDisable_flag;
 /* USER CODE END Private defines */
 
