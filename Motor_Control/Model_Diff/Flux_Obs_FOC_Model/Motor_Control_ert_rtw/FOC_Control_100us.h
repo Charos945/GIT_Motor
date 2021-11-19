@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.54
+ * Model version                  : 1.59
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Thu Nov 18 10:27:27 2021
+ * C/C++ source code generated on : Thu Nov 18 15:11:34 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -17,6 +17,7 @@
 
 #ifndef RTW_HEADER_FOC_Control_100us_h_
 #define RTW_HEADER_FOC_Control_100us_h_
+#include <float.h>
 #include <math.h>
 #ifndef Motor_Control_COMMON_INCLUDES_
 #define Motor_Control_COMMON_INCLUDES_
@@ -25,7 +26,6 @@
 #endif                                 /* Motor_Control_COMMON_INCLUDES_ */
 
 #include "Motor_Control_types.h"
-#include "rtGetNaN.h"
 #include "rt_nonfinite.h"
 
 extern void Over_M(real32_T rtu_Bus_voltage, real32_T *rty_Out1, real32_T

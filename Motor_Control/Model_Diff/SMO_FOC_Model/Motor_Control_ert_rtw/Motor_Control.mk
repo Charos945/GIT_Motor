@@ -2,7 +2,7 @@
 ## Makefile generated for component 'Motor_Control'. 
 ## 
 ## Makefile     : Motor_Control.mk
-## Generated on : Thu Nov 04 09:51:15 2021
+## Generated on : Thu Nov 18 17:48:51 2021
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)\Motor_Control.exe
 ## Product type : executable
 ## 
@@ -183,7 +183,7 @@ DEFINES = $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_STAN
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)\Motor_Control_ert_rtw\Angle_Speed_100us.c $(START_DIR)\Motor_Control_ert_rtw\Control_Command_2ms.c $(START_DIR)\Motor_Control_ert_rtw\FOC_Control_100us.c $(START_DIR)\Motor_Control_ert_rtw\Motor_Control.c $(START_DIR)\Motor_Control_ert_rtw\Motor_Control_data.c $(START_DIR)\Motor_Control_ert_rtw\Resolver_Angle_cacl.c $(START_DIR)\Motor_Control_ert_rtw\SYM_State_10ms.c $(START_DIR)\Motor_Control_ert_rtw\rtGetInf.c $(START_DIR)\Motor_Control_ert_rtw\rtGetNaN.c $(START_DIR)\Motor_Control_ert_rtw\rt_nonfinite.c $(START_DIR)\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.c
+SRCS = $(START_DIR)\Motor_Control_ert_rtw\Angle_Speed_100us.c $(START_DIR)\Motor_Control_ert_rtw\Control_Command_2ms.c $(START_DIR)\Motor_Control_ert_rtw\FOC_Control_100us.c $(START_DIR)\Motor_Control_ert_rtw\Motor_Control.c $(START_DIR)\Motor_Control_ert_rtw\Motor_Control_data.c $(START_DIR)\Motor_Control_ert_rtw\SYM_State_10ms.c $(START_DIR)\Motor_Control_ert_rtw\rtGetInf.c $(START_DIR)\Motor_Control_ert_rtw\rtGetNaN.c $(START_DIR)\Motor_Control_ert_rtw\rt_nonfinite.c
 
 MAIN_SRC = $(START_DIR)\Motor_Control_ert_rtw\ert_main.c
 
@@ -193,7 +193,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = Angle_Speed_100us.obj Control_Command_2ms.obj FOC_Control_100us.obj Motor_Control.obj Motor_Control_data.obj Resolver_Angle_cacl.obj SYM_State_10ms.obj rtGetInf.obj rtGetNaN.obj rt_nonfinite.obj rt_sys_FOC_Control_100us_2.obj
+OBJS = Angle_Speed_100us.obj Control_Command_2ms.obj FOC_Control_100us.obj Motor_Control.obj Motor_Control_data.obj SYM_State_10ms.obj rtGetInf.obj rtGetNaN.obj rt_nonfinite.obj
 
 MAIN_OBJ = ert_main.obj
 
@@ -370,10 +370,6 @@ Motor_Control_data.obj : $(START_DIR)\Motor_Control_ert_rtw\Motor_Control_data.c
 	$(CC) $(CFLAGS) -Fo"$@" $(START_DIR)\Motor_Control_ert_rtw\Motor_Control_data.c
 
 
-Resolver_Angle_cacl.obj : $(START_DIR)\Motor_Control_ert_rtw\Resolver_Angle_cacl.c
-	$(CC) $(CFLAGS) -Fo"$@" $(START_DIR)\Motor_Control_ert_rtw\Resolver_Angle_cacl.c
-
-
 SYM_State_10ms.obj : $(START_DIR)\Motor_Control_ert_rtw\SYM_State_10ms.c
 	$(CC) $(CFLAGS) -Fo"$@" $(START_DIR)\Motor_Control_ert_rtw\SYM_State_10ms.c
 
@@ -392,10 +388,6 @@ rtGetNaN.obj : $(START_DIR)\Motor_Control_ert_rtw\rtGetNaN.c
 
 rt_nonfinite.obj : $(START_DIR)\Motor_Control_ert_rtw\rt_nonfinite.c
 	$(CC) $(CFLAGS) -Fo"$@" $(START_DIR)\Motor_Control_ert_rtw\rt_nonfinite.c
-
-
-rt_sys_FOC_Control_100us_2.obj : $(START_DIR)\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.c
-	$(CC) $(CFLAGS) -Fo"$@" $(START_DIR)\Motor_Control_ert_rtw\rt_sys_FOC_Control_100us_2.c
 
 
 ###########################################################################

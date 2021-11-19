@@ -44,5 +44,5 @@ f401_motorcontrol\main.o: ..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw
 f401_motorcontrol\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 f401_motorcontrol\main.o: ..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h
 f401_motorcontrol\main.o: ..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h
-f401_motorcontrol\main.o: ..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.h
+f401_motorcontrol\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\float.h
 f401_motorcontrol\main.o: ..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h

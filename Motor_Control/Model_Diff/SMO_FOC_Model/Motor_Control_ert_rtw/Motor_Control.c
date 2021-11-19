@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.47
+ * Model version                  : 1.61
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
+ * C/C++ source code generated on : Thu Nov 18 17:48:38 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -21,41 +21,32 @@
 /* Exported block signals */
 real32_T Obs_Speed;                    /* '<S2>/Unit Delay6' */
 real32_T Obs_Theta;                    /* '<S2>/Unit Delay5' */
-real32_T Motor_Power;                  /* '<S212>/Add1' */
-real32_T Motor_Torque;                 /* '<S213>/Add1' */
-real32_T Hall_Speed;                   /* '<S66>/Add1' */
-real32_T Id_ref;                       /* '<S81>/Merge' */
-real32_T Iq_ref;                       /* '<S81>/Merge1' */
-real32_T Vq_voltage;                   /* '<S203>/Switch2' */
-real32_T Id_measured;                  /* '<S104>/Add1' */
-real32_T Iq_measured;                  /* '<S104>/Add2' */
-real32_T V_alpha;                      /* '<S101>/Add' */
-real32_T V_beta;                       /* '<S101>/Add3' */
-real32_T Vd_voltage;                   /* '<S133>/Switch2' */
-real32_T Ialpha;                       /* '<S108>/Gain2' */
-real32_T Ibeta;                        /* '<S108>/Gain5' */
+real32_T Motor_Power;                  /* '<S130>/Add1' */
+real32_T Motor_Torque;                 /* '<S131>/Add1' */
+real32_T Hall_Angle;                   /* '<S19>/Merge1' */
+real32_T Hall_Speed;                   /* '<S11>/Add1' */
+real32_T Id_ref;                       /* '<S4>/Constant' */
+real32_T Iq_ref;                       /* '<S25>/Merge' */
+real32_T Vq_voltage;                   /* '<S121>/Switch2' */
+real32_T Id_measured;                  /* '<S43>/Add1' */
+real32_T Iq_measured;                  /* '<S43>/Add2' */
+real32_T V_alpha;                      /* '<S39>/Add' */
+real32_T V_beta;                       /* '<S39>/Add3' */
+real32_T Vd_voltage;                   /* '<S52>/Switch2' */
+real32_T Ialpha;                       /* '<S48>/Gain2' */
+real32_T Ibeta;                        /* '<S48>/Gain5' */
 
 /* Exported block parameters */
-real32_T Dead_Time = 0.0F;             /* Variable: Dead_Time
-                                        * Referenced by: '<S95>/IdRef2'
-                                        */
 real32_T SpeedFilter_Fn = 0.3F;        /* Variable: SpeedFilter_Fn
                                         * Referenced by:
-                                        *   '<S102>/Constant1'
-                                        *   '<S66>/Constant1'
-                                        *   '<S79>/Constant1'
-                                        */
-uint8_T Dead_Com_Enable = 0U;          /* Variable: Dead_Com_Enable
-                                        * Referenced by: '<S95>/Constant3'
+                                        *   '<S40>/Constant1'
+                                        *   '<S11>/Constant1'
                                         */
 
 /* Exported data definition */
 
 /* Definition for custom storage class: Struct */
 CTL_Parameter_type CTL_Parameter = {
-  /* Angle_offset */
-  0.1985F,
-
   /* Over_modulation */
   0,
 
@@ -66,81 +57,62 @@ CTL_Parameter_type CTL_Parameter = {
   0U
 };
 
-FluxWeak_Parameter_type FluxWeak_Parameter = {
-  /* FluxWeak_Idref_max */
-  0.0F,
-
-  /* FluxWeak_Idref_min */
-  -200.0F,
-
-  /* FluxWeak_Ki */
-  50.0F,
-
-  /* FluxWeak_Kp */
-  1.2F,
-
-  /* FluxWeak_Enable */
-  0U
-};
-
 Hall_Parameter_type Hall_Parameter = {
   /* HaLL_AngleShift */
-  -0.25F,
-
-  /* HaLL_Sector1 */
-  5.236F,
-
-  /* HaLL_Sector2 */
-  1.0472F,
-
-  /* HaLL_Sector3 */
-  0.0F,
-
-  /* HaLL_Sector4 */
-  3.1415F,
-
-  /* HaLL_Sector5 */
-  4.1888F,
-
-  /* HaLL_Sector6 */
-  2.0944F,
-
+  1.0F,
+  3.14159274F,
+  5.23598766F,
+  4.18879032F,
+1.04719758F,
+2.09439516F,
+0.0F,
   /* HaLL_Timer_T */
-  1.0E-5F
+  5E-5F
+};
+
+OPL_Parameter_type OPL_Parameter = {
+  /* OPL_Speed */
+  800.0F,
+
+  /* OPL_Time */
+  2.0F,
+
+  /* OPL_Torque */
+  3.0F
 };
 
 PI_Parameter_type PI_Parameter = {
-  /* ID_Ki */
+ /* ID_Ki */
   0.8F,
 
   /* ID_Kp */
-  3.2F,
+  1.32F,
 
   /* IQ_Ki */
   0.32F,
 
   /* IQ_Kp */
-  3.3F,
+  1.33F,
 
   /* Speed_Ki */
-  0.633F,
+  0.00633F,
 
   /* Speed_Kp */
-  0.0267F,
+  0.000267F,
 
   /* Speed_PI_OutputMax */
-  5.0F,
+  15.0F,
 
   /* Speed_PI_OutputMin */
-  -5.0F
+  -15.0F
 };
 
 SMO_Parameter_type SMO_Parameter = {
   /* SMO_K */
-  0.5F,
+  0.2F,
 
   /* SMO_M */
-  0.15F,
+  0.1F,
 
   /* SMO_PLL_W */
   50.0F,
@@ -279,7 +251,7 @@ void Motor_Control_step(void)
   rtDW.UnitDelay4_DSTATE = Vq_voltage;
 
   /* Update for UnitDelay: '<S2>/Unit Delay6' */
-  rtDW.UnitDelay6_DSTATE = rtDW.Add1_c;
+  rtDW.UnitDelay6_DSTATE = rtDW.UnitDelay1_c;
 
   /* Update for UnitDelay: '<S2>/Unit Delay5' */
   rtDW.UnitDelay5_DSTATE = rtDW.UnitDelay;
@@ -287,7 +259,7 @@ void Motor_Control_step(void)
   /* End of Outputs for SubSystem: '<Root>/Motor_Control' */
 
   /* Outport: '<Root>/Ta' */
-  rtY.Ta = rtDW.Merge_c4;
+  rtY.Ta = rtDW.Merge_c;
 
   /* Outport: '<Root>/Tb' */
   rtY.Tb = rtDW.Merge1_h;
@@ -325,7 +297,7 @@ void Motor_Control_initialize(void)
   /* End of SystemInitialize for SubSystem: '<Root>/Motor_Control' */
 
   /* SystemInitialize for Outport: '<Root>/Ta' */
-  rtY.Ta = rtDW.Merge_c4;
+  rtY.Ta = rtDW.Merge_c;
 
   /* SystemInitialize for Outport: '<Root>/Tb' */
   rtY.Tb = rtDW.Merge1_h;

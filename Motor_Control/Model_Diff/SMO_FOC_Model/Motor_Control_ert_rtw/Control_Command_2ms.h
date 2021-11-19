@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.47
+ * Model version                  : 1.61
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Thu Nov  4 09:51:01 2021
+ * C/C++ source code generated on : Thu Nov 18 17:48:38 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -17,7 +17,6 @@
 
 #ifndef RTW_HEADER_Control_Command_2ms_h_
 #define RTW_HEADER_Control_Command_2ms_h_
-#include <math.h>
 #ifndef Motor_Control_COMMON_INCLUDES_
 #define Motor_Control_COMMON_INCLUDES_
 #include "rtwtypes.h"
@@ -25,15 +24,12 @@
 #endif                                 /* Motor_Control_COMMON_INCLUDES_ */
 
 #include "Motor_Control_types.h"
-#include "rt_nonfinite.h"
 
 extern void Speed_PI_Disable(void);
 extern void Speed_PI(void);
 extern void SwitchCaseActionSubsystem(void);
 extern void Control_Command_2ms_Init(void);
 extern void Control_Command_2ms(void);
-extern void Flux_weak_Disable(void);
-extern void Flux_weak(void);
 extern void Control_Command_2ms_o_Init(void);
 extern void Control_Command_2ms_k(void);
 

@@ -21,11 +21,11 @@
 <tr name="5" id="5">
 <td><a id="l5" class='ln'>5</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="6" id="6">
-<td><a id="l6" class='ln'>6</a></td><td><span class="ct"> * Model version                  : 1.47</span></td></tr>
+<td><a id="l6" class='ln'>6</a></td><td><span class="ct"> * Model version                  : 1.61</span></td></tr>
 <tr name="7" id="7">
 <td><a id="l7" class='ln'>7</a></td><td><span class="ct"> * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020</span></td></tr>
 <tr name="8" id="8">
-<td><a id="l8" class='ln'>8</a></td><td><span class="ct"> * C/C++ source code generated on : Thu Nov  4 09:51:01 2021</span></td></tr>
+<td><a id="l8" class='ln'>8</a></td><td><span class="ct"> * C/C++ source code generated on : Thu Nov 18 17:48:38 2021</span></td></tr>
 <tr name="9" id="9">
 <td><a id="l9" class='ln'>9</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="10" id="10">
@@ -49,63 +49,45 @@
 <tr name="19" id="19">
 <td><a id="l19" class='ln'>19</a></td><td><span class="pp">#define</span> <a id="19c9" class="tk">RTW_HEADER_Angle_Speed_100us_h_</a></td></tr>
 <tr name="20" id="20">
-<td><a id="l20" class='ln'>20</a></td><td><span class="pp">#include &lt;math.h&gt;</span></td></tr>
+<td><a id="l20" class='ln'>20</a></td><td><span class="pp">#ifndef</span> <a id="20c9" class="tk">Motor_Control_COMMON_INCLUDES_</a></td></tr>
 <tr name="21" id="21">
-<td><a id="l21" class='ln'>21</a></td><td><span class="pp">#ifndef</span> <a id="21c9" class="tk">Motor_Control_COMMON_INCLUDES_</a></td></tr>
+<td><a id="l21" class='ln'>21</a></td><td><span class="pp">#define</span> <a id="21c9" class="tk">Motor_Control_COMMON_INCLUDES_</a></td></tr>
 <tr name="22" id="22">
-<td><a id="l22" class='ln'>22</a></td><td><span class="pp">#define</span> <a id="22c9" class="tk">Motor_Control_COMMON_INCLUDES_</a></td></tr>
+<td><a id="l22" class='ln'>22</a></td><td><span class="pp">#include "rtwtypes.h"</span></td></tr>
 <tr name="23" id="23">
-<td><a id="l23" class='ln'>23</a></td><td><span class="pp">#include "rtwtypes.h"</span></td></tr>
+<td><a id="l23" class='ln'>23</a></td><td><span class="pp">#include "zero_crossing_types.h"</span></td></tr>
 <tr name="24" id="24">
-<td><a id="l24" class='ln'>24</a></td><td><span class="pp">#include "zero_crossing_types.h"</span></td></tr>
+<td><a id="l24" class='ln'>24</a></td><td><span class="pp">#endif</span>                                 <span class="ct">/* Motor_Control_COMMON_INCLUDES_ */</span></td></tr>
 <tr name="25" id="25">
-<td><a id="l25" class='ln'>25</a></td><td><span class="pp">#endif</span>                                 <span class="ct">/* Motor_Control_COMMON_INCLUDES_ */</span></td></tr>
+<td><a id="l25" class='ln'>25</a></td><td></td></tr>
 <tr name="26" id="26">
-<td><a id="l26" class='ln'>26</a></td><td></td></tr>
+<td><a id="l26" class='ln'>26</a></td><td><span class="pp">#include "Motor_Control_types.h"</span></td></tr>
 <tr name="27" id="27">
-<td><a id="l27" class='ln'>27</a></td><td><span class="pp">#include "Motor_Control_types.h"</span></td></tr>
+<td><a id="l27" class='ln'>27</a></td><td></td></tr>
 <tr name="28" id="28">
-<td><a id="l28" class='ln'>28</a></td><td></td></tr>
+<td><a id="l28" class='ln'>28</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="28c13" class="tk">ACC_OMG</a>(<span class="kw">void</span>);</td></tr>
 <tr name="29" id="29">
-<td><a id="l29" class='ln'>29</a></td><td><span class="ct">/* Child system includes */</span></td></tr>
+<td><a id="l29" class='ln'>29</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="29c13" class="tk">ADC_IRQ</a>(<span class="kw">void</span>);</td></tr>
 <tr name="30" id="30">
-<td><a id="l30" class='ln'>30</a></td><td><span class="pp">#include "Resolver_Angle_cacl.h"</span></td></tr>
+<td><a id="l30" class='ln'>30</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="30c13" class="tk">Angle_Speed_100us</a>(<span class="kw">void</span>);</td></tr>
 <tr name="31" id="31">
-<td><a id="l31" class='ln'>31</a></td><td><span class="pp">#include "rt_sys_FOC_Control_100us_2.h"</span></td></tr>
+<td><a id="l31" class='ln'>31</a></td><td></td></tr>
 <tr name="32" id="32">
-<td><a id="l32" class='ln'>32</a></td><td></td></tr>
+<td><a id="l32" class='ln'>32</a></td><td><span class="pp">#endif</span>                                 <span class="ct">/* RTW_HEADER_Angle_Speed_100us_h_ */</span></td></tr>
 <tr name="33" id="33">
-<td><a id="l33" class='ln'>33</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="33c13" class="tk">ACC_OMG</a>(<span class="kw">void</span>);</td></tr>
+<td><a id="l33" class='ln'>33</a></td><td></td></tr>
 <tr name="34" id="34">
-<td><a id="l34" class='ln'>34</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="34c13" class="tk">ADC_IRQ</a>(<span class="kw">void</span>);</td></tr>
+<td><a id="l34" class='ln'>34</a></td><td><span class="ct">/*</span></td></tr>
 <tr name="35" id="35">
-<td><a id="l35" class='ln'>35</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="35c13" class="tk">Speed_cacl</a>(<span class="kw">void</span>);</td></tr>
+<td><a id="l35" class='ln'>35</a></td><td><span class="ct"> * File trailer for generated code.</span></td></tr>
 <tr name="36" id="36">
-<td><a id="l36" class='ln'>36</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="36c13" class="tk">Speed_Resolver</a>(<span class="kw">void</span>);</td></tr>
+<td><a id="l36" class='ln'>36</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="37" id="37">
-<td><a id="l37" class='ln'>37</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="37c13" class="tk">Angle_calibration</a>(<span class="kw">void</span>);</td></tr>
+<td><a id="l37" class='ln'>37</a></td><td><span class="ct"> * [EOF]</span></td></tr>
 <tr name="38" id="38">
-<td><a id="l38" class='ln'>38</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="38c13" class="tk">Resolver_Observer</a>(<span class="kw">void</span>);</td></tr>
+<td><a id="l38" class='ln'>38</a></td><td><span class="ct"> */</span></td></tr>
 <tr name="39" id="39">
-<td><a id="l39" class='ln'>39</a></td><td><span class="kw">extern</span> <span class="kw">void</span> <a id="39c13" class="tk">Angle_Speed_100us</a>(<span class="kw">void</span>);</td></tr>
-<tr name="40" id="40">
-<td><a id="l40" class='ln'>40</a></td><td></td></tr>
-<tr name="41" id="41">
-<td><a id="l41" class='ln'>41</a></td><td><span class="pp">#endif</span>                                 <span class="ct">/* RTW_HEADER_Angle_Speed_100us_h_ */</span></td></tr>
-<tr name="42" id="42">
-<td><a id="l42" class='ln'>42</a></td><td></td></tr>
-<tr name="43" id="43">
-<td><a id="l43" class='ln'>43</a></td><td><span class="ct">/*</span></td></tr>
-<tr name="44" id="44">
-<td><a id="l44" class='ln'>44</a></td><td><span class="ct"> * File trailer for generated code.</span></td></tr>
-<tr name="45" id="45">
-<td><a id="l45" class='ln'>45</a></td><td><span class="ct"> *</span></td></tr>
-<tr name="46" id="46">
-<td><a id="l46" class='ln'>46</a></td><td><span class="ct"> * [EOF]</span></td></tr>
-<tr name="47" id="47">
-<td><a id="l47" class='ln'>47</a></td><td><span class="ct"> */</span></td></tr>
-<tr name="48" id="48">
-<td><a id="l48" class='ln'>48</a></td><td></td></tr>
+<td><a id="l39" class='ln'>39</a></td><td></td></tr>
 </table>
 </pre>
 </body>

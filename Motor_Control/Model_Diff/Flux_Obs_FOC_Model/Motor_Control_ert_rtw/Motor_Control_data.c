@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.54
+ * Model version                  : 1.59
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Thu Nov 18 10:27:27 2021
+ * C/C++ source code generated on : Thu Nov 18 15:11:34 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -22,8 +22,8 @@
 const ConstP rtConstP = {
   /* Pooled Parameter (Expression: Cosine_table)
    * Referenced by:
-   *   '<S50>/Cosine'
-   *   '<S62>/Cosine'
+   *   '<S52>/Cosine'
+   *   '<S65>/Cosine'
    */
   { 1.0F, 0.999995291F, 0.999990582F, 0.999985874F, 0.999981165F, 0.999967039F,
     0.999952912F, 0.999938846F, 0.999924719F, 0.999901175F, 0.999877632F,
@@ -851,8 +851,8 @@ const ConstP rtConstP = {
 
   /* Pooled Parameter (Expression: Sine_table)
    * Referenced by:
-   *   '<S50>/Sine'
-   *   '<S62>/Sine'
+   *   '<S52>/Sine'
+   *   '<S65>/Sine'
    */
   { 0.0F, 0.00153398793F, 0.0030679768F, 0.00460196566F, 0.00613595545F,
     0.00766988657F, 0.0092038177F, 0.0107377488F, 0.0122716809F, 0.0138054974F,

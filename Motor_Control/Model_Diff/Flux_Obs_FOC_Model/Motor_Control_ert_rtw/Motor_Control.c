@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.54
+ * Model version                  : 1.59
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Thu Nov 18 10:27:27 2021
+ * C/C++ source code generated on : Thu Nov 18 15:11:34 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -21,26 +21,26 @@
 /* Exported block signals */
 real32_T Obs_Speed;                    /* '<S2>/Unit Delay6' */
 real32_T Obs_Theta;                    /* '<S2>/Unit Delay5' */
-real32_T Motor_Power;                  /* '<S130>/Add1' */
-real32_T Motor_Torque;                 /* '<S131>/Add1' */
+real32_T Motor_Power;                  /* '<S133>/Add1' */
+real32_T Motor_Torque;                 /* '<S134>/Add1' */
 real32_T Hall_Angle;                   /* '<S19>/Merge1' */
 real32_T Hall_Speed;                   /* '<S11>/Add1' */
 real32_T Id_ref;                       /* '<S26>/Merge' */
 real32_T Iq_ref;                       /* '<S26>/Merge1' */
-real32_T Vq_voltage;                   /* '<S121>/Switch2' */
-real32_T Id_measured;                  /* '<S47>/Add1' */
-real32_T Iq_measured;                  /* '<S47>/Add2' */
-real32_T V_alpha;                      /* '<S45>/Add' */
-real32_T V_beta;                       /* '<S45>/Add3' */
-real32_T Vd_voltage;                   /* '<S55>/Switch2' */
-real32_T Ialpha;                       /* '<S51>/Gain2' */
-real32_T Ibeta;                        /* '<S51>/Gain5' */
+real32_T Vq_voltage;                   /* '<S124>/Switch2' */
+real32_T Id_measured;                  /* '<S49>/Add1' */
+real32_T Iq_measured;                  /* '<S49>/Add2' */
+real32_T V_alpha;                      /* '<S46>/Add' */
+real32_T V_beta;                       /* '<S46>/Add3' */
+real32_T Vd_voltage;                   /* '<S58>/Switch2' */
+real32_T Ialpha;                       /* '<S54>/Gain2' */
+real32_T Ibeta;                        /* '<S54>/Gain5' */
 
 /* Exported block parameters */
 real32_T SpeedFilter_Fn = 0.3F;        /* Variable: SpeedFilter_Fn
                                         * Referenced by:
                                         *   '<S11>/Constant1'
-                                        *   '<S57>/Constant1'
+                                        *   '<S60>/Constant1'
                                         */
 
 /* Exported data definition */
@@ -79,13 +79,13 @@ Flux_Parameter_type Flux_Parameter = {
   1.0F,
 
   /* pll_omega */
-  10000.0F,
+  20000.0F,
 
   /* pll_xi */
-  40.0F,
+  160.0F,
 
   /* Flux_Theta_Enable */
-  0U
+  1U
 };
 
 Hall_Parameter_type Hall_Parameter = {
@@ -101,8 +101,19 @@ Hall_Parameter_type Hall_Parameter = {
   5E-5F
 };
 
+OPL_Parameter_type OPL_Parameter = {
+  /* OPL_Speed */
+  700.0F,
+
+  /* OPL_Time */
+  2.0F,
+
+  /* OPL_Torque */
+  3.0F
+};
+
 PI_Parameter_type PI_Parameter = {
-    /* ID_Ki */
+  /* ID_Ki */
   0.8F,
 
   /* ID_Kp */
@@ -268,7 +279,7 @@ void Motor_Control_step(void)
   rtY.Ta = rtDW.Merge_c4;
 
   /* Outport: '<Root>/Tb' */
-  rtY.Tb = rtDW.Merge1;
+  rtY.Tb = rtDW.Merge1_h;
 
   /* Outport: '<Root>/Tc' */
   rtY.Tc = rtDW.Merge2_d;
@@ -306,7 +317,7 @@ void Motor_Control_initialize(void)
   rtY.Ta = rtDW.Merge_c4;
 
   /* SystemInitialize for Outport: '<Root>/Tb' */
-  rtY.Tb = rtDW.Merge1;
+  rtY.Tb = rtDW.Merge1_h;
 
   /* SystemInitialize for Outport: '<Root>/Tc' */
   rtY.Tc = rtDW.Merge2_d;

@@ -525,47 +525,47 @@
             <File>
               <FileName>Angle_Speed_100us.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c</FilePath>
             </File>
             <File>
               <FileName>Control_Command_2ms.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.c</FilePath>
             </File>
             <File>
               <FileName>FOC_Control_100us.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c</FilePath>
             </File>
             <File>
               <FileName>Motor_Control.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Motor_Control.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Motor_Control.c</FilePath>
             </File>
             <File>
               <FileName>Motor_Control_data.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\Motor_Control_data.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Motor_Control_data.c</FilePath>
             </File>
             <File>
               <FileName>rt_nonfinite.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.c</FilePath>
             </File>
             <File>
               <FileName>rtGetInf.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rtGetInf.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\rtGetInf.c</FilePath>
             </File>
             <File>
               <FileName>rtGetNaN.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.c</FilePath>
             </File>
             <File>
               <FileName>SYM_State_10ms.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Model_Diff\Flux_Obs_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.c</FilePath>
+              <FilePath>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.c</FilePath>
             </File>
           </Files>
         </Group>
