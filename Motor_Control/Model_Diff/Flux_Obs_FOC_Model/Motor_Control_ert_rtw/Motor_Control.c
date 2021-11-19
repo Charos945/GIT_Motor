@@ -90,7 +90,7 @@ Flux_Parameter_type Flux_Parameter = {
 
 Hall_Parameter_type Hall_Parameter = {
   /* HaLL_AngleShift */
-  1.0F,
+  0.85F,
   3.14159274F,
   5.23598766F,
   4.18879032F,
@@ -113,7 +113,7 @@ OPL_Parameter_type OPL_Parameter = {
 };
 
 PI_Parameter_type PI_Parameter = {
-  /* ID_Ki */
+   /* ID_Ki */
   0.8F,
 
   /* ID_Kp */

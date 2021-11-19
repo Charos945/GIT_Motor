@@ -429,7 +429,7 @@
 
   <Group>
     <GroupName>Application/User</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -740,7 +740,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c</PathWithFileName>
       <FilenameWithoutPath>Angle_Speed_100us.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -752,7 +752,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.c</PathWithFileName>
       <FilenameWithoutPath>Control_Command_2ms.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -764,7 +764,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c</PathWithFileName>
       <FilenameWithoutPath>FOC_Control_100us.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -776,8 +776,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Motor_Control.c</PathWithFileName>
-      <FilenameWithoutPath>Motor_Control.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c</PathWithFileName>
+      <FilenameWithoutPath>HF_Observer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -788,8 +788,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\Motor_Control_data.c</PathWithFileName>
-      <FilenameWithoutPath>Motor_Control_data.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.c</PathWithFileName>
+      <FilenameWithoutPath>Motor_Control.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -800,8 +800,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.c</PathWithFileName>
-      <FilenameWithoutPath>rt_nonfinite.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_data.c</PathWithFileName>
+      <FilenameWithoutPath>Motor_Control_data.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -812,8 +812,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\rtGetInf.c</PathWithFileName>
-      <FilenameWithoutPath>rtGetInf.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.c</PathWithFileName>
+      <FilenameWithoutPath>rt_nonfinite.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -824,8 +824,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.c</PathWithFileName>
-      <FilenameWithoutPath>rtGetNaN.c</FilenameWithoutPath>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.c</PathWithFileName>
+      <FilenameWithoutPath>rt_sys_HF_Observer_37.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -836,7 +836,43 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.c</PathWithFileName>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.c</PathWithFileName>
+      <FilenameWithoutPath>rt_sys_HF_Observer_38.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>34</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.c</PathWithFileName>
+      <FilenameWithoutPath>rtGetInf.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>35</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.c</PathWithFileName>
+      <FilenameWithoutPath>rtGetNaN.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>36</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.c</PathWithFileName>
       <FilenameWithoutPath>SYM_State_10ms.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

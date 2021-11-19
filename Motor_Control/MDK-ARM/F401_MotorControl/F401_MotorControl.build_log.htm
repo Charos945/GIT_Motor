@@ -22,19 +22,56 @@ Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
 F:\GIT_Motor\Motor_Control\Motor_Control\MDK-ARM\F401_MotorControl.uvprojx
-Project File Date:  11/18/2021
+Project File Date:  11/19/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'F401_MotorControl'
+compiling Motor_Control.c...
+compiling Motor_Control_data.c...
+compiling Control_Command_2ms.c...
+compiling Angle_Speed_100us.c...
 compiling FOC_Control_100us.c...
-..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c(1190): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-             (OPL_Parameter.OPL_Time / 0.0001 - 1.0E-12)) && (rtDW.UnitDelay1_c >
-..\Model_Diff\SMO_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c: 1 warning, 0 errors
+compiling HF_Observer.c...
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(64): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             (HFI_Parameter.HFI_IPD_Time / 0.0001 - 1.0E-12)) &&
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(75): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+        if ((rtDW.temporalCounter_i1_m >= (uint32_T)ceil(HFI_Parameter.HFI_NS_Time
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(305): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             (HFI_Parameter.HFI_NS_Low_Time / 0.0001 - 1.0E-12)) &&
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(317): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             (HFI_Parameter.HFI_Pulse_Time / 0.0001 - 1.0E-12)) && (rtDW.NS_2_flag
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(329): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             (HFI_Parameter.HFI_NS_Low_Time / 0.0001 - 1.0E-12)) &&
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(341): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             (HFI_Parameter.HFI_Pulse_Time / 0.0001 - 1.0E-12)) && (rtDW.NS_4_flag
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(787): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             (HFI_Parameter.HFI_NS2RUN_Time / 0.0001 - 1.0E-12)) &&
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c(804): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             (HFI_Parameter.HFI_Switch_Time / 0.0001 - 1.0E-12)) &&
+..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c: 8 warnings, 0 errors
+compiling rtGetInf.c...
+compiling rt_sys_HF_Observer_38.c...
+compiling rtGetNaN.c...
+compiling rt_nonfinite.c...
+compiling rt_sys_HF_Observer_37.c...
+compiling SYM_State_10ms.c...
+compiling main.c...
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(52): warning:  #47-D: incompatible redefinition of macro "__FPU_PRESENT" 
+  #define __FPU_PRESENT             1U       /*!< FPU present                                   */
+../Src/main.c: 1 warning, 0 errors
+compiling stm32f4xx_it.c...
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h(52): warning:  #47-D: incompatible redefinition of macro "__FPU_PRESENT" 
+  #define __FPU_PRESENT             1U       /*!< FPU present                                   */
+../Src/stm32f4xx_it.c(148): warning:  #188-D: enumerated type mixed with another type
+  	HAL_GPIO_WritePin(GPIOB,LED1_Pin,1);
+../Src/stm32f4xx_it.c(221): warning:  #188-D: enumerated type mixed with another type
+   HAL_GPIO_WritePin(GPIOB,LED1_Pin,0);
+../Src/stm32f4xx_it.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=21840 RO-data=33240 RW-data=316 ZI-data=10196  
+Program Size: Code=24908 RO-data=33240 RW-data=356 ZI-data=10428  
 FromELF: creating hex file...
-"F401_MotorControl\F401_MotorControl.axf" - 0 Error(s), 1 Warning(s).
+"F401_MotorControl\F401_MotorControl.axf" - 0 Error(s), 12 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -57,7 +94,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.2.0
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:05
 </pre>
 </body>
 </html>
