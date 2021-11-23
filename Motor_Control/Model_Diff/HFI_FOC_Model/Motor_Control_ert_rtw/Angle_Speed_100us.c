@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.75
+ * Model version                  : 1.79
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Fri Nov 19 17:54:27 2021
+ * C/C++ source code generated on : Tue Nov 23 17:08:07 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -222,9 +222,7 @@ void ADC_IRQ(void)
                * Hall_Parameter.HaLL_Timer_T) + rtDW.Merge2) +
     Hall_Parameter.HaLL_AngleShift;
 
-  /* If: '<S19>/If1' incorporates:
-   *  Inport: '<S20>/In1'
-   */
+  /* If: '<S19>/If1' */
   if (rtb_Add6 > 6.28318548F) {
     /* Outputs for IfAction SubSystem: '<S19>/If Action Subsystem2' incorporates:
      *  ActionPort: '<S21>/Action Port'
@@ -243,12 +241,63 @@ void ADC_IRQ(void)
     /* Outputs for IfAction SubSystem: '<S19>/If Action Subsystem1' incorporates:
      *  ActionPort: '<S20>/Action Port'
      */
+    /* Merge: '<S19>/Merge1' incorporates:
+     *  Inport: '<S20>/In1'
+     */
     Hall_Angle = rtb_Add6;
 
     /* End of Outputs for SubSystem: '<S19>/If Action Subsystem1' */
   }
 
   /* End of If: '<S19>/If1' */
+}
+
+/* Output and update for atomic system: '<S8>/Speed_cacl' */
+void Speed_cacl(void)
+{
+  int32_T rtb_Wrap_To_Pi;
+
+  /* Gain: '<S23>/Wrap_To_Pi' incorporates:
+   *  DataTypeConversion: '<S23>/Difference_to_Single1'
+   *  Gain: '<S23>/Scale_Input'
+   *  Inport: '<Root>/Angle_Theta'
+   */
+  rtb_Wrap_To_Pi = (int32_T)floorf(1.70891312E+8F * rtU.Angle_Theta) << 2;
+
+  /* Sum: '<S24>/Add1' incorporates:
+   *  Constant: '<S23>/Constant'
+   *  Constant: '<S23>/Constant1'
+   *  Constant: '<S24>/Constant1'
+   *  DataTypeConversion: '<S23>/Difference_to_Single'
+   *  Delay: '<S23>/Position_Delay'
+   *  Gain: '<S23>/Gain'
+   *  Product: '<S23>/Product'
+   *  Product: '<S23>/Product1'
+   *  Product: '<S24>/Divide1'
+   *  Sum: '<S23>/Difference_Wrap'
+   *  Sum: '<S24>/Add'
+   *  UnitDelay: '<S24>/Unit Delay'
+   */
+  rtDW.Add1 += ((real32_T)(rtb_Wrap_To_Pi - rtDW.Position_Delay_DSTATE) *
+                1.46291804E-5F * 9.54929638F * 0.5F - rtDW.Add1) *
+    SpeedFilter_Fn;
+
+  /* Update for Delay: '<S23>/Position_Delay' */
+  rtDW.Position_Delay_DSTATE = rtb_Wrap_To_Pi;
+}
+
+/* Output and update for action system: '<S3>/Speed_Resolver' */
+void Speed_Resolver(void)
+{
+  /* DataTypeConversion: '<S8>/DT2' incorporates:
+   *  Inport: '<Root>/Angle_Theta'
+   */
+  rtDW.Direct_Angle = rtU.Angle_Theta;
+
+  /* Outputs for Atomic SubSystem: '<S8>/Speed_cacl' */
+  Speed_cacl();
+
+  /* End of Outputs for SubSystem: '<S8>/Speed_cacl' */
 }
 
 /* Output and update for function-call system: '<S2>/Angle_Speed_100us' */
@@ -263,6 +312,20 @@ void Angle_Speed_100us(void)
   ADC_IRQ();
 
   /* End of Outputs for SubSystem: '<S7>/ADC_IRQ' */
+
+  /* SwitchCase: '<S3>/Switch Case' incorporates:
+   *  Constant: '<S2>/Select_Angle'
+   */
+  if (CTL_Parameter.Angle == 1) {
+    /* Outputs for IfAction SubSystem: '<S3>/Speed_Resolver' incorporates:
+     *  ActionPort: '<S8>/Action Port'
+     */
+    Speed_Resolver();
+
+    /* End of Outputs for SubSystem: '<S3>/Speed_Resolver' */
+  }
+
+  /* End of SwitchCase: '<S3>/Switch Case' */
 }
 
 /*

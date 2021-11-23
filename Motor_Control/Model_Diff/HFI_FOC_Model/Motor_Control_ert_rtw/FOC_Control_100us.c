@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.75
+ * Model version                  : 1.79
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Fri Nov 19 17:54:27 2021
+ * C/C++ source code generated on : Tue Nov 23 17:08:07 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -65,7 +65,7 @@ void Angle_set(void)
     /* Merge: '<S36>/Merge1' incorporates:
      *  Inport: '<S49>/Reso_angle'
      */
-    rtDW.Merge1 = Hall_Angle;
+    rtDW.Merge1 = rtDW.Direct_Angle;
 
     /* End of Outputs for SubSystem: '<S37>/Subsystem1' */
   }
@@ -757,8 +757,10 @@ void Set_Idq1(void)
 /* Output and update for atomic system: '<S36>/Set_Idq' */
 void Set_Idq_p(void)
 {
-  /* If: '<S45>/If1' */
-  if ((rtDW.RUN_state == 2) || (rtDW.RUN_state == 1)) {
+  /* If: '<S45>/If1' incorporates:
+   *  Constant: '<S45>/HFI_Enalble'
+   */
+  if ((HFI_Parameter.HFI_Fuc_Enalbe == 1) && (rtDW.RUN_state != 3)) {
     /* Outputs for IfAction SubSystem: '<S45>/Set_Idq' incorporates:
      *  ActionPort: '<S183>/Action Port'
      */

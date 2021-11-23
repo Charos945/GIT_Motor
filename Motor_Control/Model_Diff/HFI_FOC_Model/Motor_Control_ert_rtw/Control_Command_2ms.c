@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.75
+ * Model version                  : 1.79
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Fri Nov 19 17:54:27 2021
+ * C/C++ source code generated on : Tue Nov 23 17:08:07 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -309,11 +309,11 @@ void Control_Command_2ms_k(void)
   Id_ref = 0.0F;
 
   /* If: '<S26>/If1' incorporates:
-   *  Constant: '<S26>/Flux_Enable'
+   *  Constant: '<S26>/HFI_Enable'
    *  Inport: '<S34>/Hall_Speed'
    *  Inport: '<S35>/Obs_Speed'
    */
-  if (SMO_Parameter.SMO_Theta_Enable == 1) {
+  if (HFI_Parameter.HFI_Fuc_Enalbe == 1) {
     /* Outputs for IfAction SubSystem: '<S26>/Obs_Spd' incorporates:
      *  ActionPort: '<S35>/Action Port'
      */
@@ -321,11 +321,11 @@ void Control_Command_2ms_k(void)
 
     /* End of Outputs for SubSystem: '<S26>/Obs_Spd' */
   } else {
-    if (SMO_Parameter.SMO_Theta_Enable == 0) {
+    if (HFI_Parameter.HFI_Fuc_Enalbe == 0) {
       /* Outputs for IfAction SubSystem: '<S26>/Hall_Spd' incorporates:
        *  ActionPort: '<S34>/Action Port'
        */
-      rtDW.Merge = Hall_Speed;
+      rtDW.Merge = rtDW.Add1;
 
       /* End of Outputs for SubSystem: '<S26>/Hall_Spd' */
     }

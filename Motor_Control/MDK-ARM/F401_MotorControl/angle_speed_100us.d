@@ -1,5 +1,6 @@
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h
+f401_motorcontrol\angle_speed_100us.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h
@@ -10,7 +11,6 @@ f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h
 f401_motorcontrol\angle_speed_100us.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\float.h
-f401_motorcontrol\angle_speed_100us.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h
 f401_motorcontrol\angle_speed_100us.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 f401_motorcontrol\angle_speed_100us.o: ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h

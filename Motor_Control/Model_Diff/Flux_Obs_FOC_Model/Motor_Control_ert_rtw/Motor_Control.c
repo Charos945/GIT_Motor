@@ -113,7 +113,7 @@ OPL_Parameter_type OPL_Parameter = {
 };
 
 PI_Parameter_type PI_Parameter = {
-   /* ID_Ki */
+  /* ID_Ki */
   0.8F,
 
   /* ID_Kp */
@@ -132,10 +132,10 @@ PI_Parameter_type PI_Parameter = {
   0.000267F,
 
   /* Speed_PI_OutputMax */
-  15.0F,
+  6.0F,
 
   /* Speed_PI_OutputMin */
-  -15.0F
+  -6.0F
 };
 
 /* Block signals and states (default storage) */

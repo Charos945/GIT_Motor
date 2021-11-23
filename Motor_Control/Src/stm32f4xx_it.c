@@ -308,6 +308,7 @@ void TIM3_IRQHandler(void)
   /* USER CODE BEGIN TIM3_IRQn 0 */
 	//HAL_GPIO_TogglePin(GPIOB,LED1_Pin);
 	
+	rtU.Torque_ref=3;
 	Bus_volt_V=ADC_Value[0]*0.017947;
 	Speed_In = (float)ADC_Value[1]*0.45945f+800;
 	if(Speed_In<800)Speed_In=800;

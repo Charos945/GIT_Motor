@@ -21,11 +21,11 @@
 <tr name="5" id="5">
 <td><a id="l5" class='ln'>5</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="6" id="6">
-<td><a id="l6" class='ln'>6</a></td><td><span class="ct"> * Model version                  : 1.75</span></td></tr>
+<td><a id="l6" class='ln'>6</a></td><td><span class="ct"> * Model version                  : 1.79</span></td></tr>
 <tr name="7" id="7">
 <td><a id="l7" class='ln'>7</a></td><td><span class="ct"> * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020</span></td></tr>
 <tr name="8" id="8">
-<td><a id="l8" class='ln'>8</a></td><td><span class="ct"> * C/C++ source code generated on : Fri Nov 19 17:54:27 2021</span></td></tr>
+<td><a id="l8" class='ln'>8</a></td><td><span class="ct"> * C/C++ source code generated on : Tue Nov 23 17:08:07 2021</span></td></tr>
 <tr name="9" id="9">
 <td><a id="l9" class='ln'>9</a></td><td><span class="ct"> *</span></td></tr>
 <tr name="10" id="10">
@@ -633,7 +633,7 @@
 <tr name="311" id="311">
 <td><a id="l311" class='ln'>311</a></td><td>  <span class="ct">/* If: '&lt;S26&gt;/If1' incorporates:</span></td></tr>
 <tr name="312" id="312">
-<td><a id="l312" class='ln'>312</a></td><td><span class="ct">   *  Constant: '&lt;S26&gt;/Flux_Enable'</span></td></tr>
+<td><a id="l312" class='ln'>312</a></td><td><span class="ct">   *  Constant: '&lt;S26&gt;/HFI_Enable'</span></td></tr>
 <tr name="313" id="313">
 <td><a id="l313" class='ln'>313</a></td><td><span class="ct">   *  Inport: '&lt;S34&gt;/Hall_Speed'</span></td></tr>
 <tr name="314" id="314">
@@ -641,7 +641,7 @@
 <tr name="315" id="315">
 <td><a id="l315" class='ln'>315</a></td><td><span class="ct">   */</span></td></tr>
 <tr name="316" id="316">
-<td><a id="l316" class='ln'>316</a></td><td>  <span class="kw">if</span> (<a id="316c7" class="tk">SMO_Parameter</a>.<a id="316c21" class="tk">SMO_Theta_Enable</a> <a id="316c38" class="tk">==</a> 1) <span class="br">{</span></td></tr>
+<td><a id="l316" class='ln'>316</a></td><td>  <span class="kw">if</span> (<a id="316c7" class="tk">HFI_Parameter</a>.<a id="316c21" class="tk">HFI_Fuc_Enalbe</a> <a id="316c36" class="tk">==</a> 1) <span class="br">{</span></td></tr>
 <tr name="317" id="317">
 <td><a id="l317" class='ln'>317</a></td><td>    <span class="ct">/* Outputs for IfAction SubSystem: '&lt;S26&gt;/Obs_Spd' incorporates:</span></td></tr>
 <tr name="318" id="318">
@@ -657,7 +657,7 @@
 <tr name="323" id="323">
 <td><a id="l323" class='ln'>323</a></td><td>  <span class="br">}</span> <span class="kw">else</span> <span class="br">{</span></td></tr>
 <tr name="324" id="324">
-<td><a id="l324" class='ln'>324</a></td><td>    <span class="kw">if</span> (<a id="324c9" class="tk">SMO_Parameter</a>.<a id="324c23" class="tk">SMO_Theta_Enable</a> <a id="324c40" class="tk">==</a> 0) <span class="br">{</span></td></tr>
+<td><a id="l324" class='ln'>324</a></td><td>    <span class="kw">if</span> (<a id="324c9" class="tk">HFI_Parameter</a>.<a id="324c23" class="tk">HFI_Fuc_Enalbe</a> <a id="324c38" class="tk">==</a> 0) <span class="br">{</span></td></tr>
 <tr name="325" id="325">
 <td><a id="l325" class='ln'>325</a></td><td>      <span class="ct">/* Outputs for IfAction SubSystem: '&lt;S26&gt;/Hall_Spd' incorporates:</span></td></tr>
 <tr name="326" id="326">
@@ -665,7 +665,7 @@
 <tr name="327" id="327">
 <td><a id="l327" class='ln'>327</a></td><td><span class="ct">       */</span></td></tr>
 <tr name="328" id="328">
-<td><a id="l328" class='ln'>328</a></td><td>      <a id="328c7" class="tk">rtDW</a>.<a id="328c12" class="tk">Merge</a> = <a id="328c20" class="tk">Hall_Speed</a>;</td></tr>
+<td><a id="l328" class='ln'>328</a></td><td>      <a id="328c7" class="tk">rtDW</a>.<a id="328c12" class="tk">Merge</a> = <a id="328c20" class="tk">rtDW</a>.<a id="328c25" class="tk">Add1</a>;</td></tr>
 <tr name="329" id="329">
 <td><a id="l329" class='ln'>329</a></td><td></td></tr>
 <tr name="330" id="330">

@@ -36,22 +36,22 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x617CE2E3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x617CE2E3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x617CE2E3)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
-I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-F (../Src/stm32f4xx_it.c)(0x6195BDB0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\stm32f4xx_it.o --omf_browse f401_motorcontrol\stm32f4xx_it.crf --depend f401_motorcontrol\stm32f4xx_it.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+F (../Src/stm32f4xx_it.c)(0x619B079B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\stm32f4xx_it.o --omf_browse f401_motorcontrol\stm32f4xx_it.crf --depend f401_motorcontrol\stm32f4xx_it.d)
 I (../Inc/main.h)(0x61930C9F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x617CE2E3)
 I (../Inc/stm32f4xx_hal_conf.h)(0x617CE2E3)
@@ -87,21 +87,21 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x617CE2E3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x617CE2E3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x617CE2E3)
 I (../Inc/stm32f4xx_it.h)(0x617CE2E3)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
-I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
 F (../Src/stm32f4xx_hal_msp.c)(0x617CE2E3)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\stm32f4xx_hal_msp.o --omf_browse f401_motorcontrol\stm32f4xx_hal_msp.crf --depend f401_motorcontrol\stm32f4xx_hal_msp.d)
 I (../Inc/main.h)(0x61930C9F)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x617CE2E3)
@@ -817,181 +817,181 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x617CE2E3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x617CE2E3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x617CE2E3)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x617CE2E3)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\angle_speed_100us.o --omf_browse f401_motorcontrol\angle_speed_100us.crf --depend f401_motorcontrol\angle_speed_100us.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\angle_speed_100us.o --omf_browse f401_motorcontrol\angle_speed_100us.crf --depend f401_motorcontrol\angle_speed_100us.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\control_command_2ms.o --omf_browse f401_motorcontrol\control_command_2ms.crf --depend f401_motorcontrol\control_command_2ms.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\foc_control_100us.o --omf_browse f401_motorcontrol\foc_control_100us.crf --depend f401_motorcontrol\foc_control_100us.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\control_command_2ms.o --omf_browse f401_motorcontrol\control_command_2ms.crf --depend f401_motorcontrol\control_command_2ms.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\hf_observer.o --omf_browse f401_motorcontrol\hf_observer.crf --depend f401_motorcontrol\hf_observer.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\foc_control_100us.o --omf_browse f401_motorcontrol\foc_control_100us.crf --depend f401_motorcontrol\foc_control_100us.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
-I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.c)(0x619CB01A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\motor_control.o --omf_browse f401_motorcontrol\motor_control.crf --depend f401_motorcontrol\motor_control.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\hf_observer.o --omf_browse f401_motorcontrol\hf_observer.crf --depend f401_motorcontrol\hf_observer.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
-I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.c)(0x61977499)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\motor_control.o --omf_browse f401_motorcontrol\motor_control.crf --depend f401_motorcontrol\motor_control.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_data.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\motor_control_data.o --omf_browse f401_motorcontrol\motor_control_data.crf --depend f401_motorcontrol\motor_control_data.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
-I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_data.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\motor_control_data.o --omf_browse f401_motorcontrol\motor_control_data.crf --depend f401_motorcontrol\motor_control_data.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rt_nonfinite.o --omf_browse f401_motorcontrol\rt_nonfinite.crf --depend f401_motorcontrol\rt_nonfinite.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rt_sys_hf_observer_37.o --omf_browse f401_motorcontrol\rt_sys_hf_observer_37.crf --depend f401_motorcontrol\rt_sys_hf_observer_37.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rt_sys_hf_observer_38.o --omf_browse f401_motorcontrol\rt_sys_hf_observer_38.crf --depend f401_motorcontrol\rt_sys_hf_observer_38.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rt_nonfinite.o --omf_browse f401_motorcontrol\rt_nonfinite.crf --depend f401_motorcontrol\rt_nonfinite.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rt_sys_hf_observer_37.o --omf_browse f401_motorcontrol\rt_sys_hf_observer_37.crf --depend f401_motorcontrol\rt_sys_hf_observer_37.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
-I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rt_sys_hf_observer_38.o --omf_browse f401_motorcontrol\rt_sys_hf_observer_38.crf --depend f401_motorcontrol\rt_sys_hf_observer_38.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rtgetinf.o --omf_browse f401_motorcontrol\rtgetinf.crf --depend f401_motorcontrol\rtgetinf.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rtgetnan.o --omf_browse f401_motorcontrol\rtgetnan.crf --depend f401_motorcontrol\rtgetnan.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.h)(0x619CAF7E)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
+F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.c)(0x619CAF81)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\sym_state_10ms.o --omf_browse f401_motorcontrol\sym_state_10ms.crf --depend f401_motorcontrol\sym_state_10ms.d)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x619CAF81)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x619CAF81)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x619CAF81)
 I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
-I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x619CAF7E)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rtgetinf.o --omf_browse f401_motorcontrol\rtgetinf.crf --depend f401_motorcontrol\rtgetinf.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\rtgetnan.o --omf_browse f401_motorcontrol\rtgetnan.crf --depend f401_motorcontrol\rtgetnan.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetNaN.h)(0x61977459)
-I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-F (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.c)(0x6197745B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Core/Include -I ../Drivers/CMSIS/DSP/Include -I ../MotorControl/Inc -I "../../../Program Files/Polyspace/R2019b/simulink/include" -I ..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw-I.\RTE\_F401_MotorControl-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32F401xE -DMEM_UNIT_BYTES -DARM_MATH_CM4 -DMemUnit_T="uint8_T" -DMATLAB_PROJECT -DUSE_HAL_DRIVER -DSTM32F401xE -D__FPU_PRESENT-o f401_motorcontrol\sym_state_10ms.o --omf_browse f401_motorcontrol\sym_state_10ms.crf --depend f401_motorcontrol\sym_state_10ms.d)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\SYM_State_10ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtwtypes.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\zero_crossing_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_types.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Angle_Speed_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_37.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_sys_HF_Observer_38.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Control_Command_2ms.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\FOC_Control_100us.h)(0x6197745B)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\HF_Observer.h)(0x6197745B)
-I (D:\Keil_v5\ARM\ARMCC\include\float.h)(0x5CEB79E2)
-I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rt_nonfinite.h)(0x61977459)
-I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x61977459)
-I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x6197745B)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\rtGetInf.h)(0x619CAF7E)
+I (..\Model_Diff\HFI_FOC_Model\Motor_Control_ert_rtw\Motor_Control_private.h)(0x619CAF81)

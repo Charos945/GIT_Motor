@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.75
+ * Model version                  : 1.79
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Fri Nov 19 17:54:27 2021
+ * C/C++ source code generated on : Tue Nov 23 17:08:07 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -32,6 +32,14 @@ real32_T Id_measured;                  /* '<S42>/Add1' */
 real32_T Iq_measured;                  /* '<S42>/Add2' */
 real32_T V_alpha;                      /* '<S41>/Add1' */
 real32_T V_beta;                       /* '<S41>/Add2' */
+real32_T HFI_PLL_Out;                  /* '<S134>/Saturation' */
+real32_T NS_Theta;                     /* '<S61>/Data Type Conversion' */
+real32_T Id2;                          /* '<S158>/Id' */
+real32_T Id1;                          /* '<S156>/Id' */
+real32_T Ia_RMS;                       /* '<S147>/RMS' */
+real32_T Ib_RMS;                       /* '<S147>/RMS1' */
+real32_T Ic_RMS;                       /* '<S147>/RMS2' */
+real32_T Initial_Theta;                /* '<S147>/Gain1' */
 real32_T Vd_voltage;                   /* '<S56>/Switch2' */
 real32_T Ialpha;                       /* '<S52>/Gain2' */
 real32_T Ibeta;                        /* '<S52>/Gain5' */
@@ -40,6 +48,7 @@ real32_T Ibeta;                        /* '<S52>/Gain5' */
 real32_T SpeedFilter_Fn = 0.3F;        /* Variable: SpeedFilter_Fn
                                         * Referenced by:
                                         *   '<S11>/Constant1'
+                                        *   '<S24>/Constant1'
                                         *   '<S69>/Constant1'
                                         */
 
@@ -86,7 +95,7 @@ HFI_Parameter_type HFI_Parameter = {
   1.0F,
 
   /* HFI_PLL_Omga */
-  50.0F,
+  150.0F,
 
   /* HFI_PLL_Xi */
   0.707F,
@@ -105,7 +114,7 @@ HFI_Parameter_type HFI_Parameter = {
 };
 
 Hall_Parameter_type Hall_Parameter = {
-  /* HaLL_AngleShift */
+   /* HaLL_AngleShift */
   0.85F,
   3.14159274F,
   5.23598766F,
@@ -137,15 +146,10 @@ PI_Parameter_type PI_Parameter = {
   0.000267F,
 
   /* Speed_PI_OutputMax */
-  15.0F,
+  6.0F,
 
   /* Speed_PI_OutputMin */
-  -15.0F
-};
-
-SMO_Parameter_type SMO_Parameter = {
-  /* SMO_Theta_Enable */
-  0U
+  -6.0F
 };
 
 /* Block signals and states (default storage) */

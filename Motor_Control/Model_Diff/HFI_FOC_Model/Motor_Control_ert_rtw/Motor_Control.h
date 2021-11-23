@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.75
+ * Model version                  : 1.79
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Fri Nov 19 17:54:27 2021
+ * C/C++ source code generated on : Tue Nov 23 17:08:07 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -56,6 +56,8 @@ typedef struct {
   real32_T UnitDelay4;                 /* '<S2>/Unit Delay4' */
   real32_T UnitDelay3;                 /* '<S2>/Unit Delay3' */
   real32_T UnitDelay2;                 /* '<S2>/Unit Delay2' */
+  real32_T Direct_Angle;               /* '<S8>/DT2' */
+  real32_T Add1;                       /* '<S24>/Add1' */
   real32_T Timer_Counter;              /* '<S9>/Timer_Counter' */
   real32_T Gain2;                      /* '<S9>/Gain2' */
   real32_T a;                          /* '<S9>/Divide1' */
@@ -82,25 +84,24 @@ typedef struct {
   real32_T IPD_angle;                  /* '<S58>/IPD_angle' */
   real32_T Merge2_o;                   /* '<S58>/Merge2' */
   real32_T Subtract;                   /* '<S63>/Subtract' */
-  real32_T DataTypeConversion_k;       /* '<S61>/Data Type Conversion' */
   real32_T Merge_p;                    /* '<S61>/Merge' */
   real32_T Merge1_o;                   /* '<S61>/Merge1' */
   real32_T Merge1_dg;                  /* '<S159>/Merge1' */
   real32_T Merge1_hm;                  /* '<S164>/Merge1' */
+  real32_T Cosine_a;                   /* '<S163>/Cosine' */
   real32_T Sine_n;                     /* '<S163>/Sine' */
   real32_T Cosine_m;                   /* '<S162>/Cosine' */
   real32_T Sine_a;                     /* '<S162>/Sine' */
+  real32_T Cosine_f;                   /* '<S161>/Cosine' */
   real32_T Sine_d;                     /* '<S161>/Sine' */
   real32_T Cosine_g;                   /* '<S160>/Cosine' */
   real32_T Sine_p;                     /* '<S160>/Sine' */
   real32_T Product1;                   /* '<S145>/Product1' */
   real32_T Merge_l;                    /* '<S147>/Merge' */
+  real32_T Cosine_fq;                  /* '<S146>/Cosine' */
   real32_T Sine_dg;                    /* '<S146>/Sine' */
   real32_T Add;                        /* '<S36>/Add' */
   real32_T Add_l;                      /* '<S71>/Add' */
-  real32_T Id;                         /* '<S158>/Id' */
-  real32_T Id_j;                       /* '<S156>/Id' */
-  real32_T Gain1;                      /* '<S147>/Gain1' */
   real32_T UnitDelay1_DSTATE;          /* '<S2>/Unit Delay1' */
   real32_T UnitDelay4_DSTATE;          /* '<S2>/Unit Delay4' */
   real32_T UnitDelay3_DSTATE;          /* '<S2>/Unit Delay3' */
@@ -135,6 +136,7 @@ typedef struct {
   real32_T RMS_SqData;                 /* '<S147>/RMS' */
   real32_T RMS1_SqData;                /* '<S147>/RMS1' */
   real32_T RMS2_SqData;                /* '<S147>/RMS2' */
+  int32_T Position_Delay_DSTATE;       /* '<S23>/Position_Delay' */
   uint32_T temporalCounter_i1;         /* '<S58>/StartRUN_State_machine' */
   uint32_T temporalCounter_i1_a;       /* '<S61>/NS_State_machine' */
   uint32_T RMS_Iteration;              /* '<S147>/RMS' */
@@ -264,8 +266,10 @@ typedef struct HFI_Parameter_tag {
                                         * '<S58>/Const2'
                                         */
   uint8_T HFI_Fuc_Enalbe;              /* Referenced by:
+                                        * '<S26>/HFI_Enable'
                                         * '<S37>/HFI_AngleEnable'
                                         * '<S40>/HFI_Enalble'
+                                        * '<S45>/HFI_Enalble'
                                         * '<S57>/HFI_Enalble'
                                         * '<S30>/HFI_Enalble'
                                         * '<S58>/HFI_Enalble'
@@ -319,10 +323,6 @@ typedef struct PI_Parameter_tag {
                                         */
 } PI_Parameter_type;
 
-typedef struct SMO_Parameter_tag {
-  uint8_T SMO_Theta_Enable;            /* Referenced by: '<S26>/Flux_Enable' */
-} SMO_Parameter_type;
-
 /* Real-time Model Data Structure */
 struct tag_RTM {
   const char_T * volatile errorStatus;
@@ -375,6 +375,14 @@ extern real32_T Id_measured;           /* '<S42>/Add1' */
 extern real32_T Iq_measured;           /* '<S42>/Add2' */
 extern real32_T V_alpha;               /* '<S41>/Add1' */
 extern real32_T V_beta;                /* '<S41>/Add2' */
+extern real32_T HFI_PLL_Out;           /* '<S134>/Saturation' */
+extern real32_T NS_Theta;              /* '<S61>/Data Type Conversion' */
+extern real32_T Id2;                   /* '<S158>/Id' */
+extern real32_T Id1;                   /* '<S156>/Id' */
+extern real32_T Ia_RMS;                /* '<S147>/RMS' */
+extern real32_T Ib_RMS;                /* '<S147>/RMS1' */
+extern real32_T Ic_RMS;                /* '<S147>/RMS2' */
+extern real32_T Initial_Theta;         /* '<S147>/Gain1' */
 extern real32_T Vd_voltage;            /* '<S56>/Switch2' */
 extern real32_T Ialpha;                /* '<S52>/Gain2' */
 extern real32_T Ibeta;                 /* '<S52>/Gain5' */
@@ -390,6 +398,7 @@ extern real32_T Ibeta;                 /* '<S52>/Gain5' */
 extern real32_T SpeedFilter_Fn;        /* Variable: SpeedFilter_Fn
                                         * Referenced by:
                                         *   '<S11>/Constant1'
+                                        *   '<S24>/Constant1'
                                         *   '<S69>/Constant1'
                                         */
 
@@ -404,7 +413,6 @@ extern CTL_Parameter_type CTL_Parameter;
 extern HFI_Parameter_type HFI_Parameter;
 extern Hall_Parameter_type Hall_Parameter;
 extern PI_Parameter_type PI_Parameter;
-extern SMO_Parameter_type SMO_Parameter;
 
 /* Real-time Model object */
 extern RT_MODEL *const rtM;
@@ -422,24 +430,7 @@ extern RT_MODEL *const rtM;
  * Block '<S9>/Scope5' : Unused code path elimination
  * Block '<S12>/Scope' : Unused code path elimination
  * Block '<S7>/Scope' : Unused code path elimination
- * Block '<S8>/DT2' : Unused code path elimination
- * Block '<S23>/Constant' : Unused code path elimination
- * Block '<S23>/Constant1' : Unused code path elimination
- * Block '<S23>/Difference_Wrap' : Unused code path elimination
- * Block '<S23>/Difference_to_Single' : Unused code path elimination
- * Block '<S23>/Difference_to_Single1' : Unused code path elimination
- * Block '<S23>/Gain' : Unused code path elimination
- * Block '<S24>/Add' : Unused code path elimination
- * Block '<S24>/Add1' : Unused code path elimination
- * Block '<S24>/Constant1' : Unused code path elimination
- * Block '<S24>/Divide1' : Unused code path elimination
- * Block '<S24>/Unit Delay' : Unused code path elimination
- * Block '<S23>/Position_Delay' : Unused code path elimination
- * Block '<S23>/Product' : Unused code path elimination
- * Block '<S23>/Product1' : Unused code path elimination
- * Block '<S23>/Scale_Input' : Unused code path elimination
  * Block '<S23>/Scope' : Unused code path elimination
- * Block '<S23>/Wrap_To_Pi' : Unused code path elimination
  * Block '<S31>/Scope' : Unused code path elimination
  * Block '<S38>/Scope' : Unused code path elimination
  * Block '<S56>/Data Type Duplicate' : Unused code path elimination
@@ -463,15 +454,19 @@ extern RT_MODEL *const rtM;
  * Block '<S147>/Display6' : Unused code path elimination
  * Block '<S147>/Scope1' : Unused code path elimination
  * Block '<S147>/Scope2' : Unused code path elimination
+ * Block '<S61>/Scope' : Unused code path elimination
  * Block '<S61>/Scope1' : Unused code path elimination
  * Block '<S160>/Scope' : Unused code path elimination
  * Block '<S161>/Scope' : Unused code path elimination
  * Block '<S162>/Scope' : Unused code path elimination
  * Block '<S163>/Scope' : Unused code path elimination
  * Block '<S167>/Scope' : Unused code path elimination
+ * Block '<S42>/Scope' : Unused code path elimination
+ * Block '<S42>/Scope1' : Unused code path elimination
  * Block '<S176>/Data Type Duplicate' : Unused code path elimination
  * Block '<S176>/Data Type Propagation' : Unused code path elimination
  * Block '<S181>/Scope2' : Unused code path elimination
+ * Block '<S36>/Scope' : Unused code path elimination
  * Block '<S36>/Scope1' : Unused code path elimination
  * Block '<S36>/Scope2' : Unused code path elimination
  * Block '<S36>/Scope3' : Unused code path elimination
@@ -491,6 +486,7 @@ extern RT_MODEL *const rtM;
  * Block '<S89>/Saturation' : Eliminated Saturate block
  * Block '<S92>/Saturation' : Eliminated Saturate block
  * Block '<S93>/Saturation' : Eliminated Saturate block
+ * Block '<S36>/Manual Switch' : Eliminated due to constant selection input
  * Block '<S2>/RT1' : Eliminated since input and output rates are identical
  * Block '<S2>/RT2' : Eliminated since input and output rates are identical
  * Block '<S2>/RT3' : Eliminated since input and output rates are identical

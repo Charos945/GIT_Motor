@@ -3,9 +3,9 @@
  *
  * Code generated for Simulink model 'Motor_Control'.
  *
- * Model version                  : 1.75
+ * Model version                  : 1.79
  * Simulink Coder version         : 9.4 (R2020b) 29-Jul-2020
- * C/C++ source code generated on : Fri Nov 19 17:54:27 2021
+ * C/C++ source code generated on : Tue Nov 23 17:08:07 2021
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: NXP->Cortex-M4
@@ -92,30 +92,25 @@ void HFI_State_machine(void)
 /* Output and update for atomic system: '<S60>/Sine_Cosine' */
 void Sine_Cosine(void)
 {
-  uint32_T Gain1_tmp;
+  uint32_T Cosine_fq_tmp;
 
   /* Lookup_n-D: '<S146>/Cosine' incorporates:
    *  Lookup_n-D: '<S146>/Sine'
    *  Product: '<S145>/Product1'
    */
-  Gain1_tmp = plook_u32f_evencka(rtDW.Product1, 0.0F, 0.00153435534F, 4095U);
+  Cosine_fq_tmp = plook_u32f_evencka(rtDW.Product1, 0.0F, 0.00153435534F, 4095U);
 
-  /* Gain: '<S147>/Gain1' incorporates:
-   *  Lookup_n-D: '<S146>/Cosine'
-   */
-  rtDW.Gain1 = rtConstP.pooled18[Gain1_tmp];
+  /* Lookup_n-D: '<S146>/Cosine' */
+  rtDW.Cosine_fq = rtConstP.pooled18[Cosine_fq_tmp];
 
   /* Lookup_n-D: '<S146>/Sine' */
-  rtDW.Sine_dg = rtConstP.pooled14[Gain1_tmp];
+  rtDW.Sine_dg = rtConstP.pooled14[Cosine_fq_tmp];
 }
 
 /* Output and update for action system: '<S57>/IPD' */
 void IPD(void)
 {
   real32_T rtb_Add;
-  real32_T rtb_RMS;
-  real32_T rtb_RMS1;
-  real32_T rtb_RMS2;
 
   /* Product: '<S145>/Product1' incorporates:
    *  Constant: '<S145>/Const2'
@@ -135,7 +130,7 @@ void IPD(void)
    *  Constant: '<S60>/Constant'
    *  Fcn: '<S60>/7'
    */
-  rtDW.Merge_o = HFI_Parameter.HFI_IPD_V * rtDW.Gain1;
+  rtDW.Merge_o = HFI_Parameter.HFI_IPD_V * rtDW.Cosine_fq;
 
   /* Merge: '<S57>/Merge1' incorporates:
    *  Constant: '<S60>/Constant'
@@ -154,14 +149,22 @@ void IPD(void)
   rtDW.RMS_Iteration++;
   if (rtDW.RMS_Iteration > 1U) {
     rtDW.RMS_SqData += rtU.Phase_CurrentABC[0] * rtU.Phase_CurrentABC[0];
-    rtb_RMS = sqrtf(rtDW.RMS_SqData / (real32_T)rtDW.RMS_Iteration);
+
+    /* S-Function (sdspstatfcns): '<S147>/RMS' incorporates:
+     *  Inport: '<Root>/Phase_CurrentABC'
+     */
+    Ia_RMS = sqrtf(rtDW.RMS_SqData / (real32_T)rtDW.RMS_Iteration);
   } else {
     if (rtDW.RMS_Iteration == 0U) {
       rtDW.RMS_Iteration = 1U;
     }
 
     rtDW.RMS_SqData = rtU.Phase_CurrentABC[0] * rtU.Phase_CurrentABC[0];
-    rtb_RMS = fabsf(rtU.Phase_CurrentABC[0]);
+
+    /* S-Function (sdspstatfcns): '<S147>/RMS' incorporates:
+     *  Inport: '<Root>/Phase_CurrentABC'
+     */
+    Ia_RMS = fabsf(rtU.Phase_CurrentABC[0]);
   }
 
   /* End of S-Function (sdspstatfcns): '<S147>/RMS' */
@@ -172,14 +175,22 @@ void IPD(void)
   rtDW.RMS1_Iteration++;
   if (rtDW.RMS1_Iteration > 1U) {
     rtDW.RMS1_SqData += rtU.Phase_CurrentABC[1] * rtU.Phase_CurrentABC[1];
-    rtb_RMS1 = sqrtf(rtDW.RMS1_SqData / (real32_T)rtDW.RMS1_Iteration);
+
+    /* S-Function (sdspstatfcns): '<S147>/RMS1' incorporates:
+     *  Inport: '<Root>/Phase_CurrentABC'
+     */
+    Ib_RMS = sqrtf(rtDW.RMS1_SqData / (real32_T)rtDW.RMS1_Iteration);
   } else {
     if (rtDW.RMS1_Iteration == 0U) {
       rtDW.RMS1_Iteration = 1U;
     }
 
     rtDW.RMS1_SqData = rtU.Phase_CurrentABC[1] * rtU.Phase_CurrentABC[1];
-    rtb_RMS1 = fabsf(rtU.Phase_CurrentABC[1]);
+
+    /* S-Function (sdspstatfcns): '<S147>/RMS1' incorporates:
+     *  Inport: '<Root>/Phase_CurrentABC'
+     */
+    Ib_RMS = fabsf(rtU.Phase_CurrentABC[1]);
   }
 
   /* End of S-Function (sdspstatfcns): '<S147>/RMS1' */
@@ -190,79 +201,86 @@ void IPD(void)
   rtDW.RMS2_Iteration++;
   if (rtDW.RMS2_Iteration > 1U) {
     rtDW.RMS2_SqData += rtU.Phase_CurrentABC[2] * rtU.Phase_CurrentABC[2];
-    rtb_RMS2 = sqrtf(rtDW.RMS2_SqData / (real32_T)rtDW.RMS2_Iteration);
+
+    /* S-Function (sdspstatfcns): '<S147>/RMS2' incorporates:
+     *  Inport: '<Root>/Phase_CurrentABC'
+     */
+    Ic_RMS = sqrtf(rtDW.RMS2_SqData / (real32_T)rtDW.RMS2_Iteration);
   } else {
     if (rtDW.RMS2_Iteration == 0U) {
       rtDW.RMS2_Iteration = 1U;
     }
 
     rtDW.RMS2_SqData = rtU.Phase_CurrentABC[2] * rtU.Phase_CurrentABC[2];
-    rtb_RMS2 = fabsf(rtU.Phase_CurrentABC[2]);
+
+    /* S-Function (sdspstatfcns): '<S147>/RMS2' incorporates:
+     *  Inport: '<Root>/Phase_CurrentABC'
+     */
+    Ic_RMS = fabsf(rtU.Phase_CurrentABC[2]);
   }
 
   /* End of S-Function (sdspstatfcns): '<S147>/RMS2' */
 
   /* If: '<S147>/If1' */
-  if ((rtb_RMS > rtb_RMS2) && (rtb_RMS2 > rtb_RMS1)) {
+  if ((Ia_RMS > Ic_RMS) && (Ic_RMS > Ib_RMS)) {
     /* Outputs for IfAction SubSystem: '<S147>/If Action Subsystem2' incorporates:
      *  ActionPort: '<S149>/Action Port'
      */
     /* Merge: '<S147>/Merge' incorporates:
      *  Fcn: '<S149>/Fcn'
      */
-    rtDW.Merge_l = (rtb_RMS2 - rtb_RMS1) / (rtb_RMS - rtb_RMS1) * 30.0F;
+    rtDW.Merge_l = (Ic_RMS - Ib_RMS) / (Ia_RMS - Ib_RMS) * 30.0F;
 
     /* End of Outputs for SubSystem: '<S147>/If Action Subsystem2' */
-  } else if ((rtb_RMS2 > rtb_RMS) && (rtb_RMS > rtb_RMS1)) {
+  } else if ((Ic_RMS > Ia_RMS) && (Ia_RMS > Ib_RMS)) {
     /* Outputs for IfAction SubSystem: '<S147>/If Action Subsystem1' incorporates:
      *  ActionPort: '<S148>/Action Port'
      */
     /* Merge: '<S147>/Merge' incorporates:
      *  Fcn: '<S148>/Fcn'
      */
-    rtDW.Merge_l = (rtb_RMS2 - rtb_RMS) / (rtb_RMS2 - rtb_RMS1) * 30.0F + 30.0F;
+    rtDW.Merge_l = (Ic_RMS - Ia_RMS) / (Ic_RMS - Ib_RMS) * 30.0F + 30.0F;
 
     /* End of Outputs for SubSystem: '<S147>/If Action Subsystem1' */
-  } else if ((rtb_RMS2 > rtb_RMS1) && (rtb_RMS1 > rtb_RMS)) {
+  } else if ((Ic_RMS > Ib_RMS) && (Ib_RMS > Ia_RMS)) {
     /* Outputs for IfAction SubSystem: '<S147>/If Action Subsystem3' incorporates:
      *  ActionPort: '<S150>/Action Port'
      */
     /* Merge: '<S147>/Merge' incorporates:
      *  Fcn: '<S150>/Fcn'
      */
-    rtDW.Merge_l = (rtb_RMS1 - rtb_RMS) / (rtb_RMS2 - rtb_RMS) * 30.0F + 60.0F;
+    rtDW.Merge_l = (Ib_RMS - Ia_RMS) / (Ic_RMS - Ia_RMS) * 30.0F + 60.0F;
 
     /* End of Outputs for SubSystem: '<S147>/If Action Subsystem3' */
-  } else if ((rtb_RMS1 > rtb_RMS2) && (rtb_RMS2 > rtb_RMS)) {
+  } else if ((Ib_RMS > Ic_RMS) && (Ic_RMS > Ia_RMS)) {
     /* Outputs for IfAction SubSystem: '<S147>/If Action Subsystem4' incorporates:
      *  ActionPort: '<S151>/Action Port'
      */
     /* Merge: '<S147>/Merge' incorporates:
      *  Fcn: '<S151>/Fcn'
      */
-    rtDW.Merge_l = (rtb_RMS1 - rtb_RMS2) / (rtb_RMS1 - rtb_RMS) * 30.0F + 90.0F;
+    rtDW.Merge_l = (Ib_RMS - Ic_RMS) / (Ib_RMS - Ia_RMS) * 30.0F + 90.0F;
 
     /* End of Outputs for SubSystem: '<S147>/If Action Subsystem4' */
-  } else if ((rtb_RMS1 > rtb_RMS) && (rtb_RMS > rtb_RMS2)) {
+  } else if ((Ib_RMS > Ia_RMS) && (Ia_RMS > Ic_RMS)) {
     /* Outputs for IfAction SubSystem: '<S147>/If Action Subsystem5' incorporates:
      *  ActionPort: '<S152>/Action Port'
      */
     /* Merge: '<S147>/Merge' incorporates:
      *  Fcn: '<S152>/Fcn'
      */
-    rtDW.Merge_l = (rtb_RMS - rtb_RMS2) / (rtb_RMS1 - rtb_RMS2) * 30.0F + 120.0F;
+    rtDW.Merge_l = (Ia_RMS - Ic_RMS) / (Ib_RMS - Ic_RMS) * 30.0F + 120.0F;
 
     /* End of Outputs for SubSystem: '<S147>/If Action Subsystem5' */
   } else {
-    if ((rtb_RMS > rtb_RMS1) && (rtb_RMS1 > rtb_RMS2)) {
+    if ((Ia_RMS > Ib_RMS) && (Ib_RMS > Ic_RMS)) {
       /* Outputs for IfAction SubSystem: '<S147>/If Action Subsystem6' incorporates:
        *  ActionPort: '<S153>/Action Port'
        */
       /* Merge: '<S147>/Merge' incorporates:
        *  Fcn: '<S153>/Fcn'
        */
-      rtDW.Merge_l = (rtb_RMS - rtb_RMS1) / (rtb_RMS - rtb_RMS2) * 30.0F +
-        150.0F;
+      rtDW.Merge_l = (Ia_RMS - Ib_RMS) / (Ia_RMS - Ic_RMS) * 30.0F + 150.0F;
 
       /* End of Outputs for SubSystem: '<S147>/If Action Subsystem6' */
     }
@@ -271,7 +289,7 @@ void IPD(void)
   /* End of If: '<S147>/If1' */
 
   /* Gain: '<S147>/Gain1' */
-  rtDW.Gain1 = 0.0174532924F * rtDW.Merge_l;
+  Initial_Theta = 0.0174532924F * rtDW.Merge_l;
 
   /* Update for Delay: '<S145>/Delay' */
   rtDW.Delay_DSTATE_o = rtb_Add;
@@ -376,18 +394,19 @@ void Sine_Cosine_b(void)
 /* Output and update for atomic system: '<S156>/Sine_Cosine' */
 void Sine_Cosine_i(void)
 {
-  uint32_T Id_j_tmp;
+  uint32_T Cosine_f_tmp;
 
   /* Lookup_n-D: '<S161>/Cosine' incorporates:
    *  Delay: '<S57>/Delay1'
-   *  Inport: '<S156>/Id'
    *  Lookup_n-D: '<S161>/Sine'
    */
-  Id_j_tmp = plook_u32f_evencka(rtDW.Delay1, 0.0F, 0.00153435534F, 4095U);
-  rtDW.Id_j = rtConstP.pooled18[Id_j_tmp];
+  Cosine_f_tmp = plook_u32f_evencka(rtDW.Delay1, 0.0F, 0.00153435534F, 4095U);
+
+  /* Lookup_n-D: '<S161>/Cosine' */
+  rtDW.Cosine_f = rtConstP.pooled18[Cosine_f_tmp];
 
   /* Lookup_n-D: '<S161>/Sine' */
-  rtDW.Sine_d = rtConstP.pooled14[Id_j_tmp];
+  rtDW.Sine_d = rtConstP.pooled14[Cosine_f_tmp];
 }
 
 /* Output and update for atomic system: '<S157>/Sine_Cosine' */
@@ -411,18 +430,19 @@ void Sine_Cosine_d(void)
 /* Output and update for atomic system: '<S158>/Sine_Cosine' */
 void Sine_Cosine_e(void)
 {
-  uint32_T Id_tmp;
+  uint32_T Cosine_a_tmp;
 
   /* Lookup_n-D: '<S163>/Cosine' incorporates:
-   *  Inport: '<S158>/Id'
    *  Lookup_n-D: '<S163>/Sine'
    *  Merge: '<S164>/Merge1'
    */
-  Id_tmp = plook_u32f_evencka(rtDW.Merge1_hm, 0.0F, 0.00153435534F, 4095U);
-  rtDW.Id = rtConstP.pooled18[Id_tmp];
+  Cosine_a_tmp = plook_u32f_evencka(rtDW.Merge1_hm, 0.0F, 0.00153435534F, 4095U);
+
+  /* Lookup_n-D: '<S163>/Cosine' */
+  rtDW.Cosine_a = rtConstP.pooled18[Cosine_a_tmp];
 
   /* Lookup_n-D: '<S163>/Sine' */
-  rtDW.Sine_n = rtConstP.pooled14[Id_tmp];
+  rtDW.Sine_n = rtConstP.pooled14[Cosine_a_tmp];
 }
 
 /*
@@ -505,15 +525,15 @@ void NS(void)
      *  Constant: '<S156>/Constant2'
      *  Fcn: '<S156>/1'
      */
-    rtDW.Merge_p = HFI_Parameter.HFI_NS_V * rtDW.Id_j - 0.0F * rtDW.Sine_d;
+    rtDW.Merge_p = HFI_Parameter.HFI_NS_V * rtDW.Cosine_f - 0.0F * rtDW.Sine_d;
 
     /* Merge: '<S61>/Merge1' incorporates:
      *  Constant: '<S156>/Constant'
      *  Constant: '<S156>/Constant2'
      *  Fcn: '<S156>/2'
      */
-    rtDW.Merge1_o = HFI_Parameter.HFI_NS_V * rtDW.Sine_d + 0.0F * rtDW.Id_j;
-    rtDW.Id_j = rtDW.Delay;
+    rtDW.Merge1_o = HFI_Parameter.HFI_NS_V * rtDW.Sine_d + 0.0F * rtDW.Cosine_f;
+    Id1 = rtDW.Delay;
 
     /* End of Outputs for SubSystem: '<S61>/Ud_inject_2' */
     break;
@@ -581,15 +601,15 @@ void NS(void)
      *  Constant: '<S158>/Constant2'
      *  Fcn: '<S158>/1'
      */
-    rtDW.Merge_p = HFI_Parameter.HFI_NS_V * rtDW.Id - 0.0F * rtDW.Sine_n;
+    rtDW.Merge_p = HFI_Parameter.HFI_NS_V * rtDW.Cosine_a - 0.0F * rtDW.Sine_n;
 
     /* Merge: '<S61>/Merge1' incorporates:
      *  Constant: '<S158>/Constant'
      *  Constant: '<S158>/Constant2'
      *  Fcn: '<S158>/2'
      */
-    rtDW.Merge1_o = HFI_Parameter.HFI_NS_V * rtDW.Sine_n + 0.0F * rtDW.Id;
-    rtDW.Id = rtDW.Delay;
+    rtDW.Merge1_o = HFI_Parameter.HFI_NS_V * rtDW.Sine_n + 0.0F * rtDW.Cosine_a;
+    Id2 = rtDW.Delay;
 
     /* End of Outputs for SubSystem: '<S61>/Ud_inject_4' */
     break;
@@ -674,7 +694,7 @@ void NS(void)
   /* End of SwitchCase: '<S61>/Switch Case1' */
 
   /* DataTypeConversion: '<S61>/Data Type Conversion' */
-  rtDW.DataTypeConversion_k = rtDW.Merge1_dg;
+  NS_Theta = rtDW.Merge1_dg;
 
   /* SignalConversion generated from: '<S61>/Ualpha' */
   rtDW.Merge_o = rtDW.Merge_p;
@@ -686,10 +706,10 @@ void NS(void)
   rtDW.Merge2_i = rtDW.Merge1_dg;
 
   /* Update for Delay: '<S61>/Delay' */
-  rtDW.Delay_DSTATE_n = rtDW.Id_j;
+  rtDW.Delay_DSTATE_n = Id1;
 
   /* Update for Delay: '<S61>/Delay1' */
-  rtDW.Delay1_DSTATE_n = rtDW.Id;
+  rtDW.Delay1_DSTATE_n = Id2;
 }
 
 /* Output and update for atomic system: '<S65>/Angle_calibration' */
@@ -865,6 +885,7 @@ void HFI_Function_Init(void)
 void HFI_Function(void)
 {
   real32_T DiscreteTimeIntegrator_c;
+  real32_T MathFunction;
   real32_T rtb_Integrator_p;
   real32_T rtb_Produc3t;
   real32_T rtb_Product1_bq;
@@ -1105,16 +1126,16 @@ void HFI_Function(void)
      *  DiscreteIntegrator: '<S127>/Integrator'
      *  Product: '<S132>/PProd Out'
      */
-    rtb_Product_e = 2.0F * HFI_Parameter.HFI_PLL_Omga * HFI_Parameter.HFI_PLL_Xi
-      * rtb_Integrator_p + rtDW.Integrator_DSTATE_a;
+    rtb_Product1_f = 2.0F * HFI_Parameter.HFI_PLL_Omga *
+      HFI_Parameter.HFI_PLL_Xi * rtb_Integrator_p + rtDW.Integrator_DSTATE_a;
 
     /* DeadZone: '<S120>/DeadZone' */
-    if (rtb_Product_e > 314159.25F) {
-      rtb_Product1_f = rtb_Product_e - 314159.25F;
-    } else if (rtb_Product_e >= -314159.25F) {
-      rtb_Product1_f = 0.0F;
+    if (rtb_Product1_f > 3141.59277F) {
+      rtb_Product_e = rtb_Product1_f - 3141.59277F;
+    } else if (rtb_Product1_f >= 0.0F) {
+      rtb_Product_e = 0.0F;
     } else {
-      rtb_Product1_f = rtb_Product_e - -314159.25F;
+      rtb_Product_e = rtb_Product1_f;
     }
 
     /* End of DeadZone: '<S120>/DeadZone' */
@@ -1122,23 +1143,23 @@ void HFI_Function(void)
     /* RelationalOperator: '<S118>/NotEqual' incorporates:
      *  Gain: '<S118>/ZeroGain'
      */
-    rtb_NotEqual = (0.0F * rtb_Product_e != rtb_Product1_f);
+    rtb_NotEqual = (0.0F * rtb_Product1_f != rtb_Product_e);
 
     /* Signum: '<S118>/SignPreSat' */
-    if (rtb_Product1_f < 0.0F) {
-      rtb_Product1_f = -1.0F;
-    } else if (rtb_Product1_f > 0.0F) {
-      rtb_Product1_f = 1.0F;
-    } else if (rtb_Product1_f == 0.0F) {
-      rtb_Product1_f = 0.0F;
+    if (rtb_Product_e < 0.0F) {
+      rtb_Product_e = -1.0F;
+    } else if (rtb_Product_e > 0.0F) {
+      rtb_Product_e = 1.0F;
+    } else if (rtb_Product_e == 0.0F) {
+      rtb_Product_e = 0.0F;
     } else {
-      rtb_Product1_f = (rtNaNF);
+      rtb_Product_e = (rtNaNF);
     }
 
     /* End of Signum: '<S118>/SignPreSat' */
 
     /* DataTypeConversion: '<S118>/DataTypeConv1' */
-    rtAction = (int8_T)rtb_Product1_f;
+    rtAction = (int8_T)rtb_Product_e;
 
     /* Product: '<S124>/IProd Out' incorporates:
      *  Constant: '<S58>/Ki'
@@ -1146,34 +1167,43 @@ void HFI_Function(void)
     rtb_Integrator_p *= HFI_Parameter.HFI_PLL_Omga * HFI_Parameter.HFI_PLL_Omga;
 
     /* Saturate: '<S134>/Saturation' */
-    if (rtb_Product_e > 314159.25F) {
+    if (rtb_Product1_f > 3141.59277F) {
       /* Saturate: '<S134>/Saturation' */
-      rtb_Product_e = 314159.25F;
+      HFI_PLL_Out = 3141.59277F;
+    } else if (rtb_Product1_f < 0.0F) {
+      /* Saturate: '<S134>/Saturation' */
+      HFI_PLL_Out = 0.0F;
     } else {
-      if (rtb_Product_e < -314159.25F) {
-        /* Saturate: '<S134>/Saturation' */
-        rtb_Product_e = -314159.25F;
-      }
+      /* Saturate: '<S134>/Saturation' */
+      HFI_PLL_Out = rtb_Product1_f;
     }
 
     /* End of Saturate: '<S134>/Saturation' */
 
     /* UnitDelay: '<S69>/Unit Delay' */
-    rtb_Product1_f = rtDW.UnitDelay_DSTATE_c;
+    rtb_Product_e = rtDW.UnitDelay_DSTATE_c;
 
     /* Sum: '<S69>/Add1' incorporates:
      *  Constant: '<S69>/Constant1'
      *  Product: '<S69>/Divide1'
      *  Sum: '<S69>/Add'
      */
-    rtb_Product1_f += (rtb_Product_e - rtb_Product1_f) * SpeedFilter_Fn;
+    rtb_Product1_f = (HFI_PLL_Out - rtb_Product_e) * SpeedFilter_Fn +
+      rtb_Product_e;
 
     /* Gain: '<S58>/freq <-- wm1' */
     rtDW.freqwm1 = 4.77464819F * rtb_Product1_f;
 
     /* DiscreteIntegrator: '<S58>/Discrete-Time Integrator1' */
-    rtb_Product_e = 0.0001F * rtb_Product_e +
-      rtDW.DiscreteTimeIntegrator1_DSTATE;
+    rtb_Product_e = 0.0001F * HFI_PLL_Out + rtDW.DiscreteTimeIntegrator1_DSTATE;
+
+    /* Math: '<S58>/Math Function' incorporates:
+     *  Constant: '<S58>/Constant1'
+     */
+    MathFunction = rt_modf_snf(rtb_Product_e, 6.28318548F);
+
+    /* SignalConversion generated from: '<S58>/theta_est' */
+    rtDW.Merge2_i = MathFunction;
 
     /* Chart: '<S58>/StartRUN_State_machine' */
     StartRUN_State_machine();
@@ -1233,9 +1263,6 @@ void HFI_Function(void)
     rtDW.Add_l = 6.28318548F * HFI_Parameter.HFI_Inj_HF / 10000.0F +
       rtb_Product1_bq;
 
-    /* SignalConversion generated from: '<S58>/theta_est' */
-    rtDW.Merge2_i = rtDW.Merge2_o;
-
     /* Update for DiscreteIntegrator: '<S58>/Discrete-Time Integrator' */
     rtDW.DiscreteTimeIntegrator_DSTATE_i5 = DiscreteTimeIntegrator_c;
 
@@ -1259,11 +1286,8 @@ void HFI_Function(void)
     rtDW.Integrator_DSTATE_k += 0.0001F * rtb_Produc3t;
     rtDW.Integrator_PrevResetState_p = 0;
 
-    /* Update for Delay: '<S58>/Delay2' incorporates:
-     *  Constant: '<S58>/Constant1'
-     *  Math: '<S58>/Math Function'
-     */
-    rtDW.Delay2_DSTATE_h = rt_modf_snf(rtb_Product_e, 6.28318548F);
+    /* Update for Delay: '<S58>/Delay2' */
+    rtDW.Delay2_DSTATE_h = MathFunction;
 
     /* Update for DiscreteIntegrator: '<S92>/Integrator' incorporates:
      *  DiscreteIntegrator: '<S93>/Integrator'
@@ -1323,10 +1347,10 @@ void HFI_Function_Update(void)
   rtDW.Delay_DSTATE = Id_measured;
 
   /* Update for Delay: '<S57>/Delay1' */
-  rtDW.Delay1_DSTATE = rtDW.Gain1;
+  rtDW.Delay1_DSTATE = Initial_Theta;
 
   /* Update for Delay: '<S57>/Delay2' */
-  rtDW.Delay2_DSTATE = rtDW.DataTypeConversion_k;
+  rtDW.Delay2_DSTATE = NS_Theta;
 }
 
 /* System initialize for atomic system: '<S36>/HF_Observer' */
